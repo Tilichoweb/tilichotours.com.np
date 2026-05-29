@@ -1210,7 +1210,7 @@
 <!-- NAVIGATIONBAR -->
 <nav class="navbar">
     <div class="logo-section">
-        <div class="logo"><img src="webimage/Tlogo.jpeg" alt="Tilicho Tours and Travels Logo"></div>
+        <div class="logo"><img src="Tlogo.jpeg" alt="Tilicho Tours and Travels Logo"></div>
         <div class="dual-brand-header-text">
             <span class="brand-top">Tilicho Tours And Travels Pvt. Ltd.</span>
             <hr class="brand-divider">
@@ -1395,7 +1395,7 @@
             </div>
         </div>
 
-        <div class="slide" style="background-image: url('webimage/everestbasecamptrek.jpeg');">
+        <div class="slide" style="background-image: url('everestbasecamptrek.jpeg');">
             <div class="slide-content">
                 <div class="brand-intro-wrapper">
                     <span class="established-tag">Established 2006</span>
@@ -1544,7 +1544,7 @@
 <div class="grid-four-columns">
     <!-- ABC TREK CARD -->
     <div class="card">
-        <img class="main-card-img" src="webimage/Abctrekmyself.jpeg" onerror="this.src='https://images.unsplash.com/photo-1585016495481-91613a3ab1bc?auto=format&fit=crop&w=500&q=80'" alt="Annapurna Base Camp ABC Trek 5 Days">
+        <img class="main-card-img" src="Abctrekmyself.jpeg" onerror="this.src='https://images.unsplash.com/photo-1585016495481-91613a3ab1bc?auto=format&fit=crop&w=500&q=80'" alt="Annapurna Base Camp ABC Trek 5 Days">
         <div class="package-price-banner-floating">
             <span class="package-price-strike">$399</span>$359 ONLY
         </div>
@@ -1560,7 +1560,7 @@
 
     <!-- POONHILL CARD -->
     <div class="card">
-        <img class="main-card-img" src="webimage/Poonhilltrek.jpeg" onerror="this.src='https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=500&q=80'" alt="Ghorepani Poonhill Trek 4 Days">
+        <img class="main-card-img" src="/Poonhilltrek.jpeg" onerror="this.src='https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=500&q=80'" alt="Ghorepani Poonhill Trek 4 Days">
         <div class="package-price-banner-floating">
             <span class="package-price-strike">$310</span>$279 ONLY
         </div>
@@ -1576,7 +1576,7 @@
 
     <!-- MARDI HIMAL CARD -->
     <div class="card">
-        <img class="main-card-img" src="webimage/mardihimaltrek.jpeg" onerror="this.src='https://images.unsplash.com/photo-1627894483216-2138af692e32?auto=format&fit=crop&w=500&q=80'" alt="Mardi Himal Trek 4 Days">
+        <img class="main-card-img" src="mardihimaltrek.jpeg" onerror="this.src='https://images.unsplash.com/photo-1627894483216-2138af692e32?auto=format&fit=crop&w=500&q=80'" alt="Mardi Himal Trek 4 Days">
         <div class="package-price-banner-floating">
             <span class="package-price-strike">$310</span>$279 ONLY
         </div>
@@ -1592,7 +1592,7 @@
 
     <!-- ANNAPURNA CIRCUIT CARD -->
     <div class="card">
-        <img class="main-card-img" src="webimage/annapurnaciricittrek.jpeg" onerror="this.src='https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=500&q=80'" alt="Annapurna Circuit Trek 12 Days">
+        <img class="main-card-img" src="annapurnaciricittrek.jpeg" onerror="this.src='https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=500&q=80'" alt="Annapurna Circuit Trek 12 Days">
         <div class="package-price-banner-floating">
             <span class="package-price-strike">$960</span>$864 ONLY
         </div>
@@ -1608,7 +1608,7 @@
 
     <!-- EBC CARD -->
     <div class="card">
-        <img class="main-card-img" src="webimage/everestbasecamptrek.jpeg" onerror="this.src='https://images.unsplash.com/photo-1486916856992-e4db22c8df33?auto=format&fit=crop&w=500&q=80'" alt="Everest Base Camp Trek 14 Days">
+        <img class="main-card-img" src="everestbasecamptrek.jpeg" onerror="this.src='https://images.unsplash.com/photo-1486916856992-e4db22c8df33?auto=format&fit=crop&w=500&q=80'" alt="Everest Base Camp Trek 14 Days">
         <div class="package-price-banner-floating">
             <span class="package-price-strike">$1499</span>$1349 ONLY
         </div>
@@ -1616,7 +1616,7 @@
             <h3>Everest Base Camp Trek — 14 Days</h3>
             <p class="short-desc">Hike legendary Sherpa trails through Namche Bazaar up to Khumbu Glacier, standing right at the foot of Earth's highest summit.</p>
             <div class="btn-group">
-                <a href="webimage/everestbasecamptrek.jpeg" class="btn-details">Details</a>
+                <a href="everestbasecamptrek.jpeg" class="btn-details">Details</a>
                 <a href="https://wa.me/9779856023917?text=Inquiry%20Everest%20Base%20Camp%2014%20Days%20Full%20Package" class="btn-whatsapp" target="_blank">💬 Contact</a>
             </div>
         </div>
@@ -1624,7 +1624,7 @@
 
     <!-- TILICHO LAKE CARD -->
     <div class="card">
-        <img class="main-card-img" src="webimage/tilicholakeslide1.jpeg" onerror="this.src='https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=500&q=80'" alt="Tilicho Lake Trek 12 Days">
+        <img class="main-card-img" src="tilicholakeslide1.jpeg" onerror="this.src='https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=500&q=80'" alt="Tilicho Lake Trek 12 Days">
         <div class="package-price-banner-floating">
             <span class="package-price-strike">$1050</span>$945 ONLY
         </div>
@@ -1640,7 +1640,7 @@
 
     <!-- MANASLU CIRCUIT CARD -->
     <div class="card">
-        <img class="main-card-img" src="webimage/manaslutrek.jpeg" onerror="this.src='https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=500&q=80'" alt="Manaslu Circuit Trek 14 Days">
+        <img class="main-card-img" src="manaslutrek.jpeg" onerror="this.src='https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=500&q=80'" alt="Manaslu Circuit Trek 14 Days">
         <div class="package-price-banner-floating">
             <span class="package-price-strike">$1149</span>$1034 ONLY
         </div>
@@ -1656,7 +1656,7 @@
 
     <!-- UPPER MUSTANG CARD -->
     <div class="card">
-        <img class="main-card-img" src="webimage/uppermustang.jpeg" onerror="this.src='https://images.unsplash.com/photo-1624806992066-5ffcf7ca186b?auto=format&fit=crop&w=500&q=80'" alt="Upper Mustang Walled City Trek 12 Days">
+        <img class="main-card-img" src="uppermustang.jpeg" onerror="this.src='https://images.unsplash.com/photo-1624806992066-5ffcf7ca186b?auto=format&fit=crop&w=500&q=80'" alt="Upper Mustang Walled City Trek 12 Days">
         <div class="package-price-banner-floating">
             <span class="package-price-strike">$1499</span>$1349 ONLY
         </div>
@@ -1682,7 +1682,7 @@
 <div class="grid-four-columns">
     <!-- 4 CITY CIRCUIT -->
     <div class="card">
-        <img class="main-card-img" src="webimage/ktm-Pkr-chitawan-lumbinitour.jpeg" onerror="this.src='https://images.unsplash.com/photo-1541417904950-b855846fe074?auto=format&fit=crop&w=500&q=80'" alt="7 Days Kathmandu Pokhara Chitwan Lumbini Tour">
+        <img class="main-card-img" src="ktm-Pkr-chitawan-lumbinitour.jpeg" onerror="this.src='https://images.unsplash.com/photo-1541417904950-b855846fe074?auto=format&fit=crop&w=500&q=80'" alt="7 Days Kathmandu Pokhara Chitwan Lumbini Tour">
         <div class="package-price-banner-floating">
             <span class="package-price-strike">$560</span>$504 ONLY
         </div>
@@ -1698,7 +1698,7 @@
 
     <!-- POKHARA FULL DAY -->
     <div class="card">
-        <img class="main-card-img" src="webimage/Pokharaviewfromstupa.jpeg" onerror="this.src='https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=500&q=80'" alt="Pokhara Full Day City Sightseeing Tour">
+        <img class="main-card-img" src="Pokharaviewfromstupa.jpeg" onerror="this.src='https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=500&q=80'" alt="Pokhara Full Day City Sightseeing Tour">
         <div class="package-price-banner-floating">
             <span class="package-price-strike">$80</span>$72 ONLY
         </div>
@@ -1714,7 +1714,7 @@
 
     <!-- KATHMANDU UNESCO -->
     <div class="card">
-        <img class="main-card-img" src="webimage/kathmanduheritagetour.jpeg" onerror="this.src='https://images.unsplash.com/photo-1545128485-c400e7702796?auto=format&fit=crop&w=500&q=80'" alt="Kathmandu UNESCO Heritage Sites Day Tour">
+        <img class="main-card-img" src="kathmanduheritagetour.jpeg" onerror="this.src='https://images.unsplash.com/photo-1545128485-c400e7702796?auto=format&fit=crop&w=500&q=80'" alt="Kathmandu UNESCO Heritage Sites Day Tour">
         <div class="package-price-banner-floating">
             <span class="package-price-strike">$80</span>$72 ONLY
         </div>
@@ -1730,7 +1730,7 @@
 
     <!-- CHITWAN JUNGLE SAFARI -->
     <div class="card">
-        <img class="main-card-img" src="webimage/chitwantsafaritour.jpeg.png" onerror="this.src='https://images.unsplash.com/photo-1581888227599-779811939961?auto=format&fit=crop&w=500&q=80'" alt="Chitwan National Park Safari Package 3 Days">
+        <img class="main-card-img" src="chitwantsafaritour.jpeg.png" onerror="this.src='https://images.unsplash.com/photo-1581888227599-779811939961?auto=format&fit=crop&w=500&q=80'" alt="Chitwan National Park Safari Package 3 Days">
         <div class="package-price-banner-floating">
             <span class="package-price-strike">$240</span>$216 ONLY
         </div>
@@ -1755,7 +1755,7 @@
 <div class="grid-four-columns">
     <!-- ABC HELICOPTER TOUR -->
     <div class="card">
-        <img class="main-card-img" src="webimage/abcheli.jpeg" onerror="this.src='https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=500&q=80'" alt="Annapurna Base Camp ABC Helicopter Tour">
+        <img class="main-card-img" src="abcheli.jpeg" onerror="this.src='https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=500&q=80'" alt="Annapurna Base Camp ABC Helicopter Tour">
         <div class="package-price-banner-floating">
             <span class="package-price-strike">$500</span>$450 ONLY
         </div>
@@ -1771,7 +1771,7 @@
 
     <!-- MUKTINATH HELICOPTER TOUR -->
     <div class="card">
-        <img class="main-card-img" src="webimage/muktinathheli.jpeg" onerror="this.src='https://images.unsplash.com/photo-1585016495481-91613a3ab1bc?auto=format&fit=crop&w=500&q=80'" alt="Muktinath Helicopter Tour">
+        <img class="main-card-img" src="muktinathheli.jpeg" onerror="this.src='https://images.unsplash.com/photo-1585016495481-91613a3ab1bc?auto=format&fit=crop&w=500&q=80'" alt="Muktinath Helicopter Tour">
         <div class="package-price-banner-floating">
             <span class="package-price-strike">$799</span>$699 ONLY
         </div>
@@ -1787,7 +1787,7 @@
 
     <!-- EVEREST HELICOPTER TOUR -->
     <div class="card">
-        <img class="main-card-img" src="webimage/everstheli.jpeg" onerror="this.src='https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80'" alt="Everest Helicopter Tour">
+        <img class="main-card-img" src="everstheli.jpeg" onerror="this.src='https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80'" alt="Everest Helicopter Tour">
         <div class="package-price-banner-floating">
             <span class="package-price-strike">$2199</span>$2099 ONLY
         </div>
@@ -1803,7 +1803,7 @@
 
     <!-- MOUNTAIN FLIGHT BY PLANE -->
     <div class="card">
-        <img class="main-card-img" src="webimage/mountainflight.jpeg" onerror="this.src='https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=500&q=80'" alt="Mountain Flight by Plane">
+        <img class="main-card-img" src="mountainflight.jpeg" onerror="this.src='https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=500&q=80'" alt="Mountain Flight by Plane">
         <div class="package-price-banner-floating" style="line-height: 1.3 !important; text-align: right !important; font-size: 7px !important;">
             <div>: <span class="package-price-strike" style="font-size:9px;">$299 </span>  Nep& IND Nrs 12999</span> Other $260</div>
             
@@ -1831,7 +1831,7 @@
     <div class="staff-grid">
         <!-- Card 1: Guide -->
         <div class="staff-card">
-            <div class="staff-img-box" style="background-image: url('webimage/rajuguide.jpeg');">
+            <div class="staff-img-box" style="background-image: url('rajuguide.jpeg');">
                 <div class="staff-price-tag"> / Day</div>
             </div>
             <div class="staff-body">
@@ -1857,7 +1857,7 @@
 
         <!-- Card 2: Guide -->
         <div class="staff-card">
-            <div class="staff-img-box" style="background-image: url('webimage/Puspa.jpeg.JPG');">
+            <div class="staff-img-box" style="background-image: url Puspa.jpeg.JPG');">
                 <div class="staff-price-tag"> / Day</div>
             </div>
             <div class="staff-body">
@@ -1883,7 +1883,7 @@
 
         <!-- Card 3: Porter -->
         <div class="staff-card">
-            <div class="staff-img-box" style="background-image: url('webimage/Mrgovindaguide.jpeg');">
+            <div class="staff-img-box" style="background-image: url( Mrgovindaguide.jpeg');">
                 <div class="staff-price-tag"> / Day</div>
             </div>
             <div class="staff-body">
@@ -1909,7 +1909,7 @@
 
         <!-- Card 4: Porter -->
         <div class="staff-card">
-            <div class="staff-img-box" style="background-image: url('webimage/sandhyaguide.jpeg');">
+            <div class="staff-img-box" style="background-image: url('sandhyaguide.jpeg');">
                 <div class="staff-price-tag"> / Day</div>
             </div>
             <div class="staff-body">
@@ -1937,7 +1937,7 @@
 <div class="staff-grid">
     <!-- Porter Card 1 -->
     <div class="staff-card">
-        <div class="staff-img-box" style="background-image: url('webimage/porter1.jpeg.JPG');">
+        <div class="staff-img-box" style="background-image: url('porter1.jpeg.JPG');">
             <!-- Price tag removed -->
         </div>
         <div class="staff-body">
@@ -1963,7 +1963,7 @@
 
     <!-- Porter Card 2 -->
     <div class="staff-card">
-        <div class="staff-img-box" style="background-image: url('webimage/porter2.jpeg');">
+        <div class="staff-img-box" style="background-image: url('porter2.jpeg');">
             <!-- Price tag removed -->
         </div>
         <div class="staff-body">
@@ -1989,7 +1989,7 @@
 
     <!-- Porter Card 3 -->
     <div class="staff-card">
-        <div class="staff-img-box" style="background-image: url('webimage/porter3.jpeg');">
+        <div class="staff-img-box" style="background-image: url('porter3.jpeg');">
             <!-- Price tag removed -->
         </div>
         <div class="staff-body">
@@ -2015,7 +2015,7 @@
 
     <!-- Porter Card 4 -->
     <div class="staff-card">
-        <div class="staff-img-box" style="background-image: url('webimage/porter4.jpeg');">
+        <div class="staff-img-box" style="background-image: url('porter4.jpeg');">
             <!-- Price tag removed -->
         </div>
         <div class="staff-body">
