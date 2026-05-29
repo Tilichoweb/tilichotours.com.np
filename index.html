@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- SEO METRICS & GOOGLE RANKING TAGS -->
     <title>Tilicho Tours And Travels | Best Trekking Agency Pokhara Nepal</title>
     <meta name="description" content="Tilicho Tours and Travels & Tilicho Treks & Expedition are premier adventure partners based in Pokhara, Nepal. Authorized operator since 2006 specializing in Himalayan treks, helicopter tours, city sightseeing, jungle safaris, and ticketing.">
     <meta name="keywords" content="Tilicho Tours, Tilicho Treks, Trekking Pokhara, Nepal Travel Agency, Annapurna Base Camp Trek, Everest Base Camp, Pokhara Sightseeing, Hire Guide Nepal, Helicopter Tour Nepal">
@@ -11,19 +12,21 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://tilichotours.com.np/">
 
+    <!-- OPEN GRAPH FOR FACEBOOK / SOCIAL MEDIA SITES -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Tilicho Tours And Travels | Best Trekking Agency Pokhara Nepal">
     <meta property="og:description" content="Trusted travel and trekking specialists in Pokhara since 2006. Book custom trekking packages, tours, luxury helicopter flights, and experienced local guides.">
     <meta property="og:url" content="https://tilichotours.com.np/">
-    <meta property="og:image" content="Pokharaviewfromstupa.jpeg">
+    <meta property="og:image" content="images/hero-bg.jpg">
 
+    <!-- GOOGLE STRUCTURED SCHEMA DATA FOR LOCAL BUSINESS -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "TravelAgency",
       "name": "Tilicho Tours And Travels Pvt. Ltd.",
       "alternateName": "Tilicho Treks & Expedition Pvt. Ltd.",
-      "image": "Tlogo.jpeg.jpg",
+      "image": "logo.jpg",
       "@id": "https://tilichotours.com.np/#agency",
       "url": "https://tilichotours.com.np/",
       "telephone": "+977-061455269",
@@ -43,7 +46,13 @@
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": [
-          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
         ],
         "opens": "06:00",
         "closes": "21:00"
@@ -54,6 +63,7 @@
     }
     </script>
 
+    <!-- TYPOGRAPHY FONTS PRECONNECT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -132,7 +142,8 @@
         .navbar {
             display: flex;
             align-items: center;
-            justify-content: space-between; 
+            justify-content: flex-start; 
+            gap: 30px; 
             padding: 12px 40px;
             background: rgba(0, 0, 0, 0.95);
             backdrop-filter: blur(12px);
@@ -198,6 +209,7 @@
             color: #10b981;
             padding: 5px;
             line-height: 1;
+            margin-left: auto; 
         }
 
         /* COMPACT MENU SYSTEM */
@@ -256,28 +268,6 @@
         
         @media (min-width: 1201px) {
             .dropdown:hover .dropdown-content { display: block; }
-        }
-
-        /* RESPONSIVE MOBILE STYLES */
-        @media (max-width: 1200px) {
-            .mobile-menu-toggle { display: block; }
-            .menu {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: #000000;
-                border-bottom: 2px solid #10b981;
-                padding: 20px;
-                gap: 10px;
-                max-height: 75vh;
-                overflow-y: auto;
-            }
-            .menu.open { display: flex; }
-            .dropdown-content { position: static; min-width: 100%; box-shadow: none; }
-            .dropdown:focus-within .dropdown-content { display: block; }
         }
 
         /* PREMIUM HERO SLIDER SYSTEM */
@@ -387,631 +377,1825 @@
             transform: translateY(0);
         }
 
-        /* FEATURES BADGES OVERLAY */
+        /* TRUST CONTAINER FOOTER OF HERO */
         .features-container {
             position: absolute;
-            bottom: 40px;
+            bottom: 45px;
             left: 50%;
             transform: translateX(-50%);
             width: 90%;
-            max-width: 1200px;
-            z-index: 10;
+            max-width: 1250px;
+            z-index: 3;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
         }
         .features-row {
             display: flex;
             justify-content: space-between;
-            gap: 20px;
-            flex-wrap: wrap;
+            align-items: stretch;
+            gap: 24px;
         }
         .feature-box {
             flex: 1;
-            min-width: 220px;
-            background: rgba(10, 10, 10, 0.85);
-            border-left: 4px solid #10b981;
-            padding: 15px;
-            border-radius: 4px;
-            backdrop-filter: blur(5px);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            padding: 5px 10px;
+            position: relative;
+            transition: transform 0.3s ease;
         }
-        .feature-icon { font-size: 24px; margin-bottom: 5px; }
-        .feature-title { font-weight: 700; color: #ffffff; font-size: 15px; }
-        .feature-desc { font-size: 12.5px; color: #cbd5e1; }
+        .feature-box:hover { transform: translateY(-4px); }
+        .feature-box:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: -12px;
+            top: 10%;
+            height: 80%;
+            width: 1px;
+            background: linear-gradient(to bottom, transparent, rgba(16, 185, 129, 0.5), transparent);
+        }
+        .feature-icon {
+            font-size: 1.8rem;
+            margin-bottom: 14px;
+            background: rgba(16,185,129,0.1);
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            border: 1px solid rgba(16,185,129,0.3);
+        }
+        .feature-title {
+            color: #10b981;
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            letter-spacing: 0.3px;
+        }
+        .feature-desc { color: #cbd5e1; font-size: 0.85rem; line-height: 1.5; }
 
-        /* FLIGHT SEARCH STYLING */
-        .flight-search-container-row {
-            background: #0a0a0a;
-            border-bottom: 2px solid #10b981;
-            padding: 30px 40px;
+        /* HERO SLIDER NAVIGATION DOTS */
+        .slider-dots {
+            position: absolute;
+            right: 45px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            z-index: 3;
         }
-        .flight-box-headline-text { margin-bottom: 20px; }
-        .flight-box-headline-text span { font-size: 24px; font-weight: 800; color: #10b981; text-transform: uppercase; }
-        .flight-reply-note { font-size: 14px; color: #cbd5e1; }
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .dot.active {
+            background: #10b981;
+            transform: scale(1.4);
+            box-shadow: 0 0 10px #10b981;
+        }
+
+        /* NEW UNIQUE FLIGHT TICKET SEARCH BOX CONTAINER ROW */
+        .flight-search-container-row {
+            width: 95%;
+            max-width: 1400px;
+            margin: -50px auto 40px auto; 
+            position: relative;
+            z-index: 10;
+            background: #050505;
+            border: 2px solid #10b981;
+            border-radius: 12px;
+            padding: 20px 25px;
+            box-shadow: 0 10px 40px rgba(16, 185, 129, 0.25);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .flight-box-headline-text {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .flight-box-headline-text span {
+            color: #10b981;
+        }
+        .flight-reply-note {
+            font-size: 12px;
+            color: #10b981;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: none;
+        }
+        
         .flight-search-form-row {
             display: flex;
+            align-items: center;
+            gap: 12px;
+            width: 100%;
             flex-wrap: wrap;
-            gap: 15px;
-            align-items: flex-end;
+            justify-content: space-between;
         }
+        
         .flight-input-group {
             display: flex;
             flex-direction: column;
             gap: 5px;
             flex: 1;
-            min-width: 130px;
+            min-width: 100px;
         }
-        .flight-input-group label { font-size: 12px; font-weight: 700; color: #10b981; text-transform: uppercase; }
-        .flight-input-group select, .flight-input-group input {
-            background: #111;
-            border: 1px solid #333;
-            color: #fff;
+        .flight-input-group label {
+            color: #94a3b8;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .flight-input-group select, 
+        .flight-input-group input {
+            background: #111111;
+            color: #ffffff;
+            border: 1px solid rgba(16, 185, 129, 0.4);
             padding: 10px;
-            border-radius: 4px;
-            font-size: 14px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
             outline: none;
             width: 100%;
+            transition: border 0.3s ease;
         }
-        .flight-input-group select:focus, .flight-input-group input:focus { border-color: #10b981; }
-        .flight-action-group { display: flex; gap: 10px; }
-        .btn-flight-wa, .btn-flight-email {
-            padding: 10px 20px;
-            border-radius: 4px;
+        .flight-input-group select:focus, 
+        .flight-input-group input:focus {
+            border-color: #10b981;
+        }
+        .flight-input-group select option {
+            background: #000000;
+            color: #ffffff;
+        }
+        
+        /* Specialized Form Actions Group */
+        .flight-action-group {
+            display: flex;
+            gap: 10px;
+            align-items: flex-end;
+            flex: 2;
+            min-width: 250px;
+        }
+        .btn-flight-wa {
+            background: #25D366;
+            color: #ffffff;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 14px;
-            display: inline-flex;
+            font-size: 13px;
+            font-weight: 800;
+            padding: 10px 15px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+            display: flex;
             align-items: center;
             gap: 8px;
-            cursor: pointer;
-            border: none;
-            white-space: nowrap;
+            flex: 1;
+            justify-content: center;
+            height: 42px;
         }
-        .btn-flight-wa { background: #10b981; color: #000; }
-        .btn-flight-wa svg { width: 16px; height: 16px; fill: #000; }
-        .btn-flight-email { background: #111; border: 1px solid #10b981; color: #10b981; }
+        .btn-flight-wa:hover {
+            background: #1ebd5b;
+            transform: translateY(-2px);
+        }
+        .btn-flight-wa svg {
+            width: 18px; height: 18px; fill: white;
+        }
+        .btn-flight-email {
+            background: #10b981;
+            color: #000000;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 800;
+            padding: 10px 15px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 42px;
+            flex: 1;
+        }
+        .btn-flight-email:hover {
+            background: #059669;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
 
-        /* TREKKING CARD MATRIX GRID */
-        .trekking-section-wrapper { padding: 60px 40px 20px; text-align: center; }
-        .section-title h2 { font-family: 'Playfair Display', serif; font-size: 36px; color: #10b981; margin-bottom: 10px; }
-        .section-title p { max-width: 700px; margin: 0 auto; color: #cbd5e1; }
-        
+        /* PERSISTENT ULTRA-ACCESSIBLE FLOATING WHATSAPP BADGE */
+        .persistent-whatsapp-topright {
+            position: fixed;
+            top: 160px;
+            right: 25px;
+            background: #25D366;
+            color: #ffffff;
+            width: 85px;        
+            height: 85px;       
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            text-decoration: none;
+            transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s ease;
+            animation: ultraWhatsAppPulse 1.6s infinite ease-in-out;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
+        }
+        .persistent-whatsapp-topright:hover { transform: scale(1.1); background: #1ebd5b; }
+        .persistent-whatsapp-topright .wa-svg-icon { width: 34px; height: 34px; fill: #ffffff; display: block; margin-bottom: 3px; }
+        .persistent-whatsapp-topright .wa-label { font-size: 9.5px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; color: #ffffff; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); white-space: nowrap; }
+
+        @keyframes ultraWhatsAppPulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7), 0 0 0 0 rgba(37, 211, 102, 0.4), 0 10px 25px rgba(0,0,0,0.4); }
+            50% { transform: scale(1.02); }
+            100% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0), 0 0 0 30px rgba(37, 211, 102, 0), 0 10px 25px rgba(0,0,0,0.4); transform: scale(1); }
+        }
+
+        /* DYNAMIC GRID ARCHITECTURES */
         .grid-four-columns {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            padding: 20px 40px 60px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 28px;
+            max-width: 1400px;
+            margin: 0 auto 50px auto;
+            padding: 0 24px;
+        }
+
+        /* SECTION HEADERS */
+        .trekking-section-wrapper, .tours-section-wrapper, .flight-section-wrapper {
+            background: #000000;
+            padding: 50px 8% 40px 8%;
+            text-align: center;
+        }
+        .trekking-section-wrapper .section-title h2,
+        .tours-section-wrapper .section-title h2,
+        .flight-section-wrapper .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+            text-shadow: 0 4px 20px rgba(16, 185, 129, 0.2);
+            text-transform: uppercase;
+        }
+        .trekking-section-wrapper .section-title p,
+        .tours-section-wrapper .section-title p,
+        .flight-section-wrapper .section-title p {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #10b981;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .trekking-section-wrapper .section-title::after,
+        .tours-section-wrapper .section-title::after,
+        .flight-section-wrapper .section-title::after { 
+            content: ''; display: block; width: 70px; height: 4px; background: #10b981; margin: 16px auto 0 auto; border-radius: 2px; 
+        }
+
+        /* CARDS RE-ENGINEERING PACKAGES - BLACK/GREEN */
+        .card {
+            background: #0a0a0a;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.05);
+            transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+        .card:hover { transform: translateY(-6px); box-shadow: 0 15px 35px rgba(16, 185, 129, 0.2); border-color: #10b981; }
+        .card img.main-card-img { width: 100%; height: 215px; object-fit: cover; display: block; }
+        
+        .card-info { padding: 24px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .card-info h3 { margin: 0 0 12px 0; font-size: 19px; color: #ffffff; font-weight: 700; line-height: 1.4; font-family: 'Playfair Display', serif; }
+        .card-info p.short-desc { color: #cbd5e1; font-size: 14px; margin: 0 0 22px 0; line-height: 1.6; flex-grow: 1; }
+
+        /* FLOATING PACKAGED RIBBON BRANDS - RED (AS REQUESTED) */
+        .package-price-banner-floating {
+            position: absolute !important; 
+            top: 12px !important; 
+            right: 12px !important; 
+            background: linear-gradient(135deg, #ef4444, #b91c1c) !important; 
+            color: #ffffff !important; 
+            font-size: 12px !important; 
+            font-weight: 800 !important; 
+            padding: 7px 14px !important; 
+            border-radius: 6px !important; 
+            letter-spacing: 0.8px !important; 
+            box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4) !important; 
+            z-index: 5 !important; 
+            text-transform: uppercase !important;
+        }
+        .package-price-strike {
+            text-decoration: line-through; 
+            opacity: 0.8; 
+            font-size: 10.5px; 
+            margin-right: 6px;
+            font-weight: 600;
+        }
+
+        /* CTAS ACTION OPERATORS CONFIG */
+        .btn-group { display: flex; gap: 10px; justify-content: center; margin-top: auto; width: 100%; }
+        .btn-details { background: #10b981; color: #000000; padding: 11px 16px; border-radius: 6px; text-decoration: none; font-size: 13px; font-weight: 800; transition: background 0.2s ease; text-transform: uppercase; flex: 1; text-align: center; }
+        .btn-whatsapp { background: #25D366; color: #000000; padding: 11px 16px; border-radius: 6px; text-decoration: none; font-size: 13px; font-weight: 800; display: flex; align-items: center; gap: 5px; transition: background 0.2s ease; justify-content: center; text-transform: uppercase; flex: 1; }
+        .btn-details:hover { background: #059669; color:#ffffff;}
+        .btn-whatsapp:hover { background: #1ebd5b; color:#ffffff;}
+
+        /* CREW MATRICES CREATION MODULE */
+        .staff-section-wrapper {
+            background-color: #000000;
+            padding: 60px 8% 100px 8%;
+        }
+        .staff-headline-row {
+            text-align: center;
+            background: #050505;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 35px 40px;
+            border-radius: 16px;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.1);
+        }
+        .staff-headline-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+        .staff-headline-text p {
+            color: #10b981;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            font-weight: 600;
+            margin: 0;
+        }
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
             max-width: 1400px;
             margin: 0 auto;
         }
-        .card {
+        .staff-card {
             background: #0a0a0a;
-            border: 1px solid #111;
-            border-radius: 8px;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 16px;
             overflow: hidden;
-            position: relative;
-            transition: transform 0.3s ease, border-color 0.3s ease;
+            transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+            display: flex;
+            flex-direction: column;
         }
-        .card:hover { transform: translateY(-5px); border-color: #10b981; }
-        .main-card-img { width: 100%; height: 240px; object-fit: cover; display: block; }
-        .package-price-banner-floating {
+        .staff-card:hover {
+            transform: translateY(-8px);
+            border-color: #10b981;
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2);
+        }
+        .staff-img-box {
+            height: 240px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .staff-price-tag {
             position: absolute;
             top: 15px;
             right: 15px;
             background: #10b981;
-            color: #000;
+            color: #000000;
             font-weight: 800;
-            padding: 6px 12px;
-            border-radius: 4px;
-            font-size: 13px;
+            font-size: 0.9rem;
+            padding: 6px 14px;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.8);
         }
-        .package-price-strike { text-decoration: line-through; margin-right: 5px; opacity: 0.6; }
-        .card-info { padding: 25px; }
-        .card-info h3 { color: #fff; font-size: 20px; margin-bottom: 12px; }
-        .short-desc { color: #cbd5e1; font-size: 14px; margin-bottom: 20px; min-height: 66px; }
-        .btn-group { display: flex; gap: 12px; }
-        .btn-details, .btn-whatsapp {
-            flex: 1;
-            text-align: center;
-            padding: 10px;
-            border-radius: 4px;
-            font-weight: 700;
-            text-decoration: none;
-            font-size: 14px;
+        .staff-body {
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
         }
-        .btn-details { background: #111; border: 1px solid #333; color: #fff; }
-        .btn-details:hover { border-color: #10b981; color: #10b981; }
-        .btn-whatsapp { background: #10b981; color: #000; }
-
-        /* PREMIUM BRANDED FOOTER OVERLAY */
-        footer {
-            background: #050505;
-            border-top: 3px solid #10b981;
-            padding: 60px 40px 20px;
-            color: #cbd5e1;
-        }
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            max-width: 1400px;
-            margin: 0 auto 40px;
-        }
-        .footer-column h4 {
+        .staff-role {
             color: #10b981;
-            font-size: 16px;
+            font-size: 0.75rem;
             text-transform: uppercase;
-            margin-bottom: 20px;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .staff-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .staff-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 15px;
+        }
+        .badge-item {
+            background: #111111;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            color: #cbd5e1;
+            font-size: 0.7rem;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+        .badge-item.highlight {
+            background: rgba(16, 185, 129, 0.2);
+            border-color: #10b981;
+            color: #10b981;
+        }
+        .staff-desc { color: #94a3b8; font-size: 0.85rem; line-height: 1.5; margin-bottom: 25px; }
+        
+        .staff-actions-container { margin-top: auto; display: flex; flex-direction: column; gap: 10px; }
+        .btn-live-talk {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: #25D366;
+            color: #000000;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 800;
+            border-radius: 6px;
+            height: 44px;
+            transition: background 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
+        }
+        .btn-live-talk:hover { background: #1ebd5b; color:#ffffff; transform: translateY(-2px); }
+        .staff-secondary-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 700;
+            border-radius: 6px;
+            height: 40px;
+            transition: all 0.3s ease;
+        }
+        .btn-book { background: transparent; border: 1px solid #10b981; color: #10b981; }
+        .btn-book:hover { background: #10b981; color: #000000; }
+        .btn-email { background: #111111; border: 1px solid rgba(255, 255, 255, 0.2); color: #ffffff; }
+        .btn-email:hover { background: #ffffff; color: #000000; border-color: #ffffff; }
+        .staff-actions-container svg { width: 16px; height: 16px; fill: currentColor; }
+
+        /* FOOTER BRAND ARCHITECTURE - BLACK AND GREEN REWRITE */
+        .compact-footer {
+            background-color: #050505;
+            color: #e2e8f0;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            padding: 40px 20px 20px 20px;
             position: relative;
+            border-top: 4px solid #10b981;
         }
-        .footer-column h4::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -6px;
-            width: 35px;
-            height: 2px;
-            background: #10b981;
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 0.9fr 1.5fr 0.8fr; 
+            gap: 24px;
+            align-items: flex-start;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(16, 185, 129, 0.3);
         }
-        .footer-column p { font-size: 14px; line-height: 1.7; }
-        .footer-column ul { list-style: none; }
-        .footer-column ul li { margin-bottom: 12px; }
-        .footer-column ul li a { color: #cbd5e1; text-decoration: none; font-size: 14px; transition: color 0.2s ease; }
-        .footer-column ul li a:hover { color: #10b981; padding-left: 4px; }
-        .footer-contact-item { display: flex; gap: 10px; margin-bottom: 12px; font-size: 14px; }
-        .footer-bottom {
-            border-top: 1px solid #111;
-            padding-top: 20px;
+
+        .footer-brand-block { display: flex; flex-direction: column; gap: 8px; }
+        .footer-brand-title { display: flex; flex-direction: column; gap: 5px; }
+
+        .brand-tours-name {
+            font-size: 16px;
+            font-weight: 800;
+            color: #10b981;
+            letter-spacing: 0.5px;
+            margin: 0;
+            position: relative;
+            padding-bottom: 2px;
+            border-bottom: 2px solid #10b981;
+            width: fit-content;
+        }
+
+        .brand-treks-name {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #e2e8f0;
+            letter-spacing: 0.5px;
+            margin: 0;
+            position: relative;
+            padding-bottom: 2px;
+            border-bottom: 1px dashed #10b981;
+            width: fit-content;
+            margin-top: 2px;
+        }
+
+        .footer-brand-block p {
+            font-size: 11.5px;
+            line-height: 1.5;
+            color: #94a3b8;
+            margin: 4px 0 0 0;
+        }
+
+        .footer-logo-board {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 6px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-logo-board .logo-link { display: inline-flex; transition: transform 0.2s ease; }
+        .footer-logo-board .logo-link:hover { transform: translateY(-2px); }
+
+        .footer-logo-card {
+            background: #ffffff;
+            padding: 2px 4px;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 28px;
+            box-sizing: border-box;
+            border: 1px solid #10b981;
+        }
+
+        .footer-logo-card img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+        .footer-middle-hub { display: flex; flex-direction: column; gap: 8px; }
+        .footer-middle-hub span {
+            font-size: 10.5px;
+            font-weight: 700;
+            color: #10b981;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .social-vector-dock { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+        .social-vector-dock a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 8px;
+            background: #111111;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .social-vector-dock a img {
+            width: 22px;
+            height: 22px;
+            filter: invert(70%) sepia(50%) saturate(500%) hue-rotate(100deg);
+            transition: filter 0.2s ease;
+        }
+        .social-vector-dock a:hover { border-color: #10b981; background: #10b981; }
+        .social-vector-dock a:hover img { filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg); } /* Icon turns black on hover */
+
+        .footer-map-hub { display: flex; flex-direction: column; gap: 8px; }
+        .footer-map-hub span {
+            font-size: 10.5px;
+            font-weight: 700;
+            color: #10b981;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-map-wrapper {
+            width: 100%;
+            height: 135px; 
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #10b981;
+            box-shadow: 0 4px 12px rgba(16,185,129,0.1);
+        }
+
+        .footer-map-wrapper iframe { width: 100%; height: 100%; border: 0; }
+
+        .footer-nav-block { display: flex; flex-direction: column; gap: 16px; }
+        .footer-column { display: flex; flex-direction: column; gap: 5px; }
+        .footer-column span {
+            font-size: 10.5px;
+            font-weight: 700;
+            color: #10b981;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .short-menu-grid { display: flex; flex-direction: row; gap: 10px; flex-wrap: wrap; }
+        .short-menu-grid a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            transition: color 0.15s ease;
+        }
+        .short-menu-grid a:hover { color: #10b981; }
+
+        .compact-logistics { font-size: 11.5px; color: #94a3b8; line-height: 1.4; font-weight: 500; }
+        .compact-logistics a { color: #10b981; text-decoration: none; font-weight: 700; }
+        .com-contacts { margin-top: 2px; display: flex; flex-direction: column; gap: 3px; }
+        .wa-link-inline { color: #25D366 !important; font-weight: 700 !important; }
+
+        .footer-bottom-strip {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            max-width: 1400px;
-            margin: 0 auto;
-            font-size: 13px;
+            font-size: 11px;
+            color: #64748b;
+            font-weight: 600;
         }
-        .footer-bottom-links a { color: #cbd5e1; text-decoration: none; margin-left: 15px; }
-        .footer-bottom-links a:hover { color: #10b981; }
+
+        .footer-bottom-strip span a { color: #64748b; text-decoration: none; margin-left: 10px; }
+        .footer-bottom-strip span a:hover { color: #10b981; }
+
+        /* VIEWPORT BREAKPOINT RE-CONFIGURATIONS (MOBILE FRIENDLY FORCE) */
+        @media (max-width: 1300px) {
+            .grid-four-columns, .staff-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+        }
+
+        @media (max-width: 1200px) {
+            .topbar { padding: 10px 20px; justify-content: center; text-align: center; }
+            .navbar { padding: 15px 24px; justify-content: space-between; } 
+            .mobile-menu-toggle { display: block; }
+            
+            .menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #050505;
+                flex-direction: column;
+                align-items: stretch;
+                padding: 12px 0;
+                box-shadow: 0 12px 30px rgba(16, 185, 129, 0.2);
+                max-height: 80vh;
+                overflow-y: auto;
+                gap: 0;
+                border-bottom: 2px solid #10b981;
+            }
+            .menu.mobile-active { display: flex; }
+            
+            .menu a.nav-item-link {
+                padding: 14px 24px;
+                border-radius: 0;
+                font-size: 15.5px;
+                border-bottom: 1px solid #1a1a1a;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: #ffffff !important;
+            }
+            
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
+                border-radius: 0;
+                border-top: none;
+                background: #111111;
+                border: none;
+                max-height: none;
+                width: 100%;
+                margin-top: 0;
+            }
+            .dropdown-content a { padding: 12px 36px; border-bottom: 1px solid #222222; color: #e2e8f0 !important; }
+            .dropdown.open-active .dropdown-content { display: block; }
+            
+            .footer-content { grid-template-columns: 1fr 1fr; gap: 25px; }
+        }
+
+        @media (max-width: 1024px) {
+            .features-row { flex-direction: column; gap: 20px; }
+            .feature-box { padding: 10px 0; }
+            .feature-box:not(:last-child)::after { display: none; }
+            .features-container { position: relative; bottom: auto; left: auto; transform: none; width: 100%; border-radius: 0; background: #000000; padding: 40px 24px; border-top: 1px solid rgba(16, 185, 129, 0.3); }
+            .hero-slider-container, .slide { height: 75vh; }
+            .slide-title { font-size: 2.5rem; }
+            .slide-content { left: 5%; right: 5%; top: 45%; }
+            .slider-dots { right: 25px; }
+            
+            .footer-nav-block {
+                flex-direction: row;
+                grid-column: span 2;
+                border-top: 1px solid #10b981;
+                padding-top: 16px;
+                justify-content: space-between;
+            }
+            .short-menu-grid { flex-direction: column; gap: 5px; }
+        }
+
+        @media (max-width: 768px) {
+            .navbar { flex-wrap: wrap; padding: 12px 20px; }
+            .dual-brand-header-text { white-space: normal; }
+            .brand-top { font-size: 13px; }
+            .brand-bottom { font-size: 11.5px; }
+            .hero-slider-container, .slide { height: 60vh; }
+            .slide-title { font-size: 1.9rem; }
+            .slide-subtitle { font-size: 0.95rem; }
+            .trekking-section-wrapper .section-title h2,
+            .tours-section-wrapper .section-title h2,
+            .flight-section-wrapper .section-title h2,
+            .staff-headline-row h2 { font-size: 1.8rem; }
+            
+            .flight-search-container-row { margin-top: -30px; padding: 15px; }
+            .flight-search-form-row { flex-direction: column; align-items: stretch; }
+            .flight-input-group { min-width: 100%; }
+            .flight-action-group { flex-direction: column; }
+            .flight-box-headline-text { flex-direction: column; gap: 10px; text-align: center; }
+            
+            .footer-content { grid-template-columns: 1fr; text-align: center; gap: 24px; }
+            .footer-logo-board, .social-vector-dock { justify-content: center; }
+            .footer-nav-block { grid-column: span 1; flex-direction: column; align-items: center; }
+            .short-menu-grid { flex-direction: row; justify-content: center; gap: 12px; }
+            .footer-bottom-strip { flex-direction: column; gap: 6px; text-align: center; }
+            
+            .grid-four-columns, .staff-grid { grid-template-columns: 1fr; padding: 0 16px; margin-bottom: 35px; }
+            .staff-headline-row { padding: 25px 20px; }
+            .staff-headline-text p { font-size: 1rem; }
+
+            .persistent-whatsapp-topright {
+                top: auto;
+                bottom: 25px; 
+                right: 20px;
+                width: 76px;
+                height: 76px;
+            }
+            .persistent-whatsapp-topright .wa-svg-icon { width: 30px; height: 30px; }
+            .persistent-whatsapp-topright .wa-label { font-size: 8.5px; }
+        }
     </style>
 </head>
 <body>
 
-    <div class="navbar">
-        <div class="logo-section">
-            <div class="logo">
-                <img src="Tlogo.jpeg.jpg" alt="Tilicho Tours Logo">
-            </div>
-            <div class="dual-brand-header-text">
-                <p class="brand-top">Tilicho Tours & Travels</p>
-                <hr class="brand-divider">
-                <p class="brand-bottom">Tilicho Treks & Expedition</p>
-            </div>
-        </div>
+<!-- FLOATING CONNECTIVITY BADGE -->
+<a href="https://wa.me/9779856023917" class="persistent-whatsapp-topright" target="_blank" title="Contact Now for any Inquiry by WhatsApp">
+    <svg class="wa-svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.456L0 24zm6.59-4.846c1.6.95 3.488 1.449 5.412 1.451 5.428 0 9.85-4.417 9.854-9.849.002-2.631-1.019-5.101-2.875-6.959-1.856-1.857-4.321-2.879-6.953-2.88-5.432 0-9.854 4.417-9.858 9.853-.002 1.982.518 3.916 1.507 5.627L1.445 22.566l6.202-1.628zm10.746-6.74c-.297-.148-1.758-.867-2.031-.967-.273-.099-.471-.148-.669.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    </svg>
+    <span class="wa-label">Inquiry Now</span>
+</a>
 
-        <button class="mobile-menu-toggle" id="menuToggleBtn" aria-label="Toggle Navigation Menu">☰</button>
+<!-- TOP CONTEXT BAR -->
+<div class="topbar">
+    <div>Premium Adventure Tour and Trek Partners in Pokhara, Nepal</div>
+    <div class="topbar-info-wrapper">
+        <span>✉️ <a href="mailto:tilichotours074@gmail.com">tilichotours074@gmail.com</a></span>
+        <span>📞 <a href="tel:+977061455269">+977-061455269</a></span>
+        <span>📱 <a href="tel:+9779856023917">+977-9856023917</a></span>
+    </div>
+    <!-- ADDED ICON MODULE DECK HERE -->
+    <div class="topbar-social-wrapper">
+        <a href="https://www.facebook.com/" class="topbar-social-link" target="_blank" title="Facebook">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/" class="topbar-social-link" target="_blank" title="Instagram">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+        </a>
+        <a href="https://www.tiktok.com/" class="topbar-social-link" target="_blank" title="TikTok">
+            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
+        </a>
+        <a href="https://www.tripadvisor.com/" class="topbar-social-link" target="_blank" title="TripAdvisor">
+            <img src="https://cdn-icons-png.flaticon.com/512/2504/2504944.png" alt="TripAdvisor">
+        </a>
+        <a href="https://www.google.com/" class="topbar-social-link" target="_blank" title="Google">
+            <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" alt="Google">
+        </a>
+        <a href="https://www.linkedin.com/" class="topbar-social-link" target="_blank" title="LinkedIn">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+        </a>
+    </div>
+</div>
+
+<!-- NAVIGATIONBAR -->
+<nav class="navbar">
+    <div class="logo-section">
+        <div class="logo"><img src="webimage/Tlogo.jpeg" alt="Tilicho Tours and Travels Logo"></div>
+        <div class="dual-brand-header-text">
+            <span class="brand-top">Tilicho Tours And Travels Pvt. Ltd.</span>
+            <hr class="brand-divider">
+            <span class="brand-bottom">Tilicho Treks & Expedition Pvt. Ltd.</span>
+        </div>
+    </div>
+    
+    <button class="mobile-menu-toggle" id="menuToggleBtn" aria-label="Toggle Navigation Menu">☰</button>
+    
+    <div class="menu" id="mainNavbarMenu">
+        <a href="index.html" class="nav-item-link">Home</a>
         
-        <div class="menu" id="mainNavbarMenu">
-            <a href="index.html" class="nav-item-link">Home</a>
-            
-            <div class="dropdown">
-                <a href="#" class="nav-item-link">Trekking ▼</a>
-                <div class="dropdown-content">
-                    <ul>
-                        <li><a href="Ghorepani-Poonhill - trek-3 -days.html">Ghorepani Poonhill - 3 Days</a></li>
-                        <li><a href="mardi-himal-trek-4-days.html">Mardi Himal Trek - 4 Days</a></li>   
-                        <li><a href="Annapurna -Base-camp-(ABC)-trek-5-days.html">Annapurna Base Camp - 5 Days</a></li>                                
-                        <li><a href="tilicho-lake-trek-12-days.html">Tilicho Lake Trek - 12 Days</a></li>
-                        <li><a href="Everest-base-camp-trek-13-days.html">Everest Base Camp - 13 Days</a></li>
-                        <li><a href="Manaslu-trek17-days.html">Manaslu Circuit - 17 Days</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="dropdown">
-                <a href="#" class="nav-item-link">Short Treks ▼</a>
-                <div class="dropdown-content">
-                    <ul>
-                        <li><a href="#">Stupa Hiking - 1/2 day</a></li>
-                        <li><a href="#">Sarangkot-Nagarkot Hiking - 1 day</a></li>
-                        <li><a href="#">Australian Camp / Dhampus - 1 day</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="dropdown">
-                <a href="#" class="nav-item-link">Tours & Packages ▼</a>
-                <div class="dropdown-content">
-                    <ul>
-                        <li><a href="pokhara-sightseeing.html">Pokhara Half day sightseeing</a></li>
-                        <li><a href="pokhara-sightseeing.html">Pokhara Full Day Sightseeing</a></li>
-                        <li><a href="muktinath-tour.html">Muktinath Darshan Tour by jeep/van</a></li>
-                        <li><a href="kathmandu-tour.html">Kathmandu Heritage Tour</a></li>
-                    </ul>
-                </div>
-            </div>
-             
-            <div class="dropdown">
-                <a href="#" class="nav-item-link">Adventure ▼</a>
-                <div class="dropdown-content">
-                    <ul>
-                        <li><a href="#">Paragliding</a></li>
-                        <li><a href="#">Ultralight Flight</a></li>
-                        <li><a href="#">Bungee Jump</a></li>
-                        <li><a href="#">Zip Flyer / Zipping</a></li>
-                        <li><a href="#">Hot Air Balloon</a></li>
-                        <li><a href="#">Rafting</a></li>
-                        <li><a href="#">Swing</a></li>
-                        <li><a href="#">Sky Diving</a></li>
-                        <li><a href="#">Horse Riding</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="dropdown">
-                <a href="#" class="nav-item-link">Permits & Guides ▼</a>
-                <div class="dropdown-content">
-                    <ul>
-                        <li><a href="#">Trekking Permit ACAP/ECAP/MCAP</a></li>
-                        <li><a href="#">Trekking TIMS CARD</a></li>
-                        <li><a href="#">Trekking Guide Hiring per/day Basis</a></li>
-                        <li><a href="#">Trekking Porter hiring per/day Basis</a></li>
-                        <li><a href="#">Tour guide hiring per day Basis</a></li>
-                        <li><a href="#">Rock/Mountain climber guide hiring</a></li>
-                        <li><a href="#">Trekking Gear Hiring per day Basis</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="dropdown">
-                 <a href="#" class="nav-item-link">Flight & Heli ▼</a>
-                <div class="dropdown-content">
-                    <ul>
-                        <li><a href="#">Domestic Flight Tickets</a></li>
-                        <li><a href="#">International Flight Tickets</a></li>
-                        <li><a href="#">Mountain Flights</a></li>
-                        <li><a href="#">Mt Everest Helicopter Tour</a></li>
-                        <li><a href="#">Annapurna Base Camp Helicopter</a></li>
-                        <li><a href="#">Muktinath Tour Helicopter</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="dropdown">
-                <a href="#" class="nav-item-link">Vehicles ▼</a>
-                <div class="dropdown-content">
-                    <ul>
-                        <li><a href="#">Tourist Bus Tickets</a></li>
-                        <li><a href="#">Train Tickets</a></li>
-                        <li><a href="#">Car Hire / Reserve</a></li>
-                        <li><a href="#">4x4 Scorpio/Jeep Reserve</a></li>
-                        <li><a href="#">10-15 Seater Hiace / Van</a></li>
-                        <li><a href="#">Coaster / Big Bus Reserve</a></li>
-                        <li><a href="#">Mountain Bike Rental</a></li>
-                        <li><a href="#">Wedding Decorated Car</a></li>
-                        <li><a href="#">Self-Drive Options</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="dropdown">
-                <a href="#" class="nav-item-link">Our Team ▼</a>
-                <div class="dropdown-content">
-                    <ul>
-                        <li><a href="guides.html">Management & Administration</a></li>
-                        <li><a href="guides.html">Our Licensed Guides</a></li>
-                        <li><a href="guides.html">Porters Team</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="dropdown">
-                 <a href="#" class="nav-item-link">Contact Desk ▼</a>
-                <div class="dropdown-content">
-                    <ul>
-                        <li><a href="address.html">Company Address</a></li>
-                        <li><a href="blog.html">Trek Info / Blogs</a></li>
-                        <li><a href="gallery.html">Photo Gallery</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="hero-slider-container">
-        <div class="slider-wrapper" id="sliderWrapper">
-            
-            <div class="slide active" style="background-image: url('Pokharaviewfromstupa.jpeg');">
-                <div class="slide-content">
-                    <div class="brand-intro-wrapper">
-                        <span class="established-tag">Established 2006</span>
-                        <div class="frame-caption-bar">Welcome to Tilicho Tours, Treks & Expedition</div>
-                    </div>
-                    <h1 class="slide-title">Discover Himalayan Trekking Packages Of Nepal with <span>Tilicho Tours and Travels</span></h1>
-                    <p class="slide-subtitle">Trusted since 2006 for expert trekking routes, historic heritage tours, private overland transport logistics, and breathtaking Himalayan excursions.</p>
-                </div>
-            </div>
-
-            <div class="slide" style="background-image: url('adventureinpokhara.jpeg');">
-                <div class="slide-content">
-                    <div class="brand-intro-wrapper">
-                        <span class="established-tag">Established 2006</span>
-                        <div class="frame-caption-bar">Premium Sky Logistics</div>
-                    </div>
-                    <h1 class="slide-title">Experience Thrilling <span>Everest Mountain Flights, Paragliding, Ultralight & Skydiving</span> Himalayan Adventures</h1>
-                    <p class="slide-subtitle">Soar directly above iconic ridges and land straight into high-altitude wonders with flawless operational routing and luxury privacy options.</p>
-                </div>
-            </div>
-
-            <div class="slide" style="background-image: url('ghandrukvillage.jpeg');">
-                <div class="slide-content">
-                    <div class="brand-intro-wrapper">
-                        <span class="established-tag">Established 2006</span>
-                        <div class="frame-caption-bar">Untamed Wilderness Pathways</div>
-                    </div>
-                    <h1 class="slide-title">Trek The Majestic <span>Annapurna & Everest & Masanslu Mountain </span> Trails</h1>
-                    <p class="slide-subtitle">Immerse your spirit into pristine alpine passes alongside our veteran sherpa guides, backed by unparalleled logistical safety systems.</p>
-                </div>
-            </div>
-
-            <div class="slide" style="background-image: url('tilicholakeslide1.jpeg');">
-                <div class="slide-content">
-                    <div class="brand-intro-wrapper">
-                        <span class="established-tag">Established 2006</span>
-                        <div class="frame-caption-bar">Himalayan Wisdom & Journey</div>
-                    </div>
-                    <h1 class="slide-title">“The Best Views Come After <span>The Hardest Climb</span> In The Sacred Peaks”</h1>
-                    <p class="slide-subtitle">Uncover profound structural transformations along the high-altitude trails, opening exceptional new vantage paths across remote valley ecosystems.</p>
-                </div>
-            </div>
-
-            <div class="slide" style="background-image: url('everestbasecamptrek.jpeg');">
-                <div class="slide-content">
-                    <div class="brand-intro-wrapper">
-                        <span class="established-tag">Established 2006</span>
-                        <div class="frame-caption-bar">Global Exploration Ethos</div>
-                    </div>
-                    <h1 class="slide-title">“Travel Is The Only Thing <span>You Buy That Makes You Richer</span> In Adventure”</h1>
-                    <p class="slide-subtitle">Expand your boundaries with perfectly coordinated Himalayan routing and expert native sherpa support designed for absolute immersion.</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="slider-dots">
-            <div class="dot active" onclick="goToSlide(0)"></div>
-            <div class="dot" onclick="goToSlide(1)"></div>
-            <div class="dot" onclick="goToSlide(2)"></div>
-            <div class="dot" onclick="goToSlide(3)"></div>
-            <div class="dot" onclick="goToSlide(4)"></div>
-        </div>
-
-        <div class="features-container">
-            <div class="features-row">
-                <div class="feature-box">
-                    <div class="feature-icon">🗺️</div>
-                    <div class="feature-title">Govt. Authorized</div>
-                    <div class="feature-desc">Fully licensed operator in Nepal since 2006.</div>
-                </div>
-                <div class="feature-box">
-                    <div class="feature-icon">🏔️</div>
-                    <div class="feature-title">Fully Insured Crew</div>
-                    <div class="feature-desc">Licensed wilderness guides & porters.</div>
-                </div>
-                <div class="feature-box">
-                    <div class="feature-icon">⭐</div>
-                    <div class="feature-title">Reliable Logistics</div>
-                    <div class="feature-desc">Premium vehicles & direct ticketing platforms.</div>
-                </div>
-                <div class="feature-box">
-                    <div class="feature-icon">🤝</div>
-                    <div class="feature-title">Guaranteed Departures</div>
-                    <div class="feature-desc">Smooth operations & flexible routing choices.</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="flight-search-container-row">
-        <div class="flight-box-headline-text">
-            <span>Book Your Flight Ticket</span>
-            <div class="flight-reply-note">We will reply you very soon</div>
-        </div>
-        
-        <div class="flight-search-form-row">
-            <div class="flight-input-group">
-                <label>Type</label>
-                <select>
-                    <option value="international">International</option>
-                    <option value="domestic">Domestic</option>
-                </select>
-            </div>
-            <div class="flight-input-group">
-                <label>Trip</label>
-                <select>
-                    <option value="oneway">One Way</option>
-                    <option value="bothway">Both Way</option>
-                </select>
-            </div>
-            <div class="flight-input-group">
-                <label>Nationality </label>
-                <input type="text" placeholder="e.g., Country">
-            </div>
-            <div class="flight-input-group">
-                <label>From</label>
-                <input type="text" placeholder="e.g., KTM or BKK">
-            </div>
-            <div class="flight-input-group">
-                <label>To</label>
-                <input type="text" placeholder="e.g., DEL or BKK">
-            </div>
-            <div class="flight-input-group">
-                <label>Date</label>
-                <input type="date">
-            </div>
-            <div class="flight-input-group">
-                <label>Time</label>
-                <select>
-                    <option>7:00 AM</option>
-                    <option>8:00 AM</option>
-                    <option>9:00 AM</option>
-                    <option>10:00 AM</option>
-                    <option>11:00 AM</option>
-                    <option>12:00 PM</option>
-                    <option>1:00 PM</option>
-                    <option>2:00 PM</option>
-                    <option>3:00 PM</option>
-                    <option>4:00 PM</option>
-                    <option>5:00 PM</option>
-                    <option>6:00 PM</option>
-                    <option>7:00 PM</option>
-                    <option>8:00 PM</option>
-                    <option>9:00 PM</option>
-                    <option>10:00 PM</option>
-                </select>
-            </div>
-            <div class="flight-input-group" style="min-width: 60px;">
-                <label>Adult</label>
-                <select>
-                    <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
-                    <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
-                </select>
-            </div>
-            <div class="flight-input-group" style="min-width: 60px;">
-                <label>Child</label>
-                <select>
-                    <option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
-                    <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
-                </select>
-            </div>
-            <div class="flight-input-group">
-                <label>Extra request </label>
-                <input type="text" placeholder="e.g. extra bag / other req">
-            </div>
-
-            <div class="flight-action-group">
-                <a href="https://wa.me/9779856023917?text=Flight%20Booking%20Request" class="btn-flight-wa" target="_blank">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.456L0 24zm6.59-4.846c1.6.95 3.488 1.449 5.412 1.451 5.428 0 9.85-4.417 9.854-9.849.002-2.631-1.019-5.101-2.875-6.959-1.856-1.857-4.321-2.879-6.953-2.88-5.432 0-9.854 4.417-9.858 9.853-.002 1.982.518 3.916 1.507 5.627L1.445 22.566l6.202-1.628z"/>
-                    </svg> Search
-                </a>
-                <a href="mailto:tilichotours074@gmail.com?subject=Flight%20Booking%20Request" class="btn-flight-email">
-                    Email
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="trekking-section-wrapper">
-        <div class="section-title">
-            <h2>Most Popular Trekkings In Nepal</h2>
-            <p>Select Your Nepal Trekking Package & Contact Us by WhatsApp or Email for Customized Everest, Annapurna & Manaslu Trek Adventures.</p>
-        </div>
-    </div>
-
-    <div class="grid-four-columns">
-        <div class="card">
-            <img class="main-card-img" src="Abctrekmyself.jpeg" onerror="this.src='https://images.unsplash.com/photo-1585016495481-91613a3ab1bc?auto=format&fit=crop&w=500&q=80'" alt="Annapurna Base Camp ABC Trek 5 Days">
-            <div class="package-price-banner-floating">
-                <span class="package-price-strike">$399</span>$359 ONLY
-            </div>
-            <div class="card-info">
-                <h3>ABC Trek — 5 Days</h3>
-                <p class="short-desc">Stand inside the spectacular, snow-covered mountain amphitheater of the legendary high Annapurna Sanctuary base camp basin.</p>
-                <div class="btn-group">
-                    <a href="Annapurna -Base-camp-(ABC)-trek-5-days.html" class="btn-details">Details</a>
-                    <a href="https://wa.me/9779856023917?text=Inquiry%20ABC%20Trek%205%20Days%20Full%20Package" class="btn-whatsapp" target="_blank">💬 Contact</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <img class="main-card-img" src="Poonhilltrek.jpeg" onerror="this.src='https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=500&q=80'" alt="Ghorepani Poonhill Trek 4 Days">
-            <div class="package-price-banner-floating">
-                <span class="package-price-strike">$310</span>$279 ONLY
-            </div>
-            <div class="card-info">
-                <h3>Ghorepani / Poonhill Trek — 4 Days</h3>
-                <p class="short-desc">Experience golden panoramic sunrises over Dhaulagiri, Hiunchuli, and Machhapuchhre from the famous Poonhill ridge viewpoint.</p>
-                <div class="btn-group">
-                    <a href="Ghorepani-Poonhill - trek-3 -days.html" class="btn-details">Details</a>
-                    <a href="https://wa.me/9779856023917?text=Inquiry%20Ghorepani%20Poonhill%20Trek%20Full%20Package" class="btn-whatsapp" target="_blank">💬 Contact</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <img class="main-card-img" src="mardihimaltrek.jpeg" onerror="this.src='https://images.unsplash.com/photo-1627894483216-2138af692e32?auto=format&fit=crop&w=500&q=80'" alt="Mardi Himal Trek 4 Days">
-            <div class="package-price-banner-floating">
-                <span class="package-price-strike">$310</span>$279 ONLY
-            </div>
-            <div class="card-info">
-                <h3>Mardi Himal Trek — 4 Days</h3>
-                <p class="short-desc">An amazing, pristine ridge trail walking directly under the shadow of the spectacular holy Mt. Fishtail peak.</p>
-                <div class="btn-group">
-                    <a href="mardi-himal-trek-4-days.html" class="btn-details">Details</a>
-                    <a href="https://wa.me/9779856023917?text=Inquiry%20Mardi%20Himal%20Trek%204%20Days%20Full%20Package" class="btn-whatsapp" target="_blank">💬 Contact</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-column">
-                <h4>About Tilicho</h4>
-                <p style="margin-top: 10px;">Authorized local adventure and tour specialists operator in Pokhara since 2006. We specialize in tailored Himalayan trekking logistics, private sightseeing options, and reliable expedition management.</p>
-            </div>
-            <div class="footer-column">
-                <h4>Quick Links</h4>
-                <ul style="margin-top: 10px;">
-                    <li><a href="index.html">Home Desk</a></li>
-                    <li><a href="guides.html">Our Licensed Guides Team</a></li>
-                    <li><a href="blog.html">Trek Information & Blogs</a></li>
-                    <li><a href="gallery.html">Photo Exploration Gallery</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Contact Support</h4>
-                <ul style="margin-top: 10px;">
-                    <li class="footer-contact-item">📍 Lakeside-6, Pokhara, Nepal</li>
-                    <li class="footer-contact-item">📞 +977-061455269</li>
-                    <li class="footer-contact-item">💬 +977 9856023917 (WhatsApp)</li>
-                    <li class="footer-contact-item">✉️ tilichotours074@gmail.com</li>
+        <div class="dropdown">
+            <a href="#" class="nav-item-link">Trekking ▼</a>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="Ghorepani-Poonhill - trek-3 -days.html">Ghorepani Poonhill - 3 Days</a></li>
+                    <li><a href="mardi-himal-trek-4-days.html">Mardi Himal Trek - 4 Days</a></li>   
+                    <li><a href="Annapurna -Base-camp-(ABC)-trek-5-days.html">Annapurna Base Camp - 5 Days</a></li>                                
+                    <li><a href="tilicho-lake-trek-12-days.html">Tilicho Lake Trek - 12 Days</a></li>
+                    <li><a href="Everest-base-camp-trek-13-days.html">Everest Base Camp - 13 Days</a></li>
+                    <li><a href="Manaslu-trek17-days.html">Manaslu Circuit - 17 Days</a></li>
                 </ul>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Tilicho Tours And Travels Pvt. Ltd. All Rights Reserved.</p>
-            <div class="footer-bottom-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
+
+        <div class="dropdown">
+            <a href="#" class="nav-item-link">Short Treks ▼</a>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="#">Stupa Hiking - 1/2 day</a></li>
+                    <li><a href="#">Sarangkot-Nagarkot Hiking - 1 day</a></li>
+                    <li><a href="#">Australian Camp / Dhampus - 1 day</a></li>
+                </ul>
             </div>
         </div>
-    </footer>
 
-    <script>
-        // Toggle mobile navbar navigation drawer
-        document.getElementById('menuToggleBtn').addEventListener('click', function() {
-            document.getElementById('mainNavbarMenu').classList.toggle('open');
-        });
+        <div class="dropdown">
+            <a href="#" class="nav-item-link">Tours & Packages ▼</a>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="pokhara-sightseeing.html">Pokhara Half day sightseeing</a></li>
+                    <li><a href="pokhara-sightseeing.html">Pokhara Full Day Sightseeing</a></li>
+                    <li><a href="muktinath-tour.html">Muktinath Darshan Tour by jeep/van</a></li>
+                    <li><a href="kathmandu-tour.html">Kathmandu Heritage Tour</a></li>
+                </ul>
+            </div>
+        </div>
+         
+        <div class="dropdown">
+            <a href="#" class="nav-item-link">Adventure ▼</a>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="#">Paragliding</a></li>
+                    <li><a href="#">Ultralight Flight</a></li>
+                    <li><a href="#">Bungee Jump</a></li>
+                    <li><a href="#">Zip Flyer / Zipping</a></li>
+                    <li><a href="#">Hot Air Balloon</a></li>
+                    <li><a href="#">Rafting</a></li>
+                    <li><a href="#">Swing</a></li>
+                    <li><a href="#">Sky Diving</a></li>
+                    <li><a href="#">Horse Riding</a></li>
+                </ul>
+            </div>
+        </div>
 
-        // Basic Hero Slide Logic (Change value dynamically if required)
-        function goToSlide(slideIndex) {
-            const wrapper = document.getElementById('sliderWrapper');
-            if (wrapper) {
-                wrapper.style.transform = `translateX(-${slideIndex * 20}%)`;
-                
-                // Update dots active configuration
-                const dots = document.querySelectorAll('.dot');
-                dots.forEach(dot => dot.classList.remove('active'));
-                if(dots[slideIndex]) dots[slideIndex].classList.add('active');
-                
-                // Update slides active layout transitions
-                const slides = document.querySelectorAll('.slide');
-                slides.forEach(slide => slide.classList.remove('active'));
-                if(slides[slideIndex]) slides[slideIndex].classList.add('active');
+        <div class="dropdown">
+            <a href="#" class="nav-item-link">Permits & Guides ▼</a>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="#">Trekking Permit ACAP/ECAP/MCAP</a></li>
+                    <li><a href="#">Trekking TIMS CARD</a></li>
+                    <li><a href="#">Trekking Guide Hiring per/day Basis</a></li>
+                    <li><a href="#">Trekking Porter hiring per/day Basis</a></li>
+                    <li><a href="#">Tour guide hiring per day Basis</a></li>
+                    <li><a href="#">Rock/Mountain climber guide hiring</a></li>
+                    <li><a href="#">Trekking Gear Hiring per day Basis</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="dropdown">
+             <a href="#" class="nav-item-link">Flight & Heli ▼</a>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="#">Domestic Flight Tickets</a></li>
+                    <li><a href="#">International Flight Tickets</a></li>
+                    <li><a href="#">Mountain Flights</a></li>
+                    <li><a href="#">Mt Everest Helicopter Tour</a></li>
+                    <li><a href="#">Annapurna Base Camp Helicopter</a></li>
+                    <li><a href="#">Muktinath Tour Helicopter</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="#" class="nav-item-link">Vehicles ▼</a>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="#">Tourist Bus Tickets</a></li>
+                    <li><a href="#">Train Tickets</a></li>
+                    <li><a href="#">Car Hire / Reserve</a></li>
+                    <li><a href="#">4x4 Scorpio/Jeep Reserve</a></li>
+                    <li><a href="#">10-15 Seater Hiace / Van</a></li>
+                    <li><a href="#">Coaster / Big Bus Reserve</a></li>
+                    <li><a href="#">Mountain Bike Rental</a></li>
+                    <li><a href="#">Wedding Decorated Car</a></li>
+                    <li><a href="#">Self-Drive Options</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="#" class="nav-item-link">Our Team ▼</a>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="guides.html">Management & Administration</a></li>
+                    <li><a href="guides.html">Our Licensed Guides</a></li>
+                    <li><a href="guides.html">Porters Team</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="dropdown">
+             <a href="#" class="nav-item-link">Contact Desk ▼</a>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="address.html">Company Address</a></li>
+                    <li><a href="blog.html">Trek Info / Blogs</a></li>
+                    <li><a href="gallery.html">Photo Gallery</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO CONTAINER SLIDER SYSTEM -->
+<div class="hero-slider-container">
+    <div class="slider-wrapper" id="sliderWrapper">
+        
+        <div class="slide active" style="background-image: url('webimage/Pokharaviewfromstupa.jpeg');">
+            <div class="slide-content">
+                <div class="brand-intro-wrapper">
+                    <span class="established-tag">Established 2006</span>
+                    <div class="frame-caption-bar">Welcome to Tilicho Tours, Treks & Expedition</div>
+                </div>
+                <h1 class="slide-title">Discover Himalayan Trekking Packages Of Nepal with <span>Tilicho Tours and Travels</span></h1>
+                <p class="slide-subtitle">Trusted since 2006 for expert trekking routes, historic heritage tours, private overland transport logistics, and breathtaking Himalayan excursions.</p>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: url('webimage/adventureinpokhara.jpeg');">
+            <div class="slide-content">
+                <div class="brand-intro-wrapper">
+                    <span class="established-tag">Established 2006</span>
+                    <div class="frame-caption-bar">Premium Sky Logistics</div>
+                </div>
+                <h1 class="slide-title">Experience Thrilling <span>Everest Mountain Flights, Paragliding, Ultralight & Skydiving</span> Himalayan Adventures</h1>
+                <p class="slide-subtitle">Soar directly above iconic ridges and land straight into high-altitude wonders with flawless operational routing and luxury privacy options.</p>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: url('webimage/ghandrukvillage.jpeg');">
+            <div class="slide-content">
+                <div class="brand-intro-wrapper">
+                    <span class="established-tag">Established 2006</span>
+                    <div class="frame-caption-bar">Untamed Wilderness Pathways</div>
+                </div>
+                <h1 class="slide-title">Trek The Majestic <span>Annapurna & Everest & Masanslu MOUntain </span> Trails</h1>
+                <p class="slide-subtitle">Immerse your spirit into pristine alpine passes alongside our veteran sherpa guides, backed by unparalleled logistical safety systems.</p>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: url('webimage/tilicholakeslide1.jpeg');">
+            <div class="slide-content">
+                <div class="brand-intro-wrapper">
+                    <span class="established-tag">Established 2006</span>
+                    <div class="frame-caption-bar">Himalayan Wisdom & Journey</div>
+                </div>
+                <h1 class="slide-title">“The Best Views Come After <span>The Hardest Climb</span> In The Sacred Peaks”</h1>
+                <p class="slide-subtitle">Uncover profound structural transformations along the high-altitude trails, opening exceptional new vantage paths across remote valley ecosystems.</p>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: url('webimage/everestbasecamptrek.jpeg');">
+            <div class="slide-content">
+                <div class="brand-intro-wrapper">
+                    <span class="established-tag">Established 2006</span>
+                    <div class="frame-caption-bar">Global Exploration Ethos</div>
+                </div>
+                <h1 class="slide-title">“Travel Is The Only Thing <span>You Buy That Makes You Richer</span> In Adventure”</h1>
+                <p class="slide-subtitle">Expand your boundaries with perfectly coordinated Himalayan routing and expert native sherpa support designed for absolute immersion.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="slider-dots">
+        <div class="dot active" onclick="goToSlide(0)"></div>
+        <div class="dot" onclick="goToSlide(1)"></div>
+        <div class="dot" onclick="goToSlide(2)"></div>
+        <div class="dot" onclick="goToSlide(3)"></div>
+        <div class="dot" onclick="goToSlide(4)"></div>
+    </div>
+
+    <div class="features-container">
+        <div class="features-row">
+            <div class="feature-box">
+                <div class="feature-icon">🗺️</div>
+                <div class="feature-title">Govt. Authorized</div>
+                <div class="feature-desc">Fully licensed operator in Nepal since 2006.</div>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🏔️</div>
+                <div class="feature-title">Fully Insured Crew</div>
+                <div class="feature-desc">Licensed wilderness guides & porters.</div>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">⭐</div>
+                <div class="feature-title">Reliable Logistics</div>
+                <div class="feature-desc">Premium vehicles & direct ticketing platforms.</div>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🤝</div>
+                <div class="feature-title">Guaranteed Departures</div>
+                <div class="feature-desc">Smooth operations & flexible routing choices.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- UNIQUE FLIGHT TICKET SEARCH BOX IN ONE ROW ABOVE CONTENT -->
+<div class="flight-search-container-row">
+    <div class="flight-box-headline-text">
+        <span>Book Your Flight Ticket</span>
+        <div class="flight-reply-note">We will reply you very soon</div>
+    </div>
+    
+    <div class="flight-search-form-row">
+        <div class="flight-input-group">
+            <label>Type</label>
+            <select>
+                <option value="international">Domestic</option>
+                <option value="domestic">International</option>
+            </select>
+        </div>
+        <div class="flight-input-group">
+            <label>Trip</label>
+            <select>
+                <option value="oneway">One Way</option>
+                <option value="bothway">Both Way</option>
+            </select>
+        </div>
+        <div class="flight-input-group">
+            <label>Nationality </label>
+            <input type="text" placeholder="e.g., Country">
+        </div>
+        <div class="flight-input-group">
+            <label>From</label>
+            <input type="text" placeholder="e.g., Bankok or BKK ">
+        </div>
+        <div class="flight-input-group">
+            <label>To</label>
+            <input type="text" placeholder="e.g., Delhi or DEL">
+        </div>
+        <div class="flight-input-group">
+            <label>Date</label>
+            <input type="date">
+        </div>
+        <div class="flight-input-group">
+            <label>Time</label>
+            <select>
+                <option>7:00 AM</option>
+                <option>8:00 AM</option>
+                <option>9:00 AM</option>
+                <option>10:00 AM</option>
+                <option>11:00 AM</option>
+                <option>12:00 PM</option>
+                <option>1:00 PM</option>
+                <option>2:00 PM</option>
+                <option>3:00 PM</option>
+                <option>4:00 PM</option>
+                <option>5:00 PM</option>
+                <option>6:00 PM</option>
+                <option>7:00 PM</option>
+                <option>8:00 PM</option>
+                <option>9:00 PM</option>
+                <option>10:00 PM</option>
+            </select>
+        </div>
+        <div class="flight-input-group" style="min-width: 60px;">
+            <label>Adult</label>
+            <select>
+                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+                <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+            </select>
+        </div>
+        <div class="flight-input-group" style="min-width: 60px;">
+            <label>Child</label>
+            <select>
+                <option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+                <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+            </select>
+        </div>
+        <div class="flight-input-group">
+            <label>Extra request  </label>
+            <input type="text" placeholder="e.g.extra bag/ohter req ">
+        </div>
+
+        <div class="flight-action-group">
+            <a href="https://wa.me/9779856023917?text=Flight%20Booking%20Request" class="btn-flight-wa" target="_blank">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.456L0 24zm6.59-4.846c1.6.95 3.488 1.449 5.412 1.451 5.428 0 9.85-4.417 9.854-9.849.002-2.631-1.019-5.101-2.875-6.959-1.856-1.857-4.321-2.879-6.953-2.88-5.432 0-9.854 4.417-9.858 9.853-.002 1.982.518 3.916 1.507 5.627L1.445 22.566l6.202-1.628z"/>
+                </svg> Search
+            </a>
+            <a href="mailto:tilichotours074@gmail.com?subject=Flight%20Booking%20Request" class="btn-flight-email">
+                Email
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- TREKKING MATRIX SECTION -->
+<div class="trekking-section-wrapper">
+    <div class="section-title">
+        <h2>Most Popular Trekkings In Nepal</h2>
+        <p> Select Your Nepal Trekking Package & Contact Us by WhatsApp or Email for Customized Everest, Annapurna & Manaslu Trek Adventures.” . </p>
+    </div>
+</div>
+
+<div class="grid-four-columns">
+    <!-- ABC TREK CARD -->
+    <div class="card">
+        <img class="main-card-img" src="webimage/Abctrekmyself.jpeg" onerror="this.src='https://images.unsplash.com/photo-1585016495481-91613a3ab1bc?auto=format&fit=crop&w=500&q=80'" alt="Annapurna Base Camp ABC Trek 5 Days">
+        <div class="package-price-banner-floating">
+            <span class="package-price-strike">$399</span>$359 ONLY
+        </div>
+        <div class="card-info">
+            <h3>ABC Trek — 5 Days</h3>
+            <p class="short-desc">Stand inside the spectacular, snow-covered mountain amphitheater of the legendary high Annapurna Sanctuary base camp basin.</p>
+            <div class="btn-group">
+                <a href="Annapurna -Base-camp-(ABC)-trek-5-days.html" class="btn-details">Details</a>
+                <a href="https://wa.me/9779856023917?text=Inquiry%20ABC%20Trek%205%20Days%20Full%20Package" class="btn-whatsapp" target="_blank">💬 Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- POONHILL CARD -->
+    <div class="card">
+        <img class="main-card-img" src="webimage/Poonhilltrek.jpeg" onerror="this.src='https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=500&q=80'" alt="Ghorepani Poonhill Trek 4 Days">
+        <div class="package-price-banner-floating">
+            <span class="package-price-strike">$310</span>$279 ONLY
+        </div>
+        <div class="card-info">
+            <h3>Ghorepani / Poonhill Trek — 4 Days</h3>
+            <p class="short-desc">Experience golden panoramic sunrises over Dhaulagiri, Hiunchuli, and Machhapuchhre from the famous Poonhill ridge viewpoint.</p>
+            <div class="btn-group">
+                <a href="Ghorepani-Poonhill - trek-3 -days.html" class="btn-details">Details</a>
+                <a href="https://wa.me/9779856023917?text=Inquiry%20Ghorepani%20Poonhill%20Trek%20Full%20Package" class="btn-whatsapp" target="_blank">💬 Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MARDI HIMAL CARD -->
+    <div class="card">
+        <img class="main-card-img" src="webimage/mardihimaltrek.jpeg" onerror="this.src='https://images.unsplash.com/photo-1627894483216-2138af692e32?auto=format&fit=crop&w=500&q=80'" alt="Mardi Himal Trek 4 Days">
+        <div class="package-price-banner-floating">
+            <span class="package-price-strike">$310</span>$279 ONLY
+        </div>
+        <div class="card-info">
+            <h3>Mardi Himal Trek — 4 Days</h3>
+            <p class="short-desc">An amazing, pristine ridge trail walking directly under the shadow of the spectacular holy Mt. Fishtail peak.</p>
+            <div class="btn-group">
+                <a href="mardi-himal-trek-4-days.html" class="btn-details">Details</a>
+                <a href="https://wa.me/9779856023917?text=Inquiry%20Mardi%20Himal%20Trek%20Full%20Package" class="btn-whatsapp" target="_blank">💬 Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ANNAPURNA CIRCUIT CARD -->
+    <div class="card">
+        <img class="main-card-img" src="webimage/annapurnaciricittrek.jpeg" onerror="this.src='https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=500&q=80'" alt="Annapurna Circuit Trek 12 Days">
+        <div class="package-price-banner-floating">
+            <span class="package-price-strike">$960</span>$864 ONLY
+        </div>
+        <div class="card-info">
+            <h3>Annapurna Circuit Trek — 12 Days</h3>
+            <p class="short-desc">Cross the iconic high mountain pass of Thorong La at 5,416 meters, traversing beautiful changing Buddhist valleys.</p>
+            <div class="btn-group">
+                <a href="#" class="btn-details">Details</a>
+                <a href="https://wa.me/9779856023917?text=Inquiry%20Annapurna%20Circuit%2012%20Days%20Full%20Package" class="btn-whatsapp" target="_blank">💬 Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- EBC CARD -->
+    <div class="card">
+        <img class="main-card-img" src="webimage/everestbasecamptrek.jpeg" onerror="this.src='https://images.unsplash.com/photo-1486916856992-e4db22c8df33?auto=format&fit=crop&w=500&q=80'" alt="Everest Base Camp Trek 14 Days">
+        <div class="package-price-banner-floating">
+            <span class="package-price-strike">$1499</span>$1349 ONLY
+        </div>
+        <div class="card-info">
+            <h3>Everest Base Camp Trek — 14 Days</h3>
+            <p class="short-desc">Hike legendary Sherpa trails through Namche Bazaar up to Khumbu Glacier, standing right at the foot of Earth's highest summit.</p>
+            <div class="btn-group">
+                <a href="webimage/everestbasecamptrek.jpeg" class="btn-details">Details</a>
+                <a href="https://wa.me/9779856023917?text=Inquiry%20Everest%20Base%20Camp%2014%20Days%20Full%20Package" class="btn-whatsapp" target="_blank">💬 Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- TILICHO LAKE CARD -->
+    <div class="card">
+        <img class="main-card-img" src="webimage/tilicholakeslide1.jpeg" onerror="this.src='https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=500&q=80'" alt="Tilicho Lake Trek 12 Days">
+        <div class="package-price-banner-floating">
+            <span class="package-price-strike">$1050</span>$945 ONLY
+        </div>
+        <div class="card-info">
+            <h3>Tilicho Lake Trek — 12 Days</h3>
+            <p class="short-desc">Journey through dramatic high-altitude wilderness landscapes to reach the legendary turquoise blue waters of Tilicho Lake.</p>
+            <div class="btn-group">
+                <a href="tilicho-lake-trek-12-days.html" class="btn-details">Details</a>
+                <a href="https://wa.me/9779856023917?text=Inquiry%20Tilicho%20Lake%20Trek%20Full%20Package" class="btn-whatsapp" target="_blank">💬 Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MANASLU CIRCUIT CARD -->
+    <div class="card">
+        <img class="main-card-img" src="webimage/manaslutrek.jpeg" onerror="this.src='https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=500&q=80'" alt="Manaslu Circuit Trek 14 Days">
+        <div class="package-price-banner-floating">
+            <span class="package-price-strike">$1149</span>$1034 ONLY
+        </div>
+        <div class="card-info">
+            <h3>Manaslu Circuit Trek — 14 Days</h3>
+            <p class="short-desc">Explore remote, pristine paths surrounding Mt. Manaslu, navigating high wild valleys over the challenging Larkya La Pass.</p>
+            <div class="btn-group">
+                <a href="Manaslu-trek17-days.html" class="btn-details">Details</a>
+                <a href="https://wa.me/9779856023917?text=Inquiry%20Manaslu%20Circuit%2014%20Days%20Full%20Package" class="btn-whatsapp" target="_blank">💬 Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- UPPER MUSTANG CARD -->
+    <div class="card">
+        <img class="main-card-img" src="webimage/uppermustang.jpeg" onerror="this.src='https://images.unsplash.com/photo-1624806992066-5ffcf7ca186b?auto=format&fit=crop&w=500&q=80'" alt="Upper Mustang Walled City Trek 12 Days">
+        <div class="package-price-banner-floating">
+            <span class="package-price-strike">$1499</span>$1349 ONLY
+        </div>
+        <div class="card-info">
+            <h3>Upper Mustang Trek — 12 Days</h3>
+            <p class="short-desc">Discover hidden sky caves, ancient monasteries, and vibrant Tibetan-style cultures inside the iconic walled city of Lo Manthang.</p>
+            <div class="btn-group">
+                <a href="#" class="btn-details">Details</a>
+                <a href="https://wa.me/9779856023917?text=Inquiry%20Upper%20Mustang%20Trek%20Full%20Package" class="btn-whatsapp" target="_blank">💬 Contact</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CULTURAL TOURS SECTION -->
+<div class="tours-section-wrapper">
+    <div class="section-title">
+        <h2>Scenic Overland Tours & Cultural Packages</h2>
+        <p>Premium Sightseeing Logistics Across Historic Heritage Centers</p>
+    </div>
+</div>
+
+<div class="grid-four-columns">
+    <!-- 4 CITY CIRCUIT -->
+    <div class="card">
+        <img class="main-card-img" src="webimage/ktm-Pkr-chitawan-lumbinitour.jpeg" onerror="this.src='https://images.unsplash.com/photo-1541417904950-b855846fe074?auto=format&fit=crop&w=500&q=80'" alt="7 Days Kathmandu Pokhara Chitwan Lumbini Tour">
+        <div class="package-price-banner-floating">
+            <span class="package-price-strike">$560</span>$504 ONLY
+        </div>
+        <div class="card-info">
+            <h3>Kathmandu / Pokhara / Chitwan & Lumbini — 7 Days</h3>
+            <p class="short-desc">The essential multi-day overland journey covering historic heritage, serene lakes, jungle wildlife safaris, and sacred shrines.</p>
+            <div class="btn-group">
+                <a href="#" class="btn-details">Details</a>
+                <a href="https://wa.me/9779856023917?text=Inquiry%204-City%20Tour%20Full%20Package" class="btn-whatsapp" target="_blank">💬 Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- POKHARA FULL DAY -->
+    <div class="card">
+        <img class="main-card-img" src="webimage/Pokharaviewfromstupa.jpeg" onerror="this.src='https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=500&q=80'" alt="Pokhara Full Day City Sightseeing Tour">
+        <div class="package-price-banner-floating">
+            <span class="package-price-strike">$80</span>$72 ONLY
+        </div>
+        <div class="card-info">
+            <h3>Pokhara Full Day Tour Package — 1 Day</h3>
+            <p class="short-desc">Comprehensive private car tour exploring Davis Falls, Gupteshwor Cave, boating on Fewa Lake, and Shanti Stupa viewpoints.</p>
+            <div class="btn-group">
+                <a href="pokhara-sightseeing.html" class="btn-details">Details</a>
+                <a href="https://wa.me/9779856023917?text=Inquiry%20Pokhara%20Full%20Day%20Tour%20Package" class="btn-whatsapp" target="_blank">💬 Package</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- KATHMANDU UNESCO -->
+    <div class="card">
+        <img class="main-card-img" src="webimage/kathmanduheritagetour.jpeg" onerror="this.src='https://images.unsplash.com/photo-1545128485-c400e7702796?auto=format&fit=crop&w=500&q=80'" alt="Kathmandu UNESCO Heritage Sites Day Tour">
+        <div class="package-price-banner-floating">
+            <span class="package-price-strike">$80</span>$72 ONLY
+        </div>
+        <div class="card-info">
+            <h3>Kathmandu Heritage Tour Package — 1 Day</h3>
+            <p class="short-desc">Immerse yourself in centuries of history with guided private transfers to iconic UNESCO sites like Boudhanath and Patan Square.</p>
+            <div class="btn-group">
+                <a href="kathmandu-tour.html" class="btn-details">Details</a>
+                <a href="https://wa.me/9779856023917?text=Inquiry%20Kathmandu%20Heritage%20Tour%20Package" class="btn-whatsapp" target="_blank">💬 Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- CHITWAN JUNGLE SAFARI -->
+    <div class="card">
+        <img class="main-card-img" src="webimage/chitwantsafaritour.jpeg.png" onerror="this.src='https://images.unsplash.com/photo-1581888227599-779811939961?auto=format&fit=crop&w=500&q=80'" alt="Chitwan National Park Safari Package 3 Days">
+        <div class="package-price-banner-floating">
+            <span class="package-price-strike">$240</span>$216 ONLY
+        </div>
+        <div class="card-info">
+            <h3>Chitwan Safari Package — 3 Days</h3>
+            <p class="short-desc">Explore deep subtropical jungles with jeep tours tracking rare rhinos, traditional canoe rides, and Tharu cultural dances.</p>
+            <div class="btn-group">
+                <a href="#" class="btn-details">Details</a>
+                <a href="https://wa.me/9779856023917?text=Inquiry%20Chitwan%20Safari%203%20Days%20Package" class="btn-whatsapp" target="_blank">💬 Contact</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- HELICOPTER & FLIGHT SECTION -->
+<div class="flight-section-wrapper">
+    <div class="section-title">
+        <h2>Premium Helicopter & Mountain Flights</h2>
+        <p>Luxury Sky Logistics & Direct Ticketing Interfaces</p>
+    </div>
+</div>
+
+<div class="grid-four-columns">
+    <!-- ABC HELICOPTER TOUR -->
+    <div class="card">
+        <img class="main-card-img" src="webimage/abcheli.jpeg" onerror="this.src='https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=500&q=80'" alt="Annapurna Base Camp ABC Helicopter Tour">
+        <div class="package-price-banner-floating">
+            <span class="package-price-strike">$500</span>$450 ONLY
+        </div>
+        <div class="card-info">
+            <h3>ABC Helicopter Tour</h3>
+            <p class="short-desc">Fly directly to the heart of the Annapurnas. Witness breathtaking 360-degree high-altitude mountain panoramas with a landing at base camp.</p>
+            <div class="btn-group">
+                <a href="Ghorepani-Poonhill%20-%20trek-3%20-days.html" class="btn-details">Details</a>
+                <a href="https://wa.me/9779856023917?text=Inquiry%20Annapurna%20Base%20Camp%20ABC%20Helicopter%20Tour%20Package" class="btn-whatsapp" target="_blank">💬 Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MUKTINATH HELICOPTER TOUR -->
+    <div class="card">
+        <img class="main-card-img" src="webimage/muktinathheli.jpeg" onerror="this.src='https://images.unsplash.com/photo-1585016495481-91613a3ab1bc?auto=format&fit=crop&w=500&q=80'" alt="Muktinath Helicopter Tour">
+        <div class="package-price-banner-floating">
+            <span class="package-price-strike">$799</span>$699 ONLY
+        </div>
+        <div class="card-info">
+            <h3>Muktinath Helicopter Tour Package</h3>
+            <p class="short-desc">A comfortable, premium sacred pilgrimage journey across the Himalayan ranges straight to the holy grounds of Muktinath temple.</p>
+            <div class="btn-group">
+                <a href="muktinath-tour.html" class="btn-details">Details</a>
+                <a href="https://wa.me/9779856023917?text=Inquiry%20Muktinath%20Helicopter%20Tour%20Package" class="btn-whatsapp" target="_blank">💬 Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- EVEREST HELICOPTER TOUR -->
+    <div class="card">
+        <img class="main-card-img" src="webimage/everstheli.jpeg" onerror="this.src='https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80'" alt="Everest Helicopter Tour">
+        <div class="package-price-banner-floating">
+            <span class="package-price-strike">$2199</span>$2099 ONLY
+        </div>
+        <div class="card-info">
+            <h3>Mt. Everest Luxury Helicopter Tour</h3>
+            <p class="short-desc">The ultimate Himalayan luxury experience. Stand face-to-face with Mount Everest and enjoy premium mountain views over breakfast.</p>
+            <div class="btn-group">
+                <a href="Everest-base-camp-trek-13-days.html" class="btn-details">Details</a>
+                <a href="https://wa.me/9779856023917?text=Inquiry%20Everest%20Helicopter%20Tour%20Package" class="btn-whatsapp" target="_blank">💬 Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MOUNTAIN FLIGHT BY PLANE -->
+    <div class="card">
+        <img class="main-card-img" src="webimage/mountainflight.jpeg" onerror="this.src='https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=500&q=80'" alt="Mountain Flight by Plane">
+        <div class="package-price-banner-floating" style="line-height: 1.3 !important; text-align: right !important; font-size: 7px !important;">
+            <div>: <span class="package-price-strike" style="font-size:9px;">$299 </span>  Nep& IND Nrs 12999</span> Other $260</div>
+            
+        </div>
+        <div class="card-info">
+            <h3>Himalayan Mountain Flight by Plane</h3>
+            <p class="short-desc">Enjoy guaranteed window seats on an iconic low-altitude cruise showcasing the snow-capped Himalayan ranges up close.</p>
+            <div class="btn-group">
+                <a href="pokhara-sightseeing.html" class="btn-details">Details</a>
+                <a href="https://wa.me/9779856023917?text=Inquiry%20Mountain%20Flight%20by%20Plane%20Package" class="btn-whatsapp" target="_blank">💬 Contact</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- TEAM / STAFF MATRIX SECTION -->
+<section class="staff-section-wrapper">
+    <div class="staff-headline-row">
+        <div class="staff-headline-text">
+            <h2>Want to hire a Guide / porter per day basis for your mountain trek?</h2>
+            <p>Select and book now</p>
+        </div>
+    </div>
+
+    <div class="staff-grid">
+        <!-- Card 1: Guide -->
+        <div class="staff-card">
+            <div class="staff-img-box" style="background-image: url('webimage/rajuguide.jpeg');">
+                <div class="staff-price-tag"> / Day</div>
+            </div>
+            <div class="staff-body">
+                <div class="staff-role">Government Licensed Guide</div>
+                <h3 class="staff-name">Mr Raju</h3>
+                <div class="staff-badges">
+                    <span class="badge-item highlight">20+ Years Exp</span>
+                    <span class="badge-item">English Speaking</span>
+                    <span class="badge-item">Full Insurance</span>
+                </div>
+                <p class="staff-desc">Specialized in Annpurna Everest and Langtang routes.20 years expereance, Expert in alpine logistics, first aid response, and deep cultural interpretations of native high valleys.</p>
+                <div class="staff-actions-container">
+                    <a href="https://wa.me/9779856023917?text=I'd%20like%20to%20talk%20about%20booking%20Guide%20Tenzing%20Sherpa" class="btn-live-talk" target="_blank">
+                        Live Talk Now with
+                    </a>
+                    <div class="staff-secondary-row">
+                        <a href="mailto:tilichotours074@gmail.com?subject=Booking%20Inquiry%20-%20Guide%20Tenzing%20Sherpa" class="action-btn btn-book">Book Now</a>
+                        <a href="mailto:tilichotours074@gmail.com?subject=Booking%20Inquiry%20-%20Guide%20Tenzing%20Sherpa" class="action-btn btn-email">Email</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2: Guide -->
+        <div class="staff-card">
+            <div class="staff-img-box" style="background-image: url('webimage/Puspa.jpeg.JPG');">
+                <div class="staff-price-tag"> / Day</div>
+            </div>
+            <div class="staff-body">
+                <div class="staff-role">Government Licensed Guide</div>
+                <h3 class="staff-name">Mr Puspa </h3>
+                <div class="staff-badges">
+                    <span class="badge-item highlight">12+ Years Exp</span>
+                    <span class="badge-item">English Speaking</span>
+                    <span class="badge-item">Full Insurance</span>
+                </div>
+                <p class="staff-desc">Your dedicated specialist for the Annapurna Circuit and Tilicho Lake crossings. Thorough knowledge of weather patterns and safety protocols.</p>
+                <div class="staff-actions-container">
+                    <a href="https://wa.me/9779856023917?text=I'd%20like%20to%20talk%20about%20booking%20Guide%20Prakash%20Gurung" class="btn-live-talk" target="_blank">
+                        Live Talk Now
+                    </a>
+                    <div class="staff-secondary-row">
+                        <a href="mailto:tilichotours074@gmail.com?subject=Booking%20Inquiry%20-%20Guide%20Prakash%20Gurung" class="action-btn btn-book">Book Now</a>
+                        <a href="mailto:tilichotours074@gmail.com?subject=Booking%20Inquiry%20-%20Guide%20Prakash%20Gurung" class="action-btn btn-email">Email</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3: Porter -->
+        <div class="staff-card">
+            <div class="staff-img-box" style="background-image: url('webimage/Mrgovindaguide.jpeg');">
+                <div class="staff-price-tag"> / Day</div>
+            </div>
+            <div class="staff-body">
+                <div class="staff-role">High Himalaya Guide </div>
+                <h3 class="staff-name">Mr.Govinda</h3>
+                <div class="staff-badges">
+                    <span class="badge-item highlight">10+ Years Exp</span>
+                    <span class="badge-item">High-Altitude Side</span>
+                    <span class="badge-item">Full Insurance</span>
+                </div>
+                <p class="staff-desc">Extremely resilient and reliable team member. Over a decade of heavy load balancing across tricky passes, completely backed by full field insurance.</p>
+                <div class="staff-actions-container">
+                    <a href="https://wa.me/9779856023917?text=I'd%20like%20to%20talk%20about%20booking%20Porter%20Pasang%20Tamang" class="btn-live-talk" target="_blank">
+                        Live Talk Now
+                    </a>
+                    <div class="staff-secondary-row">
+                        <a href="mailto:tilichotours074@gmail.com?subject=Booking%20Inquiry%20-%20Porter%20Pasang%20Tamang" class="action-btn btn-book">Book Now</a>
+                        <a href="mailto:tilichotours074@gmail.com?subject=Booking%20Inquiry%20-%20Porter%20Pasang%20Tamang" class="action-btn btn-email">Email</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4: Porter -->
+        <div class="staff-card">
+            <div class="staff-img-box" style="background-image: url('webimage/sandhyaguide.jpeg');">
+                <div class="staff-price-tag"> / Day</div>
+            </div>
+            <div class="staff-body">
+                <div class="staff-role">High Himalaya Guide </div>
+                <h3 class="staff-name">Ms.Sandhya</h3>
+                <div class="staff-badges">
+                    <span class="badge-item highlight">11+ Years Exp</span>
+                    <span class="badge-item">High-Altitude Side</span>
+                    <span class="badge-item">Full Insurance</span>
+                </div>
+                <p class="staff-desc">Renowned for unmatched core stamina throughout high-altitude trails. Fully protected under safety mandates to ensure flawless transport of your gear.</p>
+                <div class="staff-actions-container">
+                    <a href="https://wa.me/9779856023917?text=I'd%20like%20to%20talk%20about%20booking%20Porter%20Nima%20Rinji" class="btn-live-talk" target="_blank">
+                        Live Talk Now
+                    </a>
+                    <div class="staff-secondary-row">
+                        <a href="mailto:tilichotours074@gmail.com?subject=Booking%20Inquiry%20-%20Porter%20Nima%20Rinji" class="action-btn btn-book">Book Now</a>
+                        <a href="mailto:tilichotours074@gmail.com?subject=Booking%20Inquiry%20-%20Porter%20Nima%20Rinji" class="action-btn btn-email">Email</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="staff-grid">
+    <!-- Porter Card 1 -->
+    <div class="staff-card">
+        <div class="staff-img-box" style="background-image: url('webimage/porter1.jpeg.JPG');">
+            <!-- Price tag removed -->
+        </div>
+        <div class="staff-body">
+            <div class="staff-role">Ashish Tamang  / Porter</div>
+            <h3 class="staff-name">Mr. Ashish Tamang </h3>
+            <div class="staff-badges">
+                <span class="badge-item highlight">12+ Years Exp</span>
+                <span class="badge-item">High-Altitude</span>
+                <span class="badge-item">Full Insurance</span>
+            </div>
+            <p class="staff-desc">Specializes in high-altitude logistics and safe passage for Everest and Annapurna regions. Ensuring your gear arrives safely.</p>
+            <div class="staff-actions-container">
+                <a href="https://wa.me/9779856023917?text=I'd%20like%20to%20talk%20about%20booking%20Porter%20Dawa%20Sherpa" class="btn-live-talk" target="_blank">
+                    Live Talk Now
+                </a>
+                <div class="staff-secondary-row">
+                    <a href="mailto:tilichotours074@gmail.com?subject=Booking%20Inquiry%20-%20Porter%20Dawa%20Sherpa" class="action-btn btn-book">Book Now</a>
+                    <a href="mailto:tilichotours074@gmail.com?subject=Booking%20Inquiry%20-%20Porter%20Dawa%20Sherpa" class="action-btn btn-email">Email</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Porter Card 2 -->
+    <div class="staff-card">
+        <div class="staff-img-box" style="background-image: url('webimage/porter2.jpeg');">
+            <!-- Price tag removed -->
+        </div>
+        <div class="staff-body">
+            <div class="staff-role">Senior Trekking Porter</div>
+            <h3 class="staff-name">Mr. Phurba Sherp[a </h3>
+            <div class="staff-badges">
+                <span class="badge-item highlight">10+ Years Exp</span>
+                <span class="badge-item">Reliable Pace</span>
+                <span class="badge-item">Full Insurance</span>
+            </div>
+            <p class="staff-desc">Expert in carrying heavy gear through difficult terrain while maintaining a steady pace. A highly reliable team member.</p>
+            <div class="staff-actions-container">
+                <a href="https://wa.me/9779856023917?text=I'd%20like%20to%20talk%20about%20booking%20Porter%20Phurba%20Tamang" class="btn-live-talk" target="_blank">
+                    Live Talk Now
+                </a>
+                <div class="staff-secondary-row">
+                    <a href="mailto:tilichotours074@gmail.com?subject=Booking%20Inquiry%20-%20Porter%20Phurba%20Tamang" class="action-btn btn-book">Book Now</a>
+                    <a href="mailto:tilichotours074@gmail.com?subject=Booking%20Inquiry%20-%20Porter%20Phurba%20Tamang" class="action-btn btn-email">Email</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Porter Card 3 -->
+    <div class="staff-card">
+        <div class="staff-img-box" style="background-image: url('webimage/porter3.jpeg');">
+            <!-- Price tag removed -->
+        </div>
+        <div class="staff-body">
+            <div class="staff-role">High Altitude Porter</div>
+            <h3 class="staff-name">Mr. Dorge Gurung </h3>
+            <div class="staff-badges">
+                <span class="badge-item highlight">15+ Years Exp</span>
+                <span class="badge-item">High Pass Expert</span>
+                <span class="badge-item">Full Insurance</span>
+            </div>
+            <p class="staff-desc">Extensive knowledge of high pass crossings and unpredictable mountain weather patterns. Decades of heavy load balancing.</p>
+            <div class="staff-actions-container">
+                <a href="https://wa.me/9779856023917?text=I'd%20like%20to%20talk%20about%20booking%20Porter%20Kami%20Sherpa" class="btn-live-talk" target="_blank">
+                    Live Talk Now
+                </a>
+                <div class="staff-secondary-row">
+                    <a href="mailto:tilichotours074@gmail.com?subject=Booking%20Inquiry%20-%20Porter%20Kami%20Sherpa" class="action-btn btn-book">Book Now</a>
+                    <a href="mailto:tilichotours074@gmail.com?subject=Booking%20Inquiry%20-%20Porter%20Kami%20Sherpa" class="action-btn btn-email">Email</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Porter Card 4 -->
+    <div class="staff-card">
+        <div class="staff-img-box" style="background-image: url('webimage/porter4.jpeg');">
+            <!-- Price tag removed -->
+        </div>
+        <div class="staff-body">
+            <div class="staff-role">Mountain Porter</div>
+            <h3 class="staff-name">Mr. Nima KC </h3>
+            <div class="staff-badges">
+                <span class="badge-item highlight">10+ Years Exp</span>
+                <span class="badge-item">Core Stamina</span>
+                <span class="badge-item">Full Insurance</span>
+            </div>
+            <p class="staff-desc">Dedicated support staff ensuring client comfort and safety on long-duration treks. Fully protected under safety mandates.</p>
+            <div class="staff-actions-container">
+                <a href="https://wa.me/9779856023917?text=I'd%20like%20to%20talk%20about%20booking%20Porter%20Nima%20Gurung" class="btn-live-talk" target="_blank">
+                    Live Talk Now
+                </a>
+                <div class="staff-secondary-row">
+                    <a href="mailto:tilichotours074@gmail.com?subject=Booking%20Inquiry%20-%20Porter%20Nima%20Gurung" class="action-btn btn-book">Book Now</a>
+                    <a href="mailto:tilichotours074@gmail.com?subject=Booking%20Inquiry%20-%20Porter%20Nima%20Gurung" class="action-btn btn-email">Email</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- COMPACT BRAND FOOTER -->
+<footer class="compact-footer">
+    <div class="footer-content">
+        <!-- BRAND DESCRIPTION & GOVERNMENT LICENSE SIGNALS -->
+        <div class="footer-brand-block">
+            <div class="footer-brand-title">
+                <h3 class="brand-tours-name">Tilicho Tours and Travels Pvt. Ltd.</h3>
+                <h3 class="brand-treks-name">Tilicho Treks and Expedition Pvt. Ltd.</h3>
+            </div>
+            <p>Certified sustainable gateway to Himalayan trekking, mountaineering, and helicopter exploration across Nepal since 2006.</p>
+            
+            <!-- GOVT & FEDERATION LOGO DOCK -->
+            <div class="footer-logo-board">
+                <a href="#" class="logo-link" title="TAAN Member">
+                    <div class="footer-logo-card">
+                        <img src="https://www.taan.org.np/images/logo.png" alt="TAAN" onerror="this.src='https://placehold.co/60x40/ffffff/000000?text=TAAN'">
+                    </div>
+                </a>
+                <a href="#" class="logo-link" title="Nepal Tourism Board Partner">
+                    <div class="footer-logo-card">
+                        <img src="https://ntb.gov.np/assets/images/ntb-logo-new.png" alt="NTB" onerror="this.src='https://placehold.co/60x40/ffffff/000000?text=NTB'">
+                    </div>
+                </a>
+                <a href="#" class="logo-link" title="Nepal Mountaineering Association Active Member">
+                    <div class="footer-logo-card">
+                        <img src="https://www.nepalmountaineering.org/assets/images/logo.png" alt="NMA" onerror="this.src='https://placehold.co/60x40/ffffff/000000?text=NMA'">
+                    </div>
+                </a>
+                <a href="#" class="logo-link" title="Ministry of Culture, Tourism & Civil Aviation">
+                    <div class="footer-logo-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Emblem_of_Nepal.svg" alt="Govt Ministry" onerror="this.src='https://placehold.co/60x40/ffffff/000000?text=Govt'">
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- CONNECTIVITY DESK: SOCIAL MATRICES -->
+        <div class="footer-middle-hub">
+            <span>Connect Ecosystem</span>
+            <div class="social-vector-dock">
+                <a href="#" class="fb" target="_blank" title="Facebook">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="FB">
+                </a>
+                <a href="#" class="ig" target="_blank" title="Instagram">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="IG">
+                </a>
+                <a href="#" class="ta" target="_blank" title="TripAdvisor">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2504/2504944.png" alt="TA">
+                </a>
+                <a href="#" class="tt" target="_blank" title="TikTok">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
+                </a>
+            </div>
+        </div>
+
+        <!-- MAP BLOCK -->
+        <div class="footer-map-hub">
+            <span>Find Us in Pokhara</span>
+            <div class="footer-map-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11244.332306260172!2d83.95155189785507!3d28.209635954378775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399595213b2c2b31%3A0xcb1b60662d558d74!2sLakeside%2C%20Pokhara%2033700%2C%20Nepal!5e0!3m2!1sen!2sus!4v1716382022718!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <!-- RIGHT BLOCK: LINKS & OPERATIONS -->
+        <div class="footer-nav-block">
+            <div class="footer-column">
+                <span>Quick Links</span>
+                <div class="short-menu-grid">
+                    <a href="#">About Us</a>
+                    <a href="#">Our Team</a>
+                    <a href="#">Trekking Packages</a>
+                    <a href="#">Tour Packages</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <span>Contact Desk</span>
+                <div class="compact-logistics">
+                    <strong>Tilicho Tours & Travels Pvt. Ltd.</strong><br>
+                    Lakeside-6, Pokhara, Nepal
+                    <div class="com-contacts">
+                        <span>Email: <a href="mailto:tilichotours074@gmail.com">tilichotours074@gmail.com</a></span>
+                        <span>Phone: <a href="tel:+977061455269">+977-061455269</a></span>
+                        <span>Mobile: <a href="https://wa.me/9779856023917" class="wa-link-inline">+977-9856023917 (WhatsApp)</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SUB-BASE COPYRIGHT STRIP -->
+    <div class="footer-bottom-strip">
+        <span>&copy; 2026 Tilicho Tours And Travels. All Rights Reserved.</span>
+        <span>
+            <a href="#">Sitemap</a> | <a href="#">Legal Info</a>
+        </span>
+    </div>
+</footer>
+
+<script>
+    // Hero Slider Functionality
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const sliderWrapper = document.getElementById('sliderWrapper');
+    let slideInterval;
+
+    function goToSlide(index) {
+        slides[currentSlide].classList.remove('active');
+        dots[currentSlide].classList.remove('active');
+        
+        currentSlide = index;
+        
+        sliderWrapper.style.transform = `translateX(-${currentSlide * 20}%)`;
+        
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+        
+        resetInterval();
+    }
+
+    function nextSlide() {
+        let next = (currentSlide + 1) % slides.length;
+        goToSlide(next);
+    }
+
+    function resetInterval() {
+        clearInterval(slideInterval);
+        slideInterval = setInterval(nextSlide, 6000); // 6 seconds per slide
+    }
+
+    // Initialize slider
+    resetInterval();
+
+    // Mobile Menu Toggle
+    const menuToggleBtn = document.getElementById('menuToggleBtn');
+    const mainNavbarMenu = document.getElementById('mainNavbarMenu');
+
+    menuToggleBtn.addEventListener('click', () => {
+        mainNavbarMenu.classList.toggle('mobile-active');
+    });
+
+    // Mobile Dropdown Toggle
+    const dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(dropdown => {
+        const link = dropdown.querySelector('a.nav-item-link');
+        link.addEventListener('click', (e) => {
+            if (window.innerWidth <= 1200) {
+                e.preventDefault();
+                dropdown.classList.toggle('open-active');
             }
-        }
-    </script>
+        });
+    });
+</script>
 
 </body>
 </html>
