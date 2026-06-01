@@ -2145,9 +2145,10 @@
         </div>
     </div>
 
-    <!-- Porter Card 4 -->
+<!-- Porter Card 4 -->
     <div class="staff-card">
-        <div class="staff-img-box" style="background-image: url('images/porter4.jpeg');">
+        <!-- FIXED IMAGE PATH TO MATCH SINGULAR FOLDER -->
+        <div class="staff-img-box" style="background-image: url('image/porter4.jpeg');">
             <!-- Price tag removed -->
         </div>
         <div class="staff-body">
@@ -2170,7 +2171,31 @@
             </div>
         </div>
     </div>
+</div> <!-- This closes your existing staff grid container -->
+
+<!-- ATTRACTIVE SEE ALL GUIDE & PORTERS ACTION LINK BOX IN THE BOTTOM RIGHT CORNER -->
+<div style="display: flex; justify-content: flex-end; width: 100%; margin-top: 15px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <!-- FIXED LINK TO YOUR ACTUAL GUIDE AND PORTER PAGE -->
+    <a href="guide-and-porter.html" class="see-all-staff-btn" style="display: inline-flex; align-items: center; gap: 8px; background-color: #2d3748; color: #34d399; border: 1px solid #4a5568; padding: 8px 20px; border-radius: 4px; font-size: 0.85rem; font-weight: bold; text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.3s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+        See All Guide & Porters Details <span style="font-size: 1rem;">➔</span>
+    </a>
 </div>
+
+<!-- Safely Contained Responsive Design CSS Styles -->
+<style>
+/* Smooth Hover Animation Effect for Staff Link Box */
+.see-all-staff-btn:hover {
+    background-color: #10b981 !important; /* Transitions to fresh mountain green */
+    color: #ffffff !important;
+    border-color: #10b981 !important;
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.4) !important;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+    .see-all-staff-btn { width: 100%; justify-content: center; } /* Adapts nicely on mobile phones */
+}
+</style>
 <!-- ULTRA-WIDE FULL-SCREEN GUEST REVIEWS SECTION -->
 <section class="reviews-section-wrapper" style="background-color: #1a202c; color: #ffffff; padding: 20px 40px; width: 100%; max-width: 100%; margin: 20px 0; border-radius: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; box-shadow: 0 4px 15px rgba(0,0,0,0.2); box-sizing: border-box;">
     
@@ -2184,98 +2209,110 @@
         </div>
     </div>
 
-    <!-- 4-COLUMN EDGE-TO-EDGE HORIZONTAL LAYOUT (LOCKS HEIGHT TO PREVENT SCROLLING) -->
-    <div class="reviews-main-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; align-items: stretch; width: 100%;">
+    <!-- WRAPPER CONTAINER TO RETAIN CLEAN LAYOUT STRUCTURING AND RIGHT-CORNER ALIGNMENT -->
+    <div style="display: flex; flex-direction: column; gap: 15px; width: 100%;">
         
-        <!-- Column 1: USA Review Box -->
-        <div class="review-card" style="background-color: #2d3748; padding: 15px; border-radius: 6px; border-top: 4px solid #e67e22; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box; height: 280px;">
-            <div>
-                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 5px;">
-                    <h4 style="margin: 0; font-size: 0.95rem; color: #ffffff; font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">David Miller</h4>
-                    <span style="color: #f1c40f; font-size: 0.8rem; letter-spacing: 1px; white-space: nowrap;">⭐⭐⭐⭐⭐</span>
-                </div>
-                <div style="font-size: 0.75rem; color: #e67e22; font-weight: bold; margin-bottom: 6px; text-transform: uppercase;">🇺🇸 USA</div>
-                <p style="font-size: 0.8rem; color: #e2e8f0; line-height: 1.4; margin: 0; font-style: italic;">
-                    "Flawless experience! We booked our Annapurna Circuit guide and a paragliding flight. Best price compared to multiple lakeside agencies, and exceptionally professional service. Our guide was incredibly knowledgeable and kept us safe. Highly recommending Tilicho Tours to anyone visiting Nepal!"
-                </p>
-            </div>
-        </div>
-
-        <!-- Column 2: Australia Review Box -->
-        <div class="review-card" style="background-color: #2d3748; padding: 15px; border-radius: 6px; border-top: 4px solid #2980b9; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box; height: 280px;">
-            <div>
-                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 5px;">
-                    <h4 style="margin: 0; font-size: 0.95rem; color: #ffffff; font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Sarah & Matt</h4>
-                    <span style="color: #f1c40f; font-size: 0.8rem; letter-spacing: 1px; white-space: nowrap;">⭐⭐⭐⭐⭐</span>
-                </div>
-                <div style="font-size: 0.75rem; color: #2980b9; font-weight: bold; margin-bottom: 6px; text-transform: uppercase;">🇦🇺 Australia</div>
-                <p style="font-size: 0.8rem; color: #e2e8f0; line-height: 1.4; margin: 0; font-style: italic;">
-                    "We rented an independent porter for Mardi Himal and arranged a bungee jump. The transparency in pricing was fantastic—no hidden costs. The staff organized everything seamlessly within an hour over WhatsApp. Genuinely top-tier hospitality. Will definitely book again!"
-                </p>
-            </div>
-        </div>
-
-        <!-- Column 3: Split India & China Combo (Saves Vertical Space Instantly) -->
-        <div class="review-card-split" style="display: flex; flex-direction: column; gap: 10px; box-sizing: border-box; height: 280px;">
+        <!-- 4-COLUMN EDGE-TO-EDGE HORIZONTAL LAYOUT (LOCKS HEIGHT TO PREVENT SCROLLING) -->
+        <div class="reviews-main-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; align-items: stretch; width: 100%;">
             
-            <!-- India Half -->
-            <div style="background-color: #2d3748; padding: 10px 12px; border-radius: 6px; border-left: 3px solid #27ae60; flex: 1; display: flex; flex-direction: column; justify-content: center;">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
-                    <strong style="font-size: 0.85rem; color: #ffffff;">Rahul Sharma</strong>
-                    <span style="color: #f1c40f; font-size: 0.75rem;">⭐⭐⭐⭐⭐</span>
-                </div>
-                <div style="font-size: 0.7rem; color: #27ae60; font-weight: bold; margin-bottom: 2px;">🇮🇳 INDIA</div>
-                <p style="font-size: 0.78rem; color: #cbd5e0; line-height: 1.3; margin: 0; font-style: italic; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
-                    "Highly recommended for custom packages! They provided an experienced bird watching guide at highly economical rates. Best agency in Pokhara!"
-                </p>
-            </div>
-
-            <!-- China Half (Adjusted upward perfectly) -->
-            <div style="background-color: #2d3748; padding: 10px 12px; border-radius: 6px; border-left: 3px solid #8e44ad; flex: 1; display: flex; flex-direction: column; justify-content: center;">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
-                    <strong style="font-size: 0.85rem; color: #ffffff;">Li Wei</strong>
-                    <span style="color: #f1c40f; font-size: 0.75rem;">⭐⭐⭐⭐⭐</span>
-                </div>
-                <div style="font-size: 0.7rem; color: #8e44ad; font-weight: bold; margin-bottom: 2px;">🇨🇳 CHINA</div>
-                <p style="font-size: 0.78rem; color: #cbd5e0; line-height: 1.3; margin: 0; font-style: italic; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
-                    "非常满意的服务！We booked an Ultralight flight and hired high-altitude porters here. The safety standards were premium and package rates were the best in Lakeside."
-                </p>
-            </div>
-
-        </div>
-
-        <!-- Column 4: Form Block matching exact height (Stops at Submit Review Line) -->
-        <div class="review-form-column" style="background-color: #2d3748; padding: 12px 15px; border-radius: 6px; border: 1px solid #4a5568; box-sizing: border-box; height: 280px; display: flex; flex-direction: column; justify-content: space-between;">
-            <h3 style="margin: 0; font-size: 1rem; color: #e67e22; font-weight: bold; border-bottom: 1px solid #4a5568; padding-bottom: 4px;">✍️ Leave Your Review</h3>
-            
-            <form action="#" method="POST" onsubmit="alert('Thank you for your valuable feedback! It will appear live after verification.'); return false;" style="display: flex; flex-direction: column; gap: 6px; flex: 1; justify-content: space-between; margin-top: 6px;">
-                
-                <div style="display: flex; gap: 6px;">
-                    <div style="flex: 1;">
-                        <input type="text" placeholder="Your Name" required style="width: 100%; padding: 5px 8px; border-radius: 4px; border: 1px solid #4a5568; background-color: #1a202c; color: #ffffff; font-size: 0.78rem; box-sizing: border-box;">
-                    </div>
-                    <div style="flex: 1;">
-                        <input type="text" placeholder="Country" required style="width: 100%; padding: 5px 8px; border-radius: 4px; border: 1px solid #4a5568; background-color: #1a202c; color: #ffffff; font-size: 0.78rem; box-sizing: border-box;">
-                    </div>
-                </div>
-
+            <!-- Column 1: USA Review Box -->
+            <div class="review-card" style="background-color: #2d3748; padding: 15px; border-radius: 6px; border-top: 4px solid #e67e22; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box; height: 280px;">
                 <div>
-                    <select required style="width: 100%; padding: 5px 8px; border-radius: 4px; border: 1px solid #4a5568; background-color: #1a202c; color: #f1c40f; font-size: 0.78rem; font-weight: bold; box-sizing: border-box; cursor: pointer;">
-                        <option value="5">⭐⭐⭐⭐⭐ (5 Stars - Excellent)</option>
-                        <option value="4">⭐⭐⭐⭐ (4 Stars - Very Good)</option>
-                        <option value="3">⭐⭐⭐ (3 Stars - Average)</option>
-                        <option value="2">⭐⭐ (2 Stars - Poor)</option>
-                    </select>
+                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 5px;">
+                        <h4 style="margin: 0; font-size: 0.95rem; color: #ffffff; font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">David Miller</h4>
+                        <span style="color: #f1c40f; font-size: 0.8rem; letter-spacing: 1px; white-space: nowrap;">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <div style="font-size: 0.75rem; color: #e67e22; font-weight: bold; margin-bottom: 6px; text-transform: uppercase;">🇺🇸 USA</div>
+                    <p style="font-size: 0.8rem; color: #e2e8f0; line-height: 1.4; margin: 0; font-style: italic;">
+                        "Flawless experience! We booked our Annapurna Circuit guide and a paragliding flight. Best price compared to multiple lakeside agencies, and exceptionally professional service. Our guide was incredibly knowledgeable and kept us safe. Highly recommending Tilicho Tours to anyone visiting Nepal!"
+                    </p>
+                </div>
+            </div>
+
+            <!-- Column 2: Australia Review Box -->
+            <div class="review-card" style="background-color: #2d3748; padding: 15px; border-radius: 6px; border-top: 4px solid #2980b9; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box; height: 280px;">
+                <div>
+                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 5px;">
+                        <h4 style="margin: 0; font-size: 0.95rem; color: #ffffff; font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Sarah & Matt</h4>
+                        <span style="color: #f1c40f; font-size: 0.8rem; letter-spacing: 1px; white-space: nowrap;">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <div style="font-size: 0.75rem; color: #2980b9; font-weight: bold; margin-bottom: 6px; text-transform: uppercase;">🇦🇺 Australia</div>
+                    <p style="font-size: 0.8rem; color: #e2e8f0; line-height: 1.4; margin: 0; font-style: italic;">
+                        "We rented an independent porter for Mardi Himal and arranged a bungee jump. The transparency in pricing was fantastic—no hidden costs. The staff organized everything seamlessly within an hour over WhatsApp. Genuinely top-tier hospitality. Will definitely book again!"
+                    </p>
+                </div>
+            </div>
+
+            <!-- Column 3: Split India & China Combo (Saves Vertical Space Instantly) -->
+            <div class="review-card-split" style="display: flex; flex-direction: column; gap: 10px; box-sizing: border-box; height: 280px;">
+                
+                <!-- India Half -->
+                <div style="background-color: #2d3748; padding: 10px 12px; border-radius: 6px; border-left: 3px solid #27ae60; flex: 1; display: flex; flex-direction: column; justify-content: center;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
+                        <strong style="font-size: 0.85rem; color: #ffffff;">Rahul Sharma</strong>
+                        <span style="color: #f1c40f; font-size: 0.75rem;">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <div style="font-size: 0.7rem; color: #27ae60; font-weight: bold; margin-bottom: 2px;">🇮🇳 INDIA</div>
+                    <p style="font-size: 0.78rem; color: #cbd5e0; line-height: 1.3; margin: 0; font-style: italic; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
+                        "Highly recommended for custom packages! They provided an experienced bird watching guide at highly economical rates. Best agency in Pokhara!"
+                    </p>
                 </div>
 
-                <div style="flex: 1; margin: 2px 0;">
-                    <textarea placeholder="Write brief review here..." required style="width: 100%; height: 100%; min-height: 80px; max-height: 80px; padding: 6px 8px; border-radius: 4px; border: 1px solid #4a5568; background-color: #1a202c; color: #ffffff; font-size: 0.78rem; resize: none; line-height: 1.3; box-sizing: border-box;"></textarea>
+                <!-- China Half (Adjusted upward perfectly) -->
+                <div style="background-color: #2d3748; padding: 10px 12px; border-radius: 6px; border-left: 3px solid #8e44ad; flex: 1; display: flex; flex-direction: column; justify-content: center;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
+                        <strong style="font-size: 0.85rem; color: #ffffff;">Li Wei</strong>
+                        <span style="color: #f1c40f; font-size: 0.75rem;">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <div style="font-size: 0.7rem; color: #8e44ad; font-weight: bold; margin-bottom: 2px;">🇨🇳 CHINA</div>
+                    <p style="font-size: 0.78rem; color: #cbd5e0; line-height: 1.3; margin: 0; font-style: italic; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
+                        "非常满意的服务！We booked an Ultralight flight and hired high-altitude porters here. The safety standards were premium and package rates were the best in Lakeside."
+                    </p>
                 </div>
 
-                <button type="submit" style="background-color: #e67e22; color: #ffffff; padding: 6px; font-size: 0.8rem; font-weight: bold; border: none; border-radius: 4px; cursor: pointer; text-transform: uppercase; box-sizing: border-box; width: 100%;">
-                    Submit Review
-                </button>
-            </form>
+            </div>
+
+            <!-- Column 4: Form Block matching exact height (Stops at Submit Review Line) -->
+            <div class="review-form-column" style="background-color: #2d3748; padding: 12px 15px; border-radius: 6px; border: 1px solid #4a5568; box-sizing: border-box; height: 280px; display: flex; flex-direction: column; justify-content: space-between;">
+                <h3 style="margin: 0; font-size: 1rem; color: #e67e22; font-weight: bold; border-bottom: 1px solid #4a5568; padding-bottom: 4px;">✍️ Leave Your Review</h3>
+                
+                <form action="#" method="POST" onsubmit="alert('Thank you for your valuable feedback! It will appear live after verification.'); return false;" style="display: flex; flex-direction: column; gap: 6px; flex: 1; justify-content: space-between; margin-top: 6px;">
+                    
+                    <div style="display: flex; gap: 6px;">
+                        <div style="flex: 1;">
+                            <input type="text" placeholder="Your Name" required style="width: 100%; padding: 5px 8px; border-radius: 4px; border: 1px solid #4a5568; background-color: #1a202c; color: #ffffff; font-size: 0.78rem; box-sizing: border-box;">
+                        </div>
+                        <div style="flex: 1;">
+                            <input type="text" placeholder="Country" required style="width: 100%; padding: 5px 8px; border-radius: 4px; border: 1px solid #4a5568; background-color: #1a202c; color: #ffffff; font-size: 0.78rem; box-sizing: border-box;">
+                        </div>
+                    </div>
+
+                    <div>
+                        <select required style="width: 100%; padding: 5px 8px; border-radius: 4px; border: 1px solid #4a5568; background-color: #1a202c; color: #f1c40f; font-size: 0.78rem; font-weight: bold; box-sizing: border-box; cursor: pointer;">
+                            <option value="5">⭐⭐⭐⭐⭐ (5 Stars - Excellent)</option>
+                            <option value="4">⭐⭐⭐⭐ (4 Stars - Very Good)</option>
+                            <option value="3">⭐⭐⭐ (3 Stars - Average)</option>
+                            <option value="2">⭐⭐ (2 Stars - Poor)</option>
+                        </select>
+                    </div>
+
+                    <div style="flex: 1; margin: 2px 0;">
+                        <textarea placeholder="Write brief review here..." required style="width: 100%; height: 100%; min-height: 80px; max-height: 80px; padding: 6px 8px; border-radius: 4px; border: 1px solid #4a5568; background-color: #1a202c; color: #ffffff; font-size: 0.78rem; resize: none; line-height: 1.3; box-sizing: border-box;"></textarea>
+                    </div>
+
+                    <button type="submit" style="background-color: #e67e22; color: #ffffff; padding: 6px; font-size: 0.8rem; font-weight: bold; border: none; border-radius: 4px; cursor: pointer; text-transform: uppercase; box-sizing: border-box; width: 100%;">
+                        Submit Review
+                    </button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- ATTRACTIVE SEE ALL REVIEWS ACTION LINK BOX IN THE BOTTOM RIGHT CORNER -->
+        <div style="display: flex; justify-content: flex-end; width: 100%; margin-top: 5px;">
+            <a href="/reviews" class="see-all-reviews-btn" style="display: inline-flex; align-items: center; gap: 8px; background-color: #2d3748; color: #34d399; border: 1px solid #4a5568; padding: 8px 20px; border-radius: 4px; font-size: 0.85rem; font-weight: bold; text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.3s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+                See All Customer Reviews <span style="font-size: 1rem;">➔</span>
+            </a>
         </div>
 
     </div>
@@ -2283,6 +2320,26 @@
 
 <!-- Safely Contained Responsive Design CSS Styles -->
 <style>
+/* Smooth Hover Animation Effect for See All Reviews Link Box */
+.see-all-reviews-btn:hover {
+    background-color: #10b981 !important; /* Transitions to fresh mountain green */
+    color: #ffffff !important;
+    border-color: #10b981 !important;
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.4) !important;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 1100px) {
+    .reviews-section-wrapper { padding: 20px !important; }
+    .reviews-main-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    .review-card, .review-card-split, .review-form-column { height: auto !important; }
+    .review-form-column textarea { max-height: 100px !important; min-height: 100px !important; }
+}
+@media (max-width: 600px) {
+    .reviews-main-grid { grid-template-columns: 1fr !important; }
+    .see-all-reviews-btn { width: 100%; justify-content: center; } /* Adapts nicely on phones */
+}
+</style>
 @media (max-width: 1100px) {
     .reviews-section-wrapper { padding: 20px !important; }
     .reviews-main-grid { grid-template-columns: repeat(2, 1fr) !important; }
