@@ -2187,82 +2187,311 @@
   @media (max-width: 600px) {
     .staff-headline-row h2 { font-size: 1.5rem !important; }
   }
+<!-- SELF-CONTAINED PREMIUM GUEST REVIEWS SECTION -->
+<style>
+  .tilicho-reviews-section {
+    padding: 40px 20px;
+    background-color: #f8fafc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #334155;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-sizing: border-box;
+  }
+  .tilicho-reviews-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 15px;
+  }
+  .tilicho-reviews-header h2 {
+    margin: 0 0 5px 0;
+    font-size: 1.6rem;
+    color: #0f172a;
+  }
+  .tilicho-reviews-header p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #64748b;
+  }
+  .tilicho-score-badge {
+    background-color: #10b981;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
+  }
+  .tilicho-reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+    align-items: stretch;
+  }
+  .tilicho-review-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+    position: relative;
+    box-sizing: border-box;
+  }
+  .tilicho-review-card.blue-top {
+    border-top: 3px solid #3b82f6;
+  }
+  .tilicho-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 4px;
+  }
+  .tilicho-review-name {
+    margin: 0;
+    font-size: 1rem;
+    color: #1e293b;
+    font-weight: 600;
+  }
+  .tilicho-review-stars {
+    color: #f1c40f;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+  .tilicho-review-country {
+    font-size: 0.8rem;
+    color: #64748b;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .tilicho-review-text {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.45;
+    color: #475569;
+    font-style: italic;
+  }
+  /* Split columns layout for India & China */
+  .tilicho-review-split-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-sizing: border-box;
+  }
+  .tilicho-split-half {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+    box-sizing: border-box;
+  }
+  .tilicho-split-half.purple-mode {
+    border-left: 3px solid #8b5cf6;
+  }
+  .tilicho-split-half p {
+    margin: 5px 0 0 0;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: #475569;
+    font-style: italic;
+  }
+  /* Review Submission Form Styles */
+  .tilicho-form-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+    box-sizing: border-box;
+  }
+  .tilicho-form-card h3 {
+    margin: 0 0 12px 0;
+    font-size: 1.1rem;
+    color: #0f172a;
+  }
+  .tilicho-form-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .tilicho-form-input {
+    width: 100%;
+    height: 32px;
+    padding: 4px 8px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    box-sizing: border-box;
+    background-color: #f8fafc;
+  }
+  .tilicho-form-input:focus {
+    outline: none;
+    border-color: #10b981;
+    background-color: #ffffff;
+  }
+  .tilicho-form-textarea {
+    width: 100%;
+    height: 55px;
+    padding: 6px 8px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    box-sizing: border-box;
+    resize: none;
+    background-color: #f8fafc;
+    margin-top: 8px;
+    margin-bottom: 10px;
+  }
+  .tilicho-form-textarea:focus {
+    outline: none;
+    border-color: #10b981;
+    background-color: #ffffff;
+  }
+  .tilicho-form-submit {
+    width: 100%;
+    height: 34px;
+    background-color: #0f172a;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  .tilicho-form-submit:hover {
+    background-color: #10b981;
+  }
+  .tilicho-see-all-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 15px;
+  }
+  .tilicho-see-all-link {
+    color: #27ae60;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+  }
+  .tilicho-see-all-link:hover {
+    color: #10b981;
+  }
+
+  /* Responsive Layout Overrides for Tablets and Phones */
+  @media (max-width: 1024px) {
+    .tilicho-reviews-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 640px) {
+    .tilicho-reviews-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .tilicho-reviews-grid {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    .tilicho-form-row {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
 </style>
 
-<!-- GUEST REVIEWS SECTION -->
-<section class="reviews-section">
-  <div class="reviews-header">
+<section class="tilicho-reviews-section">
+  <!-- Header Wrapper -->
+  <div class="tilicho-reviews-header">
     <div>
       <h2>⭐️ Guest Experiences &amp; Reviews ⭐️</h2>
       <p>Highly recommended local trekking &amp; adventure agency in Pokhara.</p>
     </div>
-    <div class="score-badge">Overall Score: 4.9/5.0 (Based on 450+ Reviews)</div>
+    <div class="tilicho-score-badge">Overall Score: 4.9/5.0 (Based on 450+ Reviews)</div>
   </div>
-  <div style="display:flex;flex-direction:column;gap:15px;width:100%">
-    <div class="reviews-main-grid">
-      <!-- USA -->
-      <div class="review-card-box">
-        <div>
-          <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:5px">
-            <h4 class="review-name">David Miller</h4>
-            <span class="review-stars">⭐⭐⭐⭐⭐</span>
-          </div>
-          <div class="review-country">🇺🇸 USA</div>
-          <p class="review-text-content">"Flawless experience! We booked our Annapurna Circuit guide and a paragliding flight. Best price compared to multiple lakeside agencies, and exceptionally professional service. Our guide was incredibly knowledgeable and kept us safe. Highly recommending Tilicho Tours to anyone visiting Nepal!"</p>
+
+  <!-- Review Columns Main Block -->
+  <div class="tilicho-reviews-grid">
+    
+    <!-- Box 1: USA -->
+    <div class="tilicho-review-card">
+      <div>
+        <div class="tilicho-card-header">
+          <h4 class="tilicho-review-name">David Miller</h4>
+          <span class="tilicho-review-stars">⭐⭐⭐⭐⭐</span>
         </div>
-      </div>
-      <!-- Australia -->
-      <div class="review-card-box blue-top">
-        <div>
-          <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:5px">
-            <h4 class="review-name">Sarah &amp; Matt</h4>
-            <span class="review-stars">⭐⭐⭐⭐⭐</span>
-          </div>
-          <div class="review-country aus">🇦🇺 Australia</div>
-          <p class="review-text-content">"We rented an independent porter for Mardi Himal and arranged a bungee jump. The transparency in pricing was fantastic — no hidden costs. The staff organized everything seamlessly within an hour over WhatsApp. Genuinely top-tier hospitality. Will definitely book again!"</p>
-        </div>
-      </div>
-      <!-- Split India + China -->
-      <div class="review-split">
-        <div class="review-half">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2px">
-            <strong>Rahul Sharma</strong>
-            <span style="color:#f1c40f;font-size:.75rem">⭐⭐⭐⭐⭐</span>
-          </div>
-          <div class="half-country">🇮🇳 INDIA</div>
-          <p>"Highly recommended for custom packages! They provided an experienced bird watching guide at highly economical rates. Best agency in Pokhara!"</p>
-        </div>
-        <div class="review-half purple">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2px">
-            <strong>Li Wei</strong>
-            <span style="color:#f1c40f;font-size:.75rem">⭐⭐⭐⭐⭐</span>
-          </div>
-          <div class="half-country">🇨🇳 CHINA</div>
-          <p>"非常满意的服务！We booked an Ultralight flight and hired high-altitude porters here. The safety standards were premium and package rates were the best in Lakeside."</p>
-        </div>
-      </div>
-      <!-- Review Form -->
-      <div class="review-form-col">
-        <h3>✍️ Leave Your Review</h3>
-        <form onsubmit="alert('Thank you for your valuable feedback! It will appear live after verification.');return false">
-          <div class="form-row-2">
-            <div><input type="text" class="form-input" placeholder="Your Name" required></div>
-            <div><input type="text" class="form-input" placeholder="Country" required></div>
-          </div>
-          <select class="form-input" required>
-            <option value="5">⭐⭐⭐⭐⭐ (5 Stars - Excellent)</option>
-            <option value="4">⭐⭐⭐⭐ (4 Stars - Very Good)</option>
-            <option value="3">⭐⭐⭐ (3 Stars - Average)</option>
-            <option value="2">⭐⭐ (2 Stars - Poor)</option>
-          </select>
-          <div><textarea class="form-textarea" placeholder="Write brief review here..." required></textarea></div>
-          <button type="submit" class="form-btn-submit">Submit Review</button>
-        </form>
+        <div class="tilicho-review-country">🇺🇸 USA</div>
+        <p class="tilicho-review-text">"Flawless experience! We booked our Annapurna Circuit guide and a paragliding flight. Best price compared to multiple lakeside agencies, and exceptionally professional service. Our guide was incredibly knowledgeable and kept us safe. Highly recommending Tilicho Tours to anyone visiting Nepal!"</p>
       </div>
     </div>
-    <div style="display:flex;justify-content:flex-end;width:100%;margin-top:5px">
-      <a href="/reviews" class="see-all-link">See All Customer Reviews <span>➔</span></a>
+
+    <!-- Box 2: Australia -->
+    <div class="tilicho-review-card blue-top">
+      <div>
+        <div class="tilicho-card-header">
+          <h4 class="tilicho-review-name">Sarah &amp; Matt</h4>
+          <span class="tilicho-review-stars">⭐⭐⭐⭐⭐</span>
+        </div>
+        <div class="tilicho-review-country">🇦🇺 Australia</div>
+        <p class="tilicho-review-text">"We rented an independent porter for Mardi Himal and arranged a bungee jump. The transparency in pricing was fantastic — no hidden costs. The staff organized everything seamlessly within an hour over WhatsApp. Genuinely top-tier hospitality. Will definitely book again!"</p>
+      </div>
     </div>
+
+    <!-- Box 3: Split Box Layout (India + China) -->
+    <div class="tilicho-review-split-box">
+      <!-- India Half -->
+      <div class="tilicho-split-half">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <strong style="font-size:0.85rem; color:#1e293b;">Rahul Sharma</strong>
+          <span class="tilicho-review-stars">⭐⭐⭐⭐⭐</span>
+        </div>
+        <div style="font-size:0.75rem; color:#64748b; font-weight:500; margin-top:1px;">🇮🇳 INDIA</div>
+        <p>"Highly recommended for custom packages! They provided an experienced bird watching guide at highly economical rates. Best agency in Pokhara!"</p>
+      </div>
+      
+      <!-- China Half -->
+      <div class="tilicho-split-half purple-mode">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <strong style="font-size:0.85rem; color:#1e293b;">Li Wei</strong>
+          <span class="tilicho-review-stars">⭐⭐⭐⭐⭐</span>
+        </div>
+        <div style="font-size:0.75rem; color:#64748b; font-weight:500; margin-top:1px;">🇨🇳 CHINA</div>
+        <p>"非常满意的服务！We booked an Ultralight flight and hired high-altitude porters here. The safety standards were premium and package rates were the best in Lakeside."</p>
+      </div>
+    </div>
+
+    <!-- Box 4: Interactive Review Submission Form -->
+    <div class="tilicho-form-card">
+      <h3>✍️ Leave Your Review</h3>
+      <form onsubmit="alert('Thank you for your valuable feedback! It will appear live after verification.'); return false;">
+        <div class="tilicho-form-row">
+          <input type="text" class="tilicho-form-input" placeholder="Your Name" required>
+          <input type="text" class="tilicho-form-input" placeholder="Country" required>
+        </div>
+        <select class="tilicho-form-input" style="margin-top:2px;" required>
+          <option value="5">⭐⭐⭐⭐⭐ (5 Stars - Excellent)</option>
+          <option value="4">⭐⭐⭐⭐ (4 Stars - Very Good)</option>
+          <option value="3">⭐⭐⭐ (3 Stars - Average)</option>
+          <option value="2">⭐⭐ (2 Stars - Poor)</option>
+        </select>
+        <textarea class="tilicho-form-textarea" placeholder="Write brief review here..." required></textarea>
+        <button type="submit" class="tilicho-form-submit">Submit Review</button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- See All Links Wrapper -->
+  <div class="tilicho-see-all-wrapper">
+    <a href="/reviews" class="tilicho-see-all-link">See All Customer Reviews <span>➔</span></a>
   </div>
 </section>
 
