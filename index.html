@@ -2187,16 +2187,17 @@
   @media (max-width: 600px) {
     .staff-headline-row h2 { font-size: 1.5rem !important; }
   }
-<!-- SELF-CONTAINED PREMIUM GUEST REVIEWS SECTION -->
+<!-- SELF-CONTAINED BLACK & WHITE MINIMALIST GUEST REVIEWS SECTION -->
 <style>
   .tilicho-reviews-section {
     padding: 40px 20px;
-    background-color: #f8fafc;
+    background-color: #ffffff; /* Seamless page match */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #334155;
+    color: #1a1a1a; /* Crisp dark text */
     border-radius: 8px;
     margin: 20px 0;
     box-sizing: border-box;
+    border: 1px solid #e5e5e5; /* Subtle frame containment */
   }
   .tilicho-reviews-header {
     display: flex;
@@ -2205,27 +2206,28 @@
     flex-wrap: wrap;
     gap: 15px;
     margin-bottom: 25px;
-    border-bottom: 2px solid #e2e8f0;
+    border-bottom: 2px solid #1a1a1a; /* Bold clean line separating headers */
     padding-bottom: 15px;
   }
   .tilicho-reviews-header h2 {
     margin: 0 0 5px 0;
     font-size: 1.6rem;
-    color: #0f172a;
+    color: #000000;
+    font-weight: 700;
   }
   .tilicho-reviews-header p {
     margin: 0;
     font-size: 0.95rem;
-    color: #64748b;
+    color: #4a4a4a;
   }
   .tilicho-score-badge {
-    background-color: #10b981;
+    background-color: #000000; /* High contrast black badge */
     color: #ffffff;
     padding: 8px 16px;
-    border-radius: 20px;
+    border-radius: 4px; /* Clean box structure matching client style */
     font-weight: 600;
     font-size: 0.9rem;
-    box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
+    letter-spacing: 0.5px;
   }
   .tilicho-reviews-grid {
     display: grid;
@@ -2235,18 +2237,23 @@
   }
   .tilicho-review-card {
     background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 6px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
     padding: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     position: relative;
     box-sizing: border-box;
+    transition: transform 0.2s, border-color 0.2s;
   }
-  .tilicho-review-card.blue-top {
-    border-top: 3px solid #3b82f6;
+  .tilicho-review-card:hover {
+    border-color: #000000;
+    transform: translateY(-2px);
+  }
+  .tilicho-review-card.dark-accent {
+    border-top: 3px solid #000000; /* Dynamic highlight card using monochrome styling */
   }
   .tilicho-card-header {
     display: flex;
@@ -2257,25 +2264,25 @@
   .tilicho-review-name {
     margin: 0;
     font-size: 1rem;
-    color: #1e293b;
-    font-weight: 600;
+    color: #000000;
+    font-weight: 700;
   }
   .tilicho-review-stars {
-    color: #f1c40f;
+    color: #000000; /* Styled monochrome stars for luxury black/white consistency */
     font-size: 0.85rem;
     white-space: nowrap;
   }
   .tilicho-review-country {
     font-size: 0.8rem;
-    color: #64748b;
-    font-weight: 500;
+    color: #4a4a4a;
+    font-weight: 600;
     margin-bottom: 10px;
   }
   .tilicho-review-text {
     margin: 0;
     font-size: 0.85rem;
-    line-height: 1.45;
-    color: #475569;
+    line-height: 1.5;
+    color: #262626;
     font-style: italic;
   }
   /* Split columns layout for India & China */
@@ -2287,35 +2294,40 @@
   }
   .tilicho-split-half {
     background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 6px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
     padding: 12px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     box-sizing: border-box;
+    transition: border-color 0.2s;
   }
-  .tilicho-split-half.purple-mode {
-    border-left: 3px solid #8b5cf6;
+  .tilicho-split-half:hover {
+    border-color: #000000;
+  }
+  .tilicho-split-half.side-accent {
+    border-left: 3px solid #000000; /* Clean monochrome side marker */
   }
   .tilicho-split-half p {
     margin: 5px 0 0 0;
     font-size: 0.8rem;
-    line-height: 1.4;
-    color: #475569;
+    line-height: 1.45;
+    color: #262626;
     font-style: italic;
   }
   /* Review Submission Form Styles */
   .tilicho-form-card {
     background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 6px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
     padding: 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     box-sizing: border-box;
   }
   .tilicho-form-card h3 {
     margin: 0 0 12px 0;
     font-size: 1.1rem;
-    color: #0f172a;
+    color: #000000;
+    font-weight: 700;
   }
   .tilicho-form-row {
     display: flex;
@@ -2326,39 +2338,39 @@
     width: 100%;
     height: 32px;
     padding: 4px 8px;
-    border: 1px solid #cbd5e1;
+    border: 1px solid #cccccc;
     border-radius: 4px;
     font-size: 0.85rem;
     box-sizing: border-box;
-    background-color: #f8fafc;
+    background-color: #ffffff;
+    color: #000000;
   }
   .tilicho-form-input:focus {
     outline: none;
-    border-color: #10b981;
-    background-color: #ffffff;
+    border-color: #000000;
   }
   .tilicho-form-textarea {
     width: 100%;
     height: 55px;
     padding: 6px 8px;
-    border: 1px solid #cbd5e1;
+    border: 1px solid #cccccc;
     border-radius: 4px;
     font-size: 0.85rem;
     box-sizing: border-box;
     resize: none;
-    background-color: #f8fafc;
+    background-color: #ffffff;
+    color: #000000;
     margin-top: 8px;
     margin-bottom: 10px;
   }
   .tilicho-form-textarea:focus {
     outline: none;
-    border-color: #10b981;
-    background-color: #ffffff;
+    border-color: #000000;
   }
   .tilicho-form-submit {
     width: 100%;
     height: 34px;
-    background-color: #0f172a;
+    background-color: #000000;
     color: #ffffff;
     border: none;
     border-radius: 4px;
@@ -2368,7 +2380,7 @@
     transition: background-color 0.2s;
   }
   .tilicho-form-submit:hover {
-    background-color: #10b981;
+    background-color: #27ae60; /* Turns clean green matching call actions on hover execution */
   }
   .tilicho-see-all-wrapper {
     display: flex;
@@ -2377,7 +2389,7 @@
     margin-top: 15px;
   }
   .tilicho-see-all-link {
-    color: #27ae60;
+    color: #27ae60; /* Retained designated high visibility green link design pattern */
     font-weight: 600;
     text-decoration: none;
     font-size: 0.9rem;
@@ -2433,8 +2445,8 @@
       </div>
     </div>
 
-    <!-- Box 2: Australia -->
-    <div class="tilicho-review-card blue-top">
+    <!-- Box 2: Australia (Clean Minimalist Contrast Top) -->
+    <div class="tilicho-review-card dark-accent">
       <div>
         <div class="tilicho-card-header">
           <h4 class="tilicho-review-name">Sarah &amp; Matt</h4>
@@ -2450,20 +2462,20 @@
       <!-- India Half -->
       <div class="tilicho-split-half">
         <div style="display:flex; justify-content:space-between; align-items:center;">
-          <strong style="font-size:0.85rem; color:#1e293b;">Rahul Sharma</strong>
+          <strong style="font-size:0.85rem; color:#000000;">Rahul Sharma</strong>
           <span class="tilicho-review-stars">⭐⭐⭐⭐⭐</span>
         </div>
-        <div style="font-size:0.75rem; color:#64748b; font-weight:500; margin-top:1px;">🇮🇳 INDIA</div>
+        <div style="font-size:0.75rem; color:#4a4a4a; font-weight:600; margin-top:1px;">🇮🇳 INDIA</div>
         <p>"Highly recommended for custom packages! They provided an experienced bird watching guide at highly economical rates. Best agency in Pokhara!"</p>
       </div>
       
       <!-- China Half -->
-      <div class="tilicho-split-half purple-mode">
+      <div class="tilicho-split-half side-accent">
         <div style="display:flex; justify-content:space-between; align-items:center;">
-          <strong style="font-size:0.85rem; color:#1e293b;">Li Wei</strong>
+          <strong style="font-size:0.85rem; color:#000000;">Li Wei</strong>
           <span class="tilicho-review-stars">⭐⭐⭐⭐⭐</span>
         </div>
-        <div style="font-size:0.75rem; color:#64748b; font-weight:500; margin-top:1px;">🇨🇳 CHINA</div>
+        <div style="font-size:0.75rem; color:#4a4a4a; font-weight:600; margin-top:1px;">🇨🇳 CHINA</div>
         <p>"非常满意的服务！We booked an Ultralight flight and hired high-altitude porters here. The safety standards were premium and package rates were the best in Lakeside."</p>
       </div>
     </div>
