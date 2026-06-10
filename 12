@@ -1819,7 +1819,7 @@
 
     <!-- ANNAPURNA CIRCUIT CARD -->
     <div class="card">
-        <img class="main-card-img" src="images/annapurnacircuittrek.jpeg" onerror="this.src='https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=500&q=80'" alt="Annapurna Circuit Trek 12 Days">
+        <img class="main-card-img" src="images/annapurnacircuittrek.jpeg" onerror="this.src='https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=500&q=80'" alt="Annapurna Circuit Trek 10 Days">
         <div class="package-price-banner-floating">
             <span class="package-price-strike">$960</span>$864 ONLY
         </div>
@@ -1835,7 +1835,7 @@
 
     <!-- EBC CARD -->
     <div class="card">
-        <img class="main-card-img" src="images/everestbasecamptrek.jpeg" onerror="this.src='https://images.unsplash.com/photo-1486916856992-e4db22c8df33?auto=format&fit=crop&w=500&q=80'" alt="Everest Base Camp Trek 14 Days">
+        <img class="main-card-img" src="images/everestbasecamptrek.jpeg" onerror="this.src='https://images.unsplash.com/photo-1486916856992-e4db22c8df33?auto=format&fit=crop&w=500&q=80'" alt="Everest Base Camp Trek 13 Days">
         <div class="package-price-banner-floating">
             <span class="package-price-strike">$1499</span>$1349 ONLY
         </div>
@@ -1867,12 +1867,12 @@
 
     <!-- MANASLU CIRCUIT CARD -->
     <div class="card">
-        <img class="main-card-img" src="images/manaslutrek.jpeg" onerror="this.src='https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=500&q=80'" alt="Manaslu Circuit Trek 14 Days">
+        <img class="main-card-img" src="images/manaslutrek.jpeg" onerror="this.src='https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=500&q=80'" alt="Manaslu Circuit Trek 17 Days">
         <div class="package-price-banner-floating">
             <span class="package-price-strike">$1149</span>$1034 ONLY
         </div>
         <div class="card-info">
-            <h3>Manaslu Circuit Trek — 14 Days</h3>
+            <h3>Manaslu Circuit Trek — 17 Days</h3>
             <p class="short-desc">Explore remote, pristine paths surrounding Mt. Manaslu, navigating high wild valleys over the challenging Larkya La Pass.</p>
             <div class="btn-group">
                 <a href="Manaslu-trek17-days.html" class="btn-details">Details</a>
