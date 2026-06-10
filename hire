@@ -2077,7 +2077,7 @@
     <!-- Guide Card 1: Mr. Dilip -->
     <div class="staff-card">
       <div class="staff-img-box" style="background-image: url('images/guidedilip.jfif'); background-color:#111;">
-        <div class="staff-price-tag" style="background-color: #ef4444; color: #ffffff; font-weight: 600;">Hire Per day basis</div>
+        <div class="staff-price-tag" style="background-color: #ef4444; color: #ffffff; font-weight: 600;"> Per day basis</div>
       </div>
       <div class="staff-body">
         <div class="staff-role">Senior Bird Watching Guide</div>
@@ -2104,7 +2104,7 @@
     <!-- Guide Card 2: Mr. Raju -->
     <div class="staff-card">
       <div class="staff-img-box" style="background-image: url('images/rajuguide.jpeg'); background-color:#111;">
-        <div class="staff-price-tag" style="background-color: #ef4444; color: #ffffff; font-weight: 600;">Hire Per day basis</div>
+        <div class="staff-price-tag" style="background-color: #ef4444; color: #ffffff; font-weight: 600;"> Per day basis</div>
       </div>
       <div class="staff-body">
         <div class="staff-role">Senior Mountain Guide</div>
@@ -2131,7 +2131,7 @@
     <!-- Guide Card 3: Mr. Puspa Dai -->
     <div class="staff-card">
       <div class="staff-img-box" style="background-image: url('images/Puspa.JPG'); background-color:#111;">
-        <div class="staff-price-tag" style="background-color: #ef4444; color: #ffffff; font-weight: 600;">Hire Per day basis</div>
+        <div class="staff-price-tag" style="background-color: #ef4444; color: #ffffff; font-weight: 600;"> Per day basis</div>
       </div>
       <div class="staff-body">
         <div class="staff-role">Senior Guide</div>
@@ -2158,7 +2158,7 @@
     <!-- Guide Card 4: Miss Sandhya -->
     <div class="staff-card">
       <div class="staff-img-box" style="background-image: url('images/sandhyaguide.jpeg'); background-color:#111;">
-        <div class="staff-price-tag" style="background-color: #ef4444; color: #ffffff; font-weight: 600;">Hire Per day basis</div>
+        <div class="staff-price-tag" style="background-color: #ef4444; color: #ffffff; font-weight: 600;">Per day basis</div>
       </div>
       <div class="staff-body">
         <div class="staff-role">Yoga Teacher Guide</div>
@@ -2204,7 +2204,7 @@
     <!-- Porter Card 1: Mr. Ashish -->
     <div class="staff-card">
       <div class="staff-img-box" style="background-image: url('images/porterashish1.JPG'); background-color:#111;">
-        <div class="staff-price-tag" style="background-color: #ef4444; color: #ffffff; font-weight: 600;">Hire Per day basis</div>
+        <div class="staff-price-tag" style="background-color: #ef4444; color: #ffffff; font-weight: 600;">  Per day basis</div>
       </div>
       <div class="staff-body">
         <div class="staff-role">High-Altitude Strong Porter</div>
@@ -2231,7 +2231,7 @@
     <!-- Porter Card 2: Mr. Govinda -->
     <div class="staff-card">
       <div class="staff-img-box" style="background-image: url('images/Mrgovindaguide.jpeg'); background-color:#111;">
-        <div class="staff-price-tag" style="background-color: #ef4444; color: #ffffff; font-weight: 600;">Hire Per day basis</div>
+        <div class="staff-price-tag" style="background-color: #ef4444; color: #ffffff; font-weight: 600;"> Per day basis</div>
       </div>
       <div class="staff-body">
         <div class="staff-role">Most Experienced &amp; Strong Porter</div>
@@ -2258,7 +2258,7 @@
     <!-- Porter Card 3: Mr. Sitaram -->
     <div class="staff-card">
       <div class="staff-img-box" style="background-image: url('images/porter2.jpeg'); background-color:#111;">
-        <div class="staff-price-tag" style="background-color: #ef4444; color: #ffffff; font-weight: 600;">Hire Per day basis</div>
+        <div class="staff-price-tag" style="background-color: #ef4444; color: #ffffff; font-weight: 600;"> Per day basis</div>
       </div>
       <div class="staff-body">
         <div class="staff-role">Mountain Man Porter</div>
@@ -2285,7 +2285,7 @@
     <!-- Porter Card 4: Mr. Pasang Sherpa -->
 <div class="staff-card">
   <div class="staff-img-box" style="background-image: url('images/porter3.jpeg'), url('images/porter4.jpg'), url('image/porter4.jpg'); background-color:#111;">
-    <div class="staff-price-tag" style="background-color: #ef4444; color: #ffffff; font-weight: 600;">Hire Per day basis</div>
+    <div class="staff-price-tag" style="background-color: #ef4444; color: #ffffff; font-weight: 600;"> Per day basis</div>
   </div>
   <div class="staff-body">
     <div class="staff-role">High Himalaya Porter</div>
