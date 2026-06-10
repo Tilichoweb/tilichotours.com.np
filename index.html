@@ -1415,96 +1415,236 @@
     </div>
 </div>
 
-<!-- UNIQUE FLIGHT TICKET SEARCH BOX IN ONE ROW ABOVE CONTENT -->
+<!-- FLIGHT TICKET SEARCHROW -->
+<style>
+  .flight-search-container-row {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .flight-search-form-row {
+    display: flex;
+    flex-wrap: nowrap; /* Forces everything strictly onto one single row */
+    align-items: flex-end;
+    gap: 4px; /* Tight item gap for single-row structural layout */
+    width: 100%;
+  }
+  .flight-search-form-row .flight-input-group {
+    flex: 1;
+    min-width: 0; /* Allows inputs to scale down smoothly to fit the row */
+  }
+  .flight-search-form-row .flight-input-group label {
+    display: block;
+    font-size: 10px; /* Compact font size for strict single-row alignment */
+    margin-bottom: 3px;
+    white-space: nowrap;
+    font-weight: 500;
+  }
+  .flight-search-form-row .flight-input-group input,
+  .flight-search-form-row .flight-input-group select {
+    width: 100%;
+    font-size: 11px;
+    padding: 4px 5px;
+    box-sizing: border-box;
+    height: 34px;
+  }
+  .flight-search-form-row .flight-action-group {
+    display: flex;
+    gap: 3px;
+    flex-shrink: 0;
+  }
+  .flight-search-form-row .flight-action-group a {
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    padding: 0 6px;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-weight: 600;
+    border-radius: 3px;
+  }
+  /* Disabled visual styles for both Return Date and Return Time fields */
+  .flight-input-group.disabled-state {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  .flight-input-group.disabled-state input {
+    cursor: not-allowed;
+    background-color: #f1f5f9 !important;
+  }
+</style>
+
 <div class="flight-search-container-row">
-    <div class="flight-box-headline-text">
-        <span>Book Your Flight Ticket</span>
-        <div class="flight-reply-note">We will reply you very soon</div>
+  <div class="flight-box-headline-text">
+    <span>Book Your <span>Flight Ticket</span></span>
+    <div class="flight-reply-note">We will reply you very soon</div>
+  </div>
+  <div class="flight-search-form-row">
+    <div class="flight-input-group">
+      <label>Type</label>
+      <select><option>Domestic</option><option>International</option></select>
+    </div>
+    <div class="flight-input-group">
+      <label>Trip</label>
+      <select id="flightTripType" onchange="handleFlightTripToggle()">
+        <option value="One Way">One Way</option>
+        <option value="Both Way">Both Way</option>
+      </select>
+    </div>
+    <div class="flight-input-group">
+      <label>Nationality</label>
+      <input type="text" placeholder="e.g., Country">
+    </div>
+    <div class="flight-input-group">
+      <label>From</label>
+      <input type="text" placeholder="e.g., Bangkok or BKK">
+    </div>
+    <div class="flight-input-group">
+      <label>To</label>
+      <input type="text" placeholder="e.g., Delhi or DEL">
     </div>
     
-    <div class="flight-search-form-row">
-        <div class="flight-input-group">
-            <label>Type</label>
-            <select>
-                <option value="international">Domestic</option>
-                <option value="domestic">International</option>
-            </select>
-        </div>
-        <div class="flight-input-group">
-            <label>Trip</label>
-            <select>
-                <option value="oneway">One Way</option>
-                <option value="bothway">Both Way</option>
-            </select>
-        </div>
-        <div class="flight-input-group">
-            <label>Nationality </label>
-            <input type="text" placeholder="e.g., Country">
-        </div>
-        <div class="flight-input-group">
-            <label>From</label>
-            <input type="text" placeholder="e.g., Bankok or BKK ">
-        </div>
-        <div class="flight-input-group">
-            <label>To</label>
-            <input type="text" placeholder="e.g., Delhi or DEL">
-        </div>
-        <div class="flight-input-group">
-            <label>Date</label>
-            <input type="date">
-        </div>
-        <div class="flight-input-group">
-            <label>Time</label>
-            <select>
-                <option>7:00 AM</option>
-                <option>8:00 AM</option>
-                <option>9:00 AM</option>
-                <option>10:00 AM</option>
-                <option>11:00 AM</option>
-                <option>12:00 PM</option>
-                <option>1:00 PM</option>
-                <option>2:00 PM</option>
-                <option>3:00 PM</option>
-                <option>4:00 PM</option>
-                <option>5:00 PM</option>
-                <option>6:00 PM</option>
-                <option>7:00 PM</option>
-                <option>8:00 PM</option>
-                <option>9:00 PM</option>
-                <option>10:00 PM</option>
-            </select>
-        </div>
-        <div class="flight-input-group" style="min-width: 60px;">
-            <label>Adult</label>
-            <select>
-                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
-                <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
-            </select>
-        </div>
-        <div class="flight-input-group" style="min-width: 60px;">
-            <label>Child</label>
-            <select>
-                <option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
-                <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
-            </select>
-        </div>
-        <div class="flight-input-group">
-            <label>Extra request  </label>
-            <input type="text" placeholder="e.g.extra bag/ohter req ">
-        </div>
-
-        <div class="flight-action-group">
-            <a href="https://wa.me/9779856023917?text=Flight%20Booking%20Request" class="btn-flight-wa" target="_blank">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.456L0 24zm6.59-4.846c1.6.95 3.488 1.449 5.412 1.451 5.428 0 9.85-4.417 9.854-9.849.002-2.631-1.019-5.101-2.875-6.959-1.856-1.857-4.321-2.879-6.953-2.88-5.432 0-9.854 4.417-9.858 9.853-.002 1.982.518 3.916 1.507 5.627L1.445 22.566l6.202-1.628z"/>
-                </svg> Search
-            </a>
-            <a href="mailto:tilichotours074@gmail.com?subject=Flight%20Booking%20Request" class="btn-flight-email">
-                Email
-            </a>
-        </div>
+    <!-- DEPARTURE DATE FIELD -->
+    <div class="flight-input-group">
+      <label> Flight Date</label>
+      <input type="date" id="flightDepartureDate">
     </div>
+    
+    <!-- CHANGED: DEPARTURE TIME IS NOW MANUAL TEXT INPUT -->
+    <div class="flight-input-group">
+      <label>Time</label>
+      <input type="text" placeholder="e.g., 7 AM or 2 PM">
+    </div>
+    
+    <!-- RETURN DATE FIELD -->
+    <div class="flight-input-group disabled-state" id="flightReturnDateWrapper">
+      <label>Return Date</label>
+      <input type="date" id="flightReturnDate" disabled>
+    </div>
+
+    <!-- ADDED: RETURN TIME FIELD WITH MATCHING DISABLED LOGIC -->
+    <div class="flight-input-group disabled-state" id="flightReturnTimeWrapper">
+      <label>Return Time</label>
+      <input type="text" id="flightReturnTime" placeholder="e.g., 7 PM" disabled>
+    </div>
+    
+    <div class="flight-input-group" style="min-width:35px; flex: 0.6;">
+      <label>Adult</label>
+      <select><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10<option>10+ </select>
+    </div>
+    <div class="flight-input-group" style="min-width:35px; flex: 0.6;">
+      <label>Child</label>
+      <select><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10<option>10+ </select>
+    </div>
+    <div class="flight-input-group" style="flex: 1.1;">
+      <label>Extra Request</label>
+      <input type="text" placeholder="e.g., extra bag / other req.">
+    </div>
+    
+    <!-- CLICKABLE INTERACTIVE ACTION BUTTONS -->
+    <div class="flight-action-group">
+      <a href="https://wa.me/9779856023917?text=Flight%20Booking%20Request" class="btn-flight-wa" target="_blank" title="Send ticket request via WhatsApp">
+        <svg viewBox="0 0 24 24" style="width:13px; height:13px; fill:currentColor; margin-right:3px; vertical-align:middle;"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.456L0 24zm6.59-4.846c1.6.95 3.488 1.449 5.412 1.451 5.428 0 9.85-4.417 9.854-9.849.002-2.631-1.019-5.101-2.875-6.959-1.856-1.857-4.321-2.879-6.953-2.88-5.432 0-9.854 4.417-9.858 9.853-.002 1.982.518 3.916 1.507 5.627L1.445 22.566l6.202-1.628z"/></svg>
+        WhatsApp
+      </a>
+      <a href="mailto:tilichotours074@gmail.com?subject=Flight%20Booking%20Request" class="btn-flight-email" title="Send ticket request via Email">
+        <svg viewBox="0 0 24 24" style="width:13px; height:13px; fill:currentColor; margin-right:3px; vertical-align:middle;"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        Email
+      </a>
+    </div>
+  </div>
 </div>
+
+<script>
+  // Bulletproof Calendar Auto-Selection Fix Engine
+  function runCalendarEngine() {
+    const departureInput = document.getElementById('flightDepartureDate');
+    const returnInput = document.getElementById('flightReturnDate');
+    
+    if (!departureInput) return;
+
+    // Generate strict local ISO date format format string
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const dd = String(today.getDate()).padStart(2, '0');
+    const todayString = yyyy + '-' + mm + '-' + dd;
+
+    // Force date application values immediately
+    if (!departureInput.value) {
+      departureInput.value = todayString;
+    }
+    departureInput.min = todayString;
+
+    if (returnInput) {
+      returnInput.min = departureInput.value;
+    }
+
+    // Set listener to update return validation dynamically when departure changes
+    departureInput.removeEventListener('change', syncReturnMinDate);
+    departureInput.addEventListener('change', syncReturnMinDate);
+
+    handleFlightTripToggle();
+  }
+
+  function syncReturnMinDate() {
+    const departureInput = document.getElementById('flightDepartureDate');
+    const returnInput = document.getElementById('flightReturnDate');
+    if (departureInput && returnInput) {
+      returnInput.min = departureInput.value;
+      if (returnInput.value && returnInput.value < departureInput.value) {
+        returnInput.value = departureInput.value;
+      }
+    }
+  }
+
+  function handleFlightTripToggle() {
+    const tripType = document.getElementById('flightTripType').value;
+    
+    const returnDateWrapper = document.getElementById('flightReturnDateWrapper');
+    const returnDateInput = document.getElementById('flightReturnDate');
+    
+    const returnTimeWrapper = document.getElementById('flightReturnTimeWrapper');
+    const returnTimeInput = document.getElementById('flightReturnTime');
+
+    if (tripType === 'Both Way') {
+      // Activate Date Field
+      if (returnDateInput && returnDateWrapper) {
+        returnDateInput.removeAttribute('disabled');
+        returnDateWrapper.classList.remove('disabled-state');
+        if (!returnDateInput.value) {
+          const departureInput = document.getElementById('flightDepartureDate');
+          returnDateInput.value = departureInput ? departureInput.value : returnDateInput.min;
+        }
+      }
+      // Activate Time Field
+      if (returnTimeInput && returnTimeWrapper) {
+        returnTimeInput.removeAttribute('disabled');
+        returnTimeWrapper.classList.remove('disabled-state');
+      }
+    } else {
+      // Deactivate Date Field
+      if (returnDateInput && returnDateWrapper) {
+        returnDateInput.setAttribute('disabled', 'true');
+        returnDateInput.value = ''; 
+        returnDateWrapper.classList.add('disabled-state');
+      }
+      // Deactivate Time Field
+      if (returnTimeInput && returnTimeWrapper) {
+        returnTimeInput.setAttribute('disabled', 'true');
+        returnTimeInput.value = '';
+        returnTimeWrapper.classList.add('disabled-state');
+      }
+    }
+  }
+
+  // Triple-layer execution hierarchy to ensure the date loads instantly on any theme engine
+  runCalendarEngine();
+  document.addEventListener('DOMContentLoaded', runCalendarEngine);
+  window.addEventListener('load', runCalendarEngine);
+  setTimeout(runCalendarEngine, 200); // Fail-safe override for heavy asynchronous page builders
+</script>
 
 <!-- ADVENTURE ACTIVITIES SECTION -->
 <div class="trekking-section-wrapper" style="padding: 6px 15px; max-width: 900px; margin-left: auto; margin-right: auto; border-radius: 6px;">
