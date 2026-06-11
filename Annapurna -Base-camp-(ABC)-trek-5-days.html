@@ -358,43 +358,123 @@ ul li { margin-bottom: 8px; font-size: 15px; }
   }
 </style>
 
-<!-- GALLERY SECTION HEADER -->
-<h2>Gallery (Click to View Large)</h2>
-
-<!-- IMAGE GRID -->
-<div class="lightbox-gallery-grid">
-  <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Trek View 1" onclick="openGalleryLightbox(this.src)">
-  <img src="https://images.unsplash.com/photo-1526495124232-a04e1849168c" alt="Trek View 2" onclick="openGalleryLightbox(this.src)">
-  <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Trek View 3" onclick="openGalleryLightbox(this.src)">
-  <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7" alt="Trek View 4" onclick="openGalleryLightbox(this.src)">
-  <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa" alt="Trek View 5" onclick="openGalleryLightbox(this.src)">
-</div>
-
-<!-- THE POPUP MODAL HTML STRUCTURE -->
-<div id="customGalleryModal" class="gallery-modal" onclick="closeGalleryLightbox(event)">
-  <span class="gallery-modal-close" onclick="closeGalleryLightbox(null)">&times;</span>
-  <img class="gallery-modal-content" id="lightboxTargetImage" alt="Enlarged View">
-</div>
-
-<!-- LIGHTBOX JAVASCRIPT LOGIC -->
-<script>
-  function openGalleryLightbox(imageSrc) {
-    const modal = document.getElementById('customGalleryModal');
-    const modalImg = document.getElementById('lightboxTargetImage');
-    
-    modalImg.src = imageSrc;
-    modal.classList.add('show');
-    // Prevents underlying main page background from scrolling while looking at photo
-    document.body.style.overflow = 'hidden'; 
+<!-- STYLING FOR THE INTERACTIVE SLIDESHOW -->
+<style>
+  .tour-slideshow-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   }
 
-  function closeGalleryLightbox(event) {
-    // Closes popup if user clicks background overlay, close 'X' button, or direct trigger
-    if (!event || event.target.id === 'customGalleryModal' || event.target.className === 'gallery-modal-close') {
-      const modal = document.getElementById('customGalleryModal');
-      modal.classList.remove('show');
-      document.body.style.overflow = ''; // Restores background scrolling
+  .tour-slideshow-container h2 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    color: #111;
+    margin-bottom: 12px;
+  }
+
+  /* Large Main Image Frame */
+  .slideshow-main-view {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+  }
+
+  .slideshow-main-view img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+  }
+
+  /* Thumbnail Row Layout */
+  .slideshow-thumbnail-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+    scrollbar-width: thin;
+  }
+
+  /* Individual Small Thumbnail Styles */
+  .slideshow-thumb {
+    width: 100px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0.6;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  /* Active/Selected Thumbnail Highlight */
+  .slideshow-thumb.active-display, .slideshow-thumb:hover {
+    opacity: 1;
+    border-color: #27ae60; /* Your identity green border */
+    transform: translateY(-2px);
+  }
+
+  /* Mobile Fixes */
+  @media (max-width: 768px) {
+    .slideshow-main-view {
+      height: 280px;
     }
+    .slideshow-thumb {
+      width: 75px;
+      height: 55px;
+    }
+  }
+</style>
+
+<!-- SLIDESHOW COMPONENT HTML -->
+<div class="tour-slideshow-container">
+  <h2>Gallery (Interactive Presentation)</h2>
+  
+  <!-- Main Large Photo Display Box -->
+  <div class="slideshow-main-view">
+    <img id="featuredTourImage" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Main Trekking Feature View">
+  </div>
+
+  <!-- Clickable Previews Row Underneath -->
+  <div class="slideshow-thumbnail-row">
+    <img class="slideshow-thumb active-display" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Preview 1" onclick="updateSlideshowDisplay(this)">
+    <img class="slideshow-thumb" src="https://images.unsplash.com/photo-1526495124232-a04e1849168c" alt="Preview 2" onclick="updateSlideshowDisplay(this)">
+    <img class="slideshow-thumb" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Preview 3" onclick="updateSlideshowDisplay(this)">
+    <img class="slideshow-thumb" src="https://images.unsplash.com/photo-1605649487212-47bdab064df7" alt="Preview 4" onclick="updateSlideshowDisplay(this)">
+    <img class="slideshow-thumb" src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b" alt="Preview 5" onclick="updateSlideshowDisplay(this)">
+  </div>
+</div>
+
+<!-- SLIDESHOW LOGIC JAVASCRIPT -->
+<script>
+  function updateSlideshowDisplay(thumbnailElement) {
+    const mainFeaturedImage = document.getElementById('featuredTourImage');
+    
+    // Smooth crossfade animation trigger
+    mainFeaturedImage.style.opacity = '0.3';
+    
+    setTimeout(() => {
+      // Change the main source image to the thumbnail source image
+      mainFeaturedImage.src = thumbnailElement.src;
+      mainFeaturedImage.style.opacity = '1';
+    }, 150);
+
+    // Remove the green highlight border from all other thumbnails
+    const allThumbnails = document.querySelectorAll('.slideshow-thumb');
+    allThumbnails.forEach(thumb => thumb.classList.remove('active-display'));
+    
+    // Add the green highlight border to the clicked thumbnail
+    thumbnailElement.classList.add('active-display');
   }
 </script>
     <!-- CONTACT FORM -->
