@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tilicho Lake Trek – 12 Days with Annapurna Circuit Trek </title>
+
+<style>
+body{
+font-family:Arial;
+margin:0;
+background:#f4f6f8;
+color:#222;
+}
+
+/* --- HERO SLIDER --- */
+.hero-slider { width: 100%; height: 500px; overflow: hidden; position: relative; }
+.slides { display: flex; width: 500%; height: 100%; animation: slideFlow 25s infinite; }
+.slide { width: 20%; height: 100%; background-size: cover; background-position: center; position: relative; }
+
+/* Tilicho Lake & Annapurna Images */
+.s1 { background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470'); }
+.s2 { background-image: url('https://images.unsplash.com/photo-1526495124232-a04e1849168c'); }
+.s3 { background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee'); }
+.s4 { background-image: url('https://images.unsplash.com/photo-1605649487212-47bdab064df7'); }
+.s5 { background-image: url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b'); }
+
+.hero-overlay {
+    position: absolute; inset: 0; background: rgba(0,0,0,0.55);
+    display: flex; align-items: center; justify-content: center; color: #fff; text-align: center; z-index: 10;
+    flex-direction: column;
+}
+
+@keyframes slideFlow {
+    0% { transform: translateX(0); }
+    15% { transform: translateX(0); }
+    20% { transform: translateX(-20%); }
+    35% { transform: translateX(-20%); }
+    40% { transform: translateX(-40%); }
+    55% { transform: translateX(-40%); }
+    60% { transform: translateX(-60%); }
+    75% { transform: translateX(-60%); }
+    80% { transform: translateX(-80%); }
+    95% { transform: translateX(-80%); }
+    100% { transform: translateX(0); }
+}
+
+.hero-overlay h1 { font-size: 36px; margin: 0; }
+.hero-overlay p { font-size: 18px; margin: 10px 0; }
+
+.btn{
+display:inline-block;
+background:#25D366;
+color:white;
+padding:12px 18px;
+border-radius:30px;
+text-decoration:none;
+margin-top:10px;
+font-weight:bold;
+}
+
+/* --- PRICE BOX TOP RIGHT --- */
+.price{
+position:fixed;
+right:20px;
+top:120px;
+width:200px;
+background:white;
+border:2px dashed #25D366;
+padding:12px;
+border-radius:10px;
+text-align:center;
+z-index:999;
+font-size:14px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.strike{text-decoration:line-through;color:gray;}
+.offer{font-size:20px;color:green;font-weight:bold;}
+
+/* CONTAINER */
+.container{
+max-width:1100px;
+margin:auto;
+padding:20px;
+}
+
+.box{
+background:white;
+padding:25px;
+margin-top:20px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+h2{
+border-left:5px solid #25D366;
+padding-left:10px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+font-size:14px;
+}
+
+th,td{
+border:1px solid #ddd;
+padding:10px;
+text-align:center;
+}
+
+/* GALLERY SLIDER */
+.slider-gallery{
+display:flex;
+overflow-x:auto;
+gap:10px;
+scroll-behavior:smooth;
+padding-bottom:10px;
+}
+
+.slider-gallery img{
+width:320px;
+height:220px;
+object-fit:cover;
+border-radius:10px;
+flex:0 0 auto;
+cursor:pointer;
+transition:0.3s;
+}
+
+/* FORM */
+input,textarea,select{
+width:100%;
+padding:10px;
+margin-top:8px;
+border:1px solid #ccc;
+border-radius:6px;
+}
+
+.small{
+color:#555;
+font-size:14px;
+}
+
+@media(max-width: 768px) {
+    .hero-slider { height: 350px; }
+    .price { position: relative; width: 100%; top: 0; right: 0; margin-bottom: 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO SLIDER -->
+<div class="hero-slider">
+    <div class="hero-overlay">
+        <h1>Tilicho Lake Trek – 12 Days</h1>
+        <p>Best Annapurna Circuit and Tilicho Lake Trek from Pokhara–Pokhara</p>
+        <a class="btn" href="https://wa.me/9779856023917">Inquary NOW </a>
+    </div>
+    <div class="slides">
+        <div class="slide s1"></div>
+        <div class="slide s2"></div>
+        <div class="slide s3"></div>
+        <div class="slide s4"></div>
+        <div class="slide s5"></div>
+    </div>
+</div>
+
+<!-- PRICE BOX DUAL OPTION -->
+<div class="price">
+<h3 style="margin:5px 0;">Package Price</h3>
+<p style="font-weight:bold; margin:5px 0;">Select Option</p>
+
+<!-- FULL PACKAGE -->
+<div style="border:1px solid #eee; padding:8px; border-radius:8px; margin-bottom:8px;">
+<p style="margin:4px 0;"><b>Full</b></p>
+<p class="strike" style="margin:2px 0;">USD 890</p>
+<p class="offer" style="margin:2px 0;">USD 855</p>
+<p style="font-size:11px;">All services as mentioned</p>
+<a class="btn" 
+style="display:block; background:#25D366; padding:8px; font-size:12px; text-align:center; border-radius:20px; margin-top:5px;"
+href="https://wa.me/9779856023917?text=I%20want%20Full%20Package%20Tilicho%20Lake%20Trek">
+BOOK
+</a>
+</div>
+
+<!-- SEMI PACKAGE -->
+<div style="border:1px solid #eee; padding:8px; border-radius:8px;">
+<p style="margin:4px 0;"><b>Semi</b></p>
+<p class="offer" style="margin:2px 0;">USD 555</p>
+<p style="font-size:11px;">Full package except meals</p>
+<a class="btn"
+style="display:block; background:#25D366; padding:8px; font-size:12px; text-align:center; border-radius:20px; margin-top:5px;"
+href="https://wa.me/9779856023917?text=I%20want%20Semi%20Package%20Tilicho%20Lake%20Trek">
+BOOK
+</a>
+</div>
+
+</div>
+
+<div class="container">
+
+<div class="box">
+<h2>Trip Overview</h2>
+<ul>
+<li>Explore the world-famous Annapurna Circuit Trek route</li>
+<li>Visit Tilicho Lake – one of the highest glacial lakes in the world</li>
+<li>Cross Thorong La Pass (5,416m)</li>
+<li>Experience Tibetan villages and Himalayan culture</li>
+<li>Visit sacred Muktinath Temple</li>
+<li>Beautiful mountain views of Annapurna, Gangapurna and Tilicho Peak</li>
+<li>Perfect mix of adventure, culture and high-altitude trekking</li>
+</ul>
+</div>
+
+<div class="box">
+<h2>Outline Itinerary</h2>
+<table>
+<tr>
+<th>Day</th>
+<th>Overnight Stop</th>
+<th>Altitude</th>
+<th>Distance</th>
+<th>Remarks</th>
+</tr>
+<tr><td>1</td><td>Chame</td><td>2670m</td><td>Drive 8 hrs </td><td> Pkr Besisahar-Chame  sharing bus,jeep</td></tr>
+<tr><td>2</td><td>Pisang</td><td>3200m</td><td>15 km</td><td>Pine forest & suspension bridges</td></tr>
+<tr><td>3</td><td>Manang</td><td>3540m</td><td>17 km</td><td>Tibetan villages & mountain views</td></tr>
+<tr><td>4</td><td>Manang</td><td>3540m</td><td>Rest Day</td><td>Acclimatization</td></tr>
+<tr><td>5</td><td>Shree Kharka</td><td>4050m</td><td>10 km</td><td>Alpine landscapes</td></tr>
+<tr><td>6</td><td>Tilicho Base Camp</td><td>4150m</td><td>8 km</td><td>Rugged Himalayan trail</td></tr>
+<tr><td>7</td><td>Shree Kharka</td><td>4050m</td><td>16 km</td><td>Tilicho Lake visit</td></tr>
+<tr><td>8</td><td>Yak Kharka</td><td>4050m</td><td>12 km</td><td>Yak pastures</td></tr>
+<tr><td>9</td><td>Thorong High Camp</td><td>4925m</td><td>9 km</td><td>Pass preparation</td></tr>
+<tr><td>10</td><td>Muktinath</td><td>3800m</td><td>15 km</td><td>Thorong La Pass crossing</td></tr>
+<tr><td>11</td><td>Pokhara</td><td>820m</td><td>Drive 7 hrs </td><td>Return by bus/jeep sharing via Kali Gandaki Valley</td></tr>
+</table>
+</div>
+
+<div class="box">
+<h2>Detailed Itinerary</h2>
+<p><b>Day 1 – Pokhara to Chame (Drive 175 km | 2670m | 8–9 hrs)</b><br>
+Drive early morning from Pokhara by sharing vehicle with Scenic drive via Besisahar, the drive by sharing jeep through rivers, waterfalls, and terraced hills. Reach Chame before evening, the gateway to the Annapurna region and enjoy the peaceful mountain village overnight.</p>
+
+<p><b>Day 2 – Chame to Pisang (15 km | 3200m | 5 hrs trek)</b><br>
+Walk through pine forests, suspension bridges, and beautiful mountain valleys. Enjoy views of Annapurna peaks and explore the peaceful Buddhist village of Pisang.</p>
+
+<p><b>Day 3 – Pisang to Manang (17 km | 3540m | 6 hrs trek)</b><br>
+Trek through Tibetan-style villages with amazing Himalayan views. Visit monasteries and enjoy panoramic landscapes before reaching Manang village.</p>
+
+<p><b>Day 4 – Acclimatization Day in Manang (Optional 3–5 km hike)</b><br>
+Rest day for altitude adjustment. Explore Braga Monastery, Gangapurna Lake, and nearby viewpoints while preparing for higher elevation trekking.</p>
+
+<p><b>Day 5 – Manang to Shree Kharka (10 km | 4050m | 5 hrs trek)</b><br>
+Steady uphill trail through alpine landscapes and peaceful mountain routes. Enjoy excellent views of Annapurna II and Tilicho Peak.</p>
+
+<p><b>Day 6 – Shree Kharka to Tilicho Base Camp (8 km | 4150m | 4 hrs trek)</b><br>
+A rugged and scenic trail leads to Tilicho Base Camp. Rocky landscapes and dramatic mountain scenery make this a special trekking day.</p>
+
+<p><b>Day 7 – Tilicho Lake Visit & Return (16 km | 4130m | 6 hrs trek)</b><br>
+Early morning hike to Tilicho Lake, one of the world’s highest glacial lakes. Enjoy turquoise water, snow peaks, and unforgettable Himalayan scenery before returning to Shree Kharka.</p>
+
+<p><b>Day 8 – Shree Kharka to Yak Kharka (12 km | 4050m | 6 hrs trek)</b><br>
+Cross alpine meadows and yak pastures with quiet mountain trails. A peaceful day with beautiful Himalayan landscapes and local shepherd culture.</p>
+
+<p><b>Day 9 – Yak Kharka to Thorong High Camp (9 km | 4925m | 5 hrs trek)</b><br>
+Gradual climb to High Camp for Thorong La Pass crossing. Spectacular views and strong high-mountain atmosphere before the biggest trekking day.</p>
+
+<p><b>Day 10 – Thorong La Pass to Muktinath (15 km | 5416m pass | 7 hrs trek)</b><br>
+Cross the famous Thorong La Pass, one of the highest trekking passes in the world. Descend to sacred Muktinath Temple for overnight stay.</p>
+
+<p><b>Day 11 – Muktinath to Pokhara (Drive 165 km | 7–8 hrs)</b><br>
+Drive through the Kali Gandaki Valley with changing landscapes from dry Mustang to green Pokhara. Relax at Lakeside after completing your adventure.</p>
+</div>
+
+<div class="box">
+<h2>Trekking Equipment Checklist</h2>
+<table>
+<tr><th>Item</th><th>Qty</th></tr>
+<tr><td>Duffel Bag & Daypack</td><td>1 Each</td></tr>
+<tr><td>Trekking Boots & Socks</td><td>1 Pair / 3 Pairs</td></tr>
+<tr><td>Clothing (Trek pants, T-shirts, Down Jacket)</td><td>As Needed</td></tr>
+<tr><td>Weather Gear (Raincoat, Warm Hat, Gloves)</td><td>1 Each</td></tr>
+<tr><td>Accessories (Sunglasses, Water Bottle, Flashlight)</td><td>1 Each</td></tr>
+<tr><td>Health & Essentials (Sunscreen, Medicine, Toiletries)</td><td>1 Set</td></tr>
+</table>
+</div>
+
+<div class="box">
+<h2>Package Includes</h2>
+<ul>
+<li>All types of Government Paperwork like ACAP & TIMS Permits</li>
+<li>Professional English speaking Guide / Porters</li>
+<li>Meals on Trek (Breakfast + Dinner)</li>
+<li>Local Guesthouse Accommodation</li>
+<li>Transportation beginning trek and from end of trek (sharing)</li>
+<li>First Aid Support</li>
+<li>Basic Trekking map, stick/pole etc.</li>
+<li>Guide / Porter food, accommodation, transportation & insurance</li>
+<li>Emergency rescue support arrangement</li>
+</ul>
+</div>
+
+<div class="box">
+<h2>Package Excludes</h2>
+<ul>
+<li>International Flights & Visa</li>
+<li>Lunch on Trek</li>
+<li>Personal Equipment</li>
+<li>Tips for Guide / Porter</li>
+<li>Soft drinks & personal expenses</li>
+<li>Extra days all expenses due to weather or health</li>
+</ul>
+</div>
+
+<div class="box">
+<h2>Package Cost Details</h2>
+<table>
+<tr>
+<th>Package Option</th>
+<th>Price</th>
+<th>Details</th>
+</tr>
+<tr>
+<td>Full Package</td>
+<td>USD 855 / Person</td>
+<td>Guide + Permits + Transport + Accommodation + Breakfast + Lunch + Dinner</td>
+</tr>
+<tr>
+<td>Semi Package</td>
+<td>USD 555 / Person</td>
+<td>Same services except guest meals are not included</td>
+</tr>
+</table>
+</div>
+
+<div class="box">
+<h2>Gallery (Swipe / Click)</h2>
+<div class="slider-gallery">
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+<img src="https://images.unsplash.com/photo-1526495124232-a04e1849168c">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+<img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7">
+<img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b">
+</div>
+</div>
+
+<div class="box">
+<h2>Trekking Map</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Annapurna_Circuit_map.png" style="width:100%;border-radius:10px;">
+</div>
+
+<div class="box">
+<h2>Book Now / Enquiry</h2>
+<form action="mailto:tilichotours074@gmail.com">
+<input type="text" placeholder="Full Name" required>
+<input type="email" placeholder="Email Address" required>
+<input type="text" placeholder="WhatsApp Number" required>
+<input type="text" placeholder="Country" required>
+<select>
+<option>Number of Pax</option>
+<option>1</option>
+<option>2</option>
+<option>3-5</option>
+<option>Group</option>
+</select>
+<textarea rows="6" placeholder="Your Message"></textarea>
+<button class="btn" type="submit">Send Massage</button>
+</form>
+</div>
+
+<div class="box">
+<h2>Message from Tilicho Tours</h2>
+<p>
+Trusted journey, real Himalayas, lifetime experience with Tilicho Tours & Travels.<br><br>
+<b>We don’t sell trips, we create memories in the Himalayas.</b>
+</p>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ABC Trek 5 Days | Tilicho Tours & Travels</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+body { background: #f4f6f8; color: #333; line-height: 1.6; }
+
+/* --- HERO SLIDER --- */
+.hero-slider { width: 100%; height: 500px; overflow: hidden; position: relative; }
+.slides { display: flex; width: 500%; height: 100%; animation: slideFlow 25s infinite; }
+.slide { width: 20%; height: 100%; background-size: cover; background-position: center; position: relative; }
+
+.s1 { background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470'); }
+.s2 { background-image: url('https://images.unsplash.com/photo-1544735716-392fe2489ffa'); }
+.s3 { background-image: url('https://images.unsplash.com/photo-1520208422220-d12a3c588e6c'); }
+.s4 { background-image: url('https://images.unsplash.com/photo-1585016495481-91613a3f55ce'); }
+.s5 { background-image: url('https://images.unsplash.com/photo-1533130061792-64b345e4a833'); }
+
+.hero-overlay {
+    position: absolute; inset: 0; background: rgba(0,0,0,0.4);
+    display: flex; align-items: center; justify-content: center; color: #fff; text-align: center; z-index: 10;
+    flex-direction: column; padding: 20px;
+}
+
+@keyframes slideFlow {
+    0%, 15% { transform: translateX(0); }
+    20%, 35% { transform: translateX(-20%); }
+    40%, 55% { transform: translateX(-40%); }
+    60%, 75% { transform: translateX(-60%); }
+    80%, 95% { transform: translateX(-80%); }
+    100% { transform: translateX(0); }
+}
+
+.hero-overlay h1 { font-size: 42px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
+.hero-overlay p { font-size: 18px; margin-bottom: 20px; font-weight: 300; }
+
+/* --- PRICE BOX --- */
+.price-box-fixed {
+    position: fixed; right: 20px; top: 100px; width: 230px; background: white;
+    border: 2px dashed #25D366; padding: 15px; border-radius: 12px;
+    text-align: center; z-index: 999; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.offer { font-size: 24px; color: #e74c3c; font-weight: bold; margin: 5px 0; }
+.strike { text-decoration: line-through; color: #888; font-size: 14px; }
+.pkg-btn { 
+    display: block; background: #25D366; color: white; padding: 10px; 
+    border-radius: 25px; margin-top: 10px; text-decoration: none; font-weight: bold; font-size: 14px;
+}
+
+/* --- LAYOUT --- */
+.container { max-width: 1000px; margin: auto; padding: 20px; }
+.box { background: white; padding: 30px; margin-top: 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+h2 { color: #0d4d7a; border-left: 5px solid #25D366; padding-left: 15px; margin-bottom: 20px; font-size: 24px; }
+h3 { color: #0d4d7a; margin: 20px 0 10px 0; font-size: 19px; }
+
+/* --- TABLES --- */
+table { width: 100%; border-collapse: collapse; margin: 15px 0; background: #fff; }
+th, td { border: 1px solid #eee; padding: 12px; text-align: left; font-size: 14px; }
+th { background: #f8f9fa; color: #0d4d7a; font-weight: bold; }
+
+/* --- LISTS --- */
+ul { padding-left: 20px; }
+ul li { margin-bottom: 8px; font-size: 15px; }
+
+.highlight-box { background: #f0f7ff; padding: 15px; border-radius: 6px; margin: 10px 0; border-left: 3px solid #0d4d7a; }
+
+@media(max-width: 768px) {
+    .price-box-fixed { position: relative; width: 100%; top: 0; right: 0; margin-bottom: 20px; }
+    .hero-overlay h1 { font-size: 28px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- PRICE BOX -->
+<div class="price-box-fixed">
+    <p style="font-weight:bold; color:#0d4d7a; margin-bottom:10px;">Special Offers</p>
+    <div style="border-bottom:1px solid #eee; padding-bottom:10px; margin-bottom:10px;">
+        <p style="font-size:12px; font-weight:bold;">FULL PACKAGE</p>
+        <p class="strike">USD 400</p>
+        <p class="offer">USD 380</p>
+        <a class="pkg-btn" href="https://wa.me/9779856023917?text=Full%20Package%20Inquiry">BOOK FULL</a>
+    </div>
+    <div>
+        <p style="font-size:12px; font-weight:bold;">SEMI PACKAGE</p>
+        <p class="offer">USD 260</p>
+        <p style="font-size:11px; color:#666;">(Meals Excluded)</p>
+        <a class="pkg-btn" href="https://wa.me/9779856023917?text=Semi%20Package%20Inquiry">BOOK SEMI</a>
+    </div>
+</div>
+
+<!-- HERO SLIDER -->
+<div class="hero-slider">
+    <div class="hero-overlay">
+        <h1>Annaprna Base Camp (ABC) Trek -5 Days</h1>
+        <p>A Breathtaking Journey to the Heart of the Annapurnas</p>
+        <a class="pkg-btn" style="width:200px; padding:15px;" href="https://wa.me/9779856023917">WHATSAPP INQUIRY</a>
+    </div>
+    <div class="slides">
+        <div class="slide s1"></div>
+        <div class="slide s2"></div>
+        <div class="slide s3"></div>
+        <div class="slide s4"></div>
+        <div class="slide s5"></div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- OVERVIEW -->
+<div class="box">
+    <h2>Trip Overview</h2>
+    <ul>
+        <li>Comfortable day camp itinerary for beginners</li>
+        <li>Max altitude: 4130m (ABC)</li>
+        <li>360 sunrise view from ABC 4130m height</li>
+        <li>Moderate trekking adventure Nepal</li>
+        <li>Forest, River, Glacier, Hot Spring</li>
+    </ul>
+</div>
+
+<!-- OUTLINE -->
+<div class="box">
+    <h2>Outline Itinerary</h2>
+    <table>
+        <tr>
+            <th>Day</th>
+            <th>Stay Place</th>
+            <th>Altitude</th>
+            <th>Walking Hours</th>
+            <th>Trek Type</th>
+        </tr>
+        <tr><td>1</td><td>Chhomrong</td><td>2170m</td><td>5-6 hrs</td><td>Uphill Forest</td></tr>
+        <tr><td>2</td><td>Deurali</td><td>3200m</td><td>6-7 hrs</td><td>River + Forest</td></tr>
+        <tr><td>3</td><td>ABC</td><td>4130m</td><td>5-6 hrs</td><td>High Altitude</td></tr>
+        <tr><td>4</td><td>Bamboo</td><td>2310m</td><td>5-6 hrs</td><td>Downhill Forest</td></tr>
+        <tr><td>5</td><td>Jhinu/Pokhara</td><td>1780m</td><td>4-5 hrs</td><td>Hot Spring</td></tr>
+    </table>
+</div>
+
+    <!-- ITINERARY SECTION -->
+    <div class="box">
+        <h2>Detailed Itinerary (Day by Day)</h2>
+
+        <h3>Day 1: Pokhara to Samrong (Drive) & Trek to Chhomrong/Sinuwa</h3>
+        <ul>
+            <li><b>Elevation:</b> Pokhara (820m) → Samrong (1,780m) → Chhomrong (2,170m)</li>
+            <li><b>Distance:</b> ~60km drive, then 2 hours trek.</li>
+            <li><b>Highlights:</b> Drive to Samrong (near Jhinu Danda). Trek through terraced fields and forests. Option to enjoy a relaxing hot spring bath at Jhinu Danda. If time permits, continue another 2 hours to Sinuwa (conditions apply).</li>
+        </ul>
+
+        <h3>Day 2: Chhomrong/Sinuwa to Deurali (3,200m)</h3>
+        <ul>
+            <li><b>Walking Time:</b> 6 - 7 hours.</li>
+            <li><b>Highlights:</b> Start at 7:00 AM. Uphill trek beside the Modi Khola river. Pass through Bamboo and Dovan. Trek through lush forests to reach Himalaya for lunch. Pass Hinko Cave (3,100m) to reach Deurali, the gateway to the Sanctuary.</li>
+            <li><b>Stay:</b> Overnight at a local guest house.</li>
+        </ul>
+
+        <h3>Day 3: Deurali to Annapurna Base Camp (4,130m)</h3>
+        <ul>
+            <li><b>Distance:</b> ~15km | <b>Trek Time:</b> Approx 5 hours.</li>
+            <li><b>Highlights:</b> Trek through steeper terrain as green scenery transitions into rock and ice. Entry into the "Himalayan Heaven" with a serene, cold atmosphere. Arrive at the destination: the magnificent Annapurna Base Camp.</li>
+            <li><b>Stay:</b> Overnight at a local guest house.</li>
+        </ul>
+
+        <div class="highlight-box">
+            <p><b>Mountains Visible from ABC:</b></p>
+            <ul style="list-style-type: '✔ '; margin-top:10px;">
+                <li><b>Annapurna I (8,091m):</b> 10th highest mountain in the world.</li>
+                <li><b>Annapurna South (7,219m):</b> A prominent sight with a rugged face.</li>
+                <li><b>Machhapuchhre (6,993m):</b> The iconic "Fishtail" sacred mountain.</li>
+                <li><b>Hiunchuli (6,441m):</b> Neighboring Annapurna South.</li>
+                <li><li><b>Annapurna III (7,555m) & Gangapurna (7,455m):</b> Stunning glacial peaks.</li>
+                <li><b>Tent Peak (5,695m):</b> Also known as Tharpu Chuli.</li>
+            </ul>
+        </div>
+
+        <h3>Day 4: Explore ABC & Trek to Bamboo</h3>
+        <ul>
+            <li><b>Distance:</b> 14km | <b>Trek Time:</b> Approx 5 hours.</li>
+            <li><b>Description:</b> Early morning sunrise view over the Annapurna range. After breakfast, trek back downhill via MBC and Deurali to reach Bamboo.</li>
+            <li><b>Stay:</b> Overnight at Bamboo local guest house.</li>
+        </ul>
+
+        <h3>Day 5: Bamboo to Jhinu Danda & Drive to Pokhara</h3>
+        <ul>
+            <li><b>Distance:</b> ~14km | <b>Trek Time:</b> Approx 5 hours.</li>
+            <li><b>Description:</b> Trek uphill to Sinuwa/Chhomrong, then downhill to Jhinu Danda. Enjoy the natural hot springs by the Modi Khola river. Final 30-minute walk to Samrong for a 3-hour jeep/bus drive back to Pokhara.</li>
+        </ul>
+
+        <div class="highlight-box" style="background:#fff9f0; border-left-color:#ffa500;">
+            <p><b>Important Notes:</b></p>
+            <p style="font-size:13px;">• Walking hours include rest time. Breakfast ~7 AM, Lunch ~1 PM, Dinner ~7 PM. <br>
+            • Transport may be on a sharing basis. Itinerary subject to change based on weather and fitness.</p>
+        </div>
+    </div>
+
+    <!-- EQUIPMENT CHECKLIST -->
+    <div class="box">
+        <h2>Trekking Equipment Checklist</h2>
+        <table>
+            <tr><th>Item</th><th>Qty</th><th>Notes</th></tr>
+            <tr><td>Duffel Bag</td><td>1</td><td>Sturdy with good zippers</td></tr>
+            <tr><td>Daypack</td><td>1</td><td>For daily essentials/camera</td></tr>
+            <tr><td>Waterproof Boots</td><td>1 pair</td><td>Essential for rugged terrain</td></tr>
+            <tr><td>Trekking Socks</td><td>3 pairs</td><td>Moisture-wicking</td></tr>
+            <tr><td>Jacket (Down/Warm)</td><td>1</td><td>Insulated for cold weather</td></tr>
+            <tr><td>Rain Gear</td><td>1</td><td>Waterproof jacket or poncho</td></tr>
+            <tr><td>Sunglasses</td><td>1 pair</td><td>UV protection is crucial</td></tr>
+            <tr><td>Water Bottle</td><td>1</td><td>Reusable</td></tr>
+            <tr><td>Trekking Poles</td><td>1-2</td><td>Helpful for balance</td></tr>
+            <tr><td>First Aid Kit</td><td>1</td><td>Carried by Guide (Diamox, etc.)</td></tr>
+        </table>
+        <p style="font-size:13px; color:#666; margin-top:10px;">* Items like sleeping bags and poles can be rented or purchased in Lakeside, Pokhara.</p>
+    </div>
+
+    <!-- INCLUDES / EXCLUDES -->
+    <div class="box">
+        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2>Package Includes</h2>
+                <ul>
+                    <li>ACAP Permit & TIMS Card</li>
+                    <li>English Speaking Guide & Porters</li>
+                    <li>All Meals (Breakfast, Lunch, Dinner)</li>
+                    <li>Guesthouse Accommodation</li>
+                    <li>Staff Insurance, Food & Essentials</li>
+                    <li>Trekking Map & First Aid Box</li>
+                </ul>
+            </div>
+            <div style="flex: 1; min-width: 300px;">
+                <h2>Package Excludes</h2>
+                <ul>
+                    <li>International Flights & Visa Fees</li>
+                    <li>Personal Travel Insurance</li>
+                    <li>Personal Trekking Gear & Boots</li>
+                    <li>Tips for Guide and Porter</li>
+                    <li>Soft Drinks, Laundry, & WiFi</li>
+                    <li>Extra days due to health/weather</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+<h2>Gallery (Swipe / Click)</h2>
+
+<div style="display:flex; overflow-x:auto; gap:10px; scroll-behavior:smooth; padding-bottom:10px;">
+
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+style="width:320px;height:220px;object-fit:cover;border-radius:10px;flex:0 0 auto;cursor:pointer;">
+
+<img src="https://images.unsplash.com/photo-1526495124232-a04e1849168c"
+style="width:320px;height:220px;object-fit:cover;border-radius:10px;flex:0 0 auto;cursor:pointer;">
+
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+style="width:320px;height:220px;object-fit:cover;border-radius:10px;flex:0 0 auto;cursor:pointer;">
+
+<img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7"
+style="width:320px;height:220px;object-fit:cover;border-radius:10px;flex:0 0 auto;cursor:pointer;">
+
+<img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b"
+style="width:320px;height:220px;object-fit:cover;border-radius:10px;flex:0 0 auto;cursor:pointer;">
+
+
+
+</div>
+
+    <!-- CONTACT FORM -->
+    <div class="box">
+        <h2>Book Your Adventure</h2>
+        <form action="mailto:tilichotours074@gmail.com" method="post" enctype="text/plain">
+            <input type="text" placeholder="Full Name" style="width:100%; padding:12px; margin-bottom:10px; border:1px solid #ddd; border-radius:5px;">
+            <input type="email" placeholder="Email Address" style="width:100%; padding:12px; margin-bottom:10px; border:1px solid #ddd; border-radius:5px;">
+            <input type="text" placeholder="WhatsApp Number" style="width:100%; padding:12px; margin-bottom:10px; border:1px solid #ddd; border-radius:5px;">
+            <textarea placeholder="Your Requirements" rows="4" style="width:100%; padding:12px; margin-bottom:10px; border:1px solid #ddd; border-radius:5px;"></textarea>
+            <button type="submit" class="pkg-btn" style="width:100%; border:none; cursor:pointer; padding:15px; font-size:16px;">SEND Massage </button>
+        </form>
+    </div>
+
+    <div style="text-align:center; padding:40px 0; color:#0d4d7a;">
+        <p><b>“Travel not just to see mountains, but to feel them.”</b></p>
+        <p style="font-size:14px; margin-top:10px;">Tilicho Tours & Travels - Pokhara, Nepal</p>
+    </div>
+
+</div>
+
+</body>
+</html>
