@@ -194,28 +194,166 @@ BOOK
 <li>Best short trekking adventure in Nepal</li>
 </ul>
 </div>
-  <!-- FLOATING CONNECTIVITY BADGE -->
-<a href="https://wa.me/9779856023917" class="persistent-whatsapp-topright" target="_blank" title="Contact Now for any Inquiry by WhatsApp">
+<!-- STYLING FOR FLOATING WHATSAPP & ITINERARY TABLE -->
+<style>
+  /* Floating WhatsApp Button Layout */
+  .persistent-whatsapp-topright {
+    position: fixed;
+    top: 140px;
+    right: 25px;
+    z-index: 9999999;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #25D366;
+    color: #ffffff !important;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    animation: whatsappGlow 2s infinite;
+  }
+  .persistent-whatsapp-topright:hover {
+    background-color: #20ba5a;
+    transform: scale(1.05);
+  }
+  .wa-svg-icon {
+    width: 22px;
+    height: 22px;
+    fill: #ffffff;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .wa-label {
+    color: #ffffff;
+    letter-spacing: 0.5px;
+  }
+  @keyframes whatsappGlow {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+  }
+
+  /* Responsive Table Layout */
+  .itinerary-table-container {
+    width: 100%;
+    overflow-x: auto; /* Allows horizontal swiping on mobile screens */
+    margin: 20px 0 10px 0;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    background: #ffffff;
+  }
+  .itinerary-custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 14px;
+  }
+  .itinerary-custom-table th {
+    background-color: #f8f9fa;
+    color: #111111;
+    font-weight: 700;
+    padding: 14px 16px;
+    border-bottom: 2px solid #eaeaea;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+  .itinerary-custom-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333333;
+    vertical-align: middle;
+  }
+  .itinerary-custom-table tr:nth-child(even) {
+    background-color: #fbfbfb;
+  }
+  /* Style for Day Column */
+  .itinerary-custom-table td:first-child {
+    font-weight: 700;
+    color: #27ae60; /* Your green branding color */
+    white-space: nowrap;
+  }
+  .itinerary-custom-table tr:last-child td {
+    border-bottom: none;
+  }
+  .stay-highlight {
+    font-weight: 600;
+    color: #111111;
+  }
+
+  /* Mobile Screen Fixes */
+  @media (max-width: 768px) {
+    .persistent-whatsapp-topright {
+      top: auto;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 14px;
+      font-size: 13px;
+    }
+  }
+</style>
+
+<!-- FLOATING CONNECTIVITY BADGE -->
+<a href="https://wa.me/9779856023917?text=Hello%20Tilicho%20Tours,%20I%20am%20inquiring%20about%20the%204-Day%20Ghorepani%20Poon%20Hill%20Trek." class="persistent-whatsapp-topright" target="_blank" title="Contact Now for any Inquiry by WhatsApp">
     <svg class="wa-svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.456L0 24zm6.59-4.846c1.6.95 3.488 1.449 5.412 1.451 5.428 0 9.85-4.417 9.854-9.849.002-2.631-1.019-5.101-2.875-6.959-1.856-1.857-4.321-2.879-6.953-2.88-5.432 0-9.854 4.417-9.858 9.853-.002 1.982.518 3.916 1.507 5.627L1.445 22.566l6.202-1.628zm10.746-6.74c-.297-.148-1.758-.867-2.031-.967-.273-.099-.471-.148-.669.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
     </svg>
     <span class="wa-label">Inquiry Now</span>
 </a>
+
+<!-- OUTLINE ITINERARY BOX -->
 <div class="box">
-<h2>Outline Itinerary</h2>
-<table>
-<tr>
-<th>Day</th>
-<th>Stay Place</th>
-<th>Altitude</th>
-<th>Walking Hours</th>
-<th>Trek Type</th>
-</tr>
-<tr><td>Day 1</td><td>Ulleri</td><td>2050m</td><td> Drive 1 hrs Trek 5–6 hrs</td><td>Village + Stone Steps Trek</td></tr>
-<tr><td>Day 2</td><td>Ghorepani</td><td>2850m</td><td>6–7 hrs</td><td>Forest + Mountain Trail</td></tr>
-<tr><td>Day 3</td><td>Tadapani</td><td>2670m</td><td>6–7 hrs</td><td>Sunrise + Forest Trek</td></tr>
-<tr><td>Day 4</td><td>Pokhara</td><td>822m</td><td>Trek 2 hrs + drive  3hrs </td><td>Village Walk + Return jeep saharing </td></tr>
-</table>
+  <h2>Outline Itinerary</h2>
+  
+  <div class="itinerary-table-container">
+    <table class="itinerary-custom-table">
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Stay Place</th>
+          <th>Altitude</th>
+          <th>Walking Hours</th>
+          <th>Trek Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Day 1</td>
+          <td><span class="stay-highlight">Ulleri</span></td>
+          <td>2,050 m</td>
+          <td>Drive 1 hr + Trek 5–6 hrs</td>
+          <td>Village + Stone Steps Trek</td>
+        </tr>
+        <tr>
+          <td>Day 2</td>
+          <td><span class="stay-highlight">Ghorepani</span></td>
+          <td>2,850 m</td>
+          <td>6–7 hrs</td>
+          <td>Forest + Mountain Trail</td>
+        </tr>
+        <tr>
+          <td>Day 3</td>
+          <td><span class="stay-highlight">Tadapani</span></td>
+          <td>2,670 m</td>
+          <td>6–7 hrs</td>
+          <td>Sunrise + Forest Trek</td>
+        </tr>
+        <tr>
+          <td>Day 4</td>
+          <td><span class="stay-highlight">Pokhara</span></td>
+          <td>822 m</td>
+          <td>Trek 2 hrs + Drive 3 hrs</td>
+          <td>Village Walk + Return Sharing Jeep</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 
 <div class="box">
