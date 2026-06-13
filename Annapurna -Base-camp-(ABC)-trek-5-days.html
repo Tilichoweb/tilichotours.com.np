@@ -13,29 +13,27 @@
     <style>
         /* --- CORE CONFIGURATION & RESET --- */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background: #f4f6f8; color: #333; line-height: 1.6; }
+        body { background: #f4f6f8; color: #333; line-height: 1.5; }
         
-        /* --- LAYOUT WRAPPERS --- */
-        .container { max-width: 1200px; margin: 0 auto; padding: 20px; display: flex; gap: 30px; position: relative; }
+        /* --- DESIGN LAYOUT WRAPPER (COMPACT FOOTPRINT) --- */
+        .wrapper-bounded { max-width: 1140px; margin: 0 auto; padding: 0 15px; }
+        .container { display: flex; gap: 20px; margin-top: 20px; position: relative; align-items: flex-start; }
         .main-content { flex: 3; min-width: 0; }
-        .sidebar { flex: 1; min-width: 320px; }
-        .box { background: white; padding: 30px; margin-bottom: 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .sidebar { flex: 1; min-width: 300px; position: sticky; top: 20px; }
+        .box { background: white; padding: 22px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
         
         /* --- TYPOGRAPHY --- */
-        h2 { color: #0d4d7a; border-left: 5px solid #25D366; padding-left: 15px; margin-bottom: 20px; font-size: 24px; }
-        h3 { color: #0d4d7a; margin: 25px 0 10px 0; font-size: 17px; background: #f8f9fa; padding: 10px; border-radius: 4px; border-right: 3px solid #0d4d7a; }
-        p { margin-bottom: 15px; }
+        h2 { color: #0d4d7a; border-left: 4px solid #25D366; padding-left: 12px; margin-bottom: 15px; font-size: 20px; font-weight: 700; }
+        p { margin-bottom: 12px; font-size: 14.5px; color: #444; }
 
         /* --- 10-PICTURE AUTOMATED HERO SLIDER --- */
-        .hero-slider { width: 100%; height: 550px; overflow: hidden; position: relative; background: #222; }
+        .hero-slider { width: 100%; height: 420px; overflow: hidden; position: relative; background: #222; border-radius: 12px; margin-top: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
         .slides { display: flex; width: 1000%; height: 100%; animation: slideFlowTen 40s infinite; }
-        
-        /* FIXED: Added 'center top' alignment to prevent flat stretching and show mountain peaks */
         .slide { width: 10%; height: 100%; background-size: cover; background-position: center top; position: relative; }
         
-        /* VERIFIED IMAGE PATHS: Exact uppercase/lowercase properties matching your repo */
-        .s1 { background-image: url('images/ABCtrek%20(1).jpg'); }
-        .s2 { background-image: url('images/ABCtrek%20(2).jpg'); }
+        /* EXACT GITHUB REPOSITORY PATH ALIGNMENTS */
+        .s1 { background-image: url('images/ABCtrek1.jpg'); }
+        .s2 { background-image: url('images/ABCtrek2.jpg'); }
         .s3 { background-image: url('images/ABCtrek3.jpeg'); }
         .s4 { background-image: url('images/abctrek4.jpg'); }
         .s5 { background-image: url('images/abctrek5.jpg'); }
@@ -45,11 +43,10 @@
         .s9 { background-image: url('images/Abctrekmyself.jpeg'); }
         .s10 { background-image: url('images/abcheli.jpeg'); }
 
-        .hero-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.45); display: flex; align-items: center; justify-content: center; color: #fff; text-align: center; z-index: 10; flex-direction: column; padding: 20px; }
-        .hero-overlay h1 { font-size: 42px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.6); }
-        .hero-overlay p { font-size: 19px; margin-bottom: 20px; font-weight: 300; letter-spacing: 1px; }
+        .hero-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; color: #fff; text-align: center; z-index: 10; flex-direction: column; padding: 20px; }
+        .hero-overlay h1 { font-size: 34px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+        .hero-overlay p { font-size: 16px; font-weight: 300; letter-spacing: 0.5px; }
 
-        /* Smooth 10-Slide CSS Animation Timeline Loop */
         @keyframes slideFlowTen {
             0%, 8% { transform: translateX(0); }
             10%, 18% { transform: translateX(-10%); }
@@ -64,149 +61,220 @@
             100% { transform: translateX(0); }
         }
 
-        /* --- STICKY SIDEBAR PRICE BOX & FORM --- */
-        .price-box-fixed { position: sticky; top: 20px; background: white; border: 2px dashed #25D366; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
-        .price-title { font-size: 18px; color: #0d4d7a; font-weight: bold; margin-bottom: 5px; }
-        .offer { font-size: 28px; color: #e74c3c; font-weight: bold; margin: 2px 0 10px 0; }
-        .strike { text-decoration: line-through; color: #888; font-size: 15px; font-weight: normal; }
-        .pkg-btn { display: block; background: #25D366; color: white !important; padding: 12px; border-radius: 25px; margin-top: 15px; text-decoration: none; font-weight: bold; font-size: 15px; text-align: center; transition: background 0.2s ease, transform 0.2s ease; border: none; width: 100%; cursor: pointer; }
-        .pkg-btn:hover { background: #20ba5a; transform: scale(1.02); }
+        /* --- STREAMLINED ITINERARY METRIC ROWS --- */
+        .itinerary-row { background: #f8f9fa; padding: 10px 14px; margin: 10px 0; border-radius: 6px; border-left: 4px solid #0d4d7a; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 5px; }
+        .itinerary-title { font-weight: 700; color: #0d4d7a; font-size: 14.5px; }
+        .itinerary-metrics { font-size: 13px; color: #555; background: #fff; padding: 3px 10px; border-radius: 20px; border: 1px solid #e2e8f0; font-weight: 600; }
+
+        /* --- COMPACT BOOKING FORM COUNTERWIDGET --- */
+        .price-box-fixed { background: white; border: 1px solid #e2e8f0; padding: 18px; border-radius: 10px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
+        .price-title { font-size: 15px; color: #555; font-weight: 600; }
+        .offer { font-size: 24px; color: #e74c3c; font-weight: bold; margin: 2px 0; }
+        .strike { text-decoration: line-through; color: #999; font-size: 13px; font-weight: normal; }
+        
+        .compact-form { margin-top: 12px; }
+        .form-label { display: block; text-align: left; font-size: 12px; font-weight: 600; margin-bottom: 3px; color: #444; }
+        .form-control { width: 100%; padding: 7px 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 13px; display: block; background: #fafafa; }
+        .form-control:focus { background: #fff; border-color: #25D366; outline: none; }
+        
+        .pkg-btn { display: block; background: #25D366; color: white !important; padding: 10px; border-radius: 6px; margin-top: 5px; text-decoration: none; font-weight: bold; font-size: 14px; text-align: center; border: none; width: 100%; cursor: pointer; transition: background 0.2s; }
+        .pkg-btn:hover { background: #20ba5a; }
+        .email-link { display: block; margin-top: 10px; font-size: 11.5px; color: #0d4d7a; text-decoration: none; font-weight: 600; }
+
+        /* --- PRICING PLAN COMPARISON TABLE --- */
+        .table-responsive { width: 100%; overflow-x: auto; margin: 15px 0; border-radius: 6px; border: 1px solid #eee; }
+        table { width: 100%; border-collapse: collapse; background: #fff; text-align: left; }
+        th, td { padding: 10px 12px; font-size: 13.5px; border-bottom: 1px solid #eee; }
+        th { background: #0d4d7a; color: white; font-weight: 600; }
+        tr:last-child td { border: none; }
+        .status-yes { color: #25D366; font-weight: bold; }
+        .status-no { color: #e74c3c; font-weight: bold; }
+
+        /* --- ACCORDION SYSTEM (SEO HIERARCHY) --- */
+        details { background: #f8f9fa; padding: 12px; margin-bottom: 8px; border-radius: 6px; border: 1px solid #e2e8f0; transition: background 0.3s; }
+        details[open] { background: #fff; border-color: #0d4d7a; }
+        summary { font-weight: 600; color: #0d4d7a; font-size: 14px; cursor: pointer; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+        summary::after { content: '＋'; font-size: 12px; color: #888; }
+        details[open] summary::after { content: '－'; color: #0d4d7a; }
+        .details-content { margin-top: 10px; font-size: 13.5px; color: #555; border-top: 1px solid #eee; padding-top: 8px; }
 
         /* --- FLOATING WHATSAPP BADGE --- */
-        .persistent-whatsapp-topright { position: fixed; top: 20px; right: 25px; z-index: 999999; display: flex; align-items: center; gap: 8px; background-color: #25D366; color: #ffffff !important; text-decoration: none; padding: 12px 18px; border-radius: 30px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25); font-weight: bold; font-size: 14px; transition: transform 0.2s ease, background-color 0.2s ease; animation: Glow 2s infinite; }
-        .persistent-whatsapp-topright:hover { background-color: #20ba5a; transform: scale(1.05); }
-        .wa-svg-icon { width: 22px; height: 22px; fill: #ffffff; }
+        .persistent-whatsapp-topright { position: fixed; top: 15px; right: 15px; z-index: 99999; display: flex; align-items: center; gap: 6px; background-color: #25D366; color: #ffffff !important; text-decoration: none; padding: 10px 15px; border-radius: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); font-weight: bold; font-size: 13px; animation: Glow 2s infinite; }
+        .wa-svg-icon { width: 18px; height: 18px; fill: #ffffff; }
         @keyframes Glow {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
-            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+            70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
             100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
-
-        /* --- DATA TABLES --- */
-        .table-responsive { width: 100%; overflow-x: auto; margin: 15px 0; }
-        table { width: 100%; border-collapse: collapse; background: #fff; }
-        th, td { border: 1px solid #eee; padding: 12px; text-align: left; font-size: 14px; }
-        th { background: #f8f9fa; color: #0d4d7a; font-weight: bold; }
-
-        /* --- LISTS & HIGHLIGHT BOXES --- */
-        ul { padding-left: 20px; margin-bottom: 15px; }
-        ul li { margin-bottom: 8px; font-size: 15px; }
-        .highlight-box { background: #f0f7ff; padding: 20px; border-radius: 6px; margin: 15px 0; border-left: 4px solid #0d4d7a; }
-
-        /* --- FORM STYLING inside Sidebar --- */
-        .form-control { width: 100%; padding: 10px 12px; margin-bottom: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; display: block; }
-        .form-label { display: block; text-align: left; font-size: 13px; font-weight: 600; margin-bottom: 4px; color: #444; }
 
         /* --- RESPONSIVE MEDIA QUERIES --- */
         @media (max-width: 992px) {
             .container { flex-direction: column; }
-            .sidebar { width: 100%; }
-            .price-box-fixed { position: relative; top: 0; width: 100%; }
-            .persistent-whatsapp-topright { top: auto; bottom: 20px; right: 20px; padding: 10px 14px; font-size: 13px; }
-        }
-        @media (max-width: 768px) {
-            .hero-overlay h1 { font-size: 28px; }
+            .sidebar { width: 100%; position: relative; top: 0; }
+            .persistent-whatsapp-topright { top: auto; bottom: 15px; right: 15px; }
         }
     </style>
 </head>
 <body>
 
     <!-- FLOATING WHATSAPP BADGE -->
-    <a href="https://wa.me/9779856023917?text=Hello%20Tilicho%20Tours,%20I%20am%20interested%20in%20booking%20the%205%20Days%20ABC%20Trek!" class="persistent-whatsapp-topright" target="_blank" title="Contact Now via WhatsApp">
+    <a href="https://wa.me/9779856023917?text=Hello%20Tilicho%20Tours,%20I%20am%20interested%20in%20the%205%20Days%20ABC%20Trek!" class="persistent-whatsapp-topright" target="_blank">
         <svg class="wa-svg-icon" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.456L0 24zm6.59-4.846c1.6.95 3.488 1.449 5.412 1.451 5.428 0 9.85-4.417 9.854-9.849.002-2.631-1.019-5.101-2.875-6.959-1.856-1.857-4.321-2.879-6.953-2.88-5.432 0-9.854 4.417-9.858 9.853-.002 1.982.518 3.916 1.507 5.627L1.445 22.566l6.202-1.628zm10.746-6.74c-.297-.148-1.758-.867-2.031-.967-.273-.099-.471-.148-.669.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
-        <span class="wa-label"> Live Talk Now</span>
+        <span>Live Chat</span>
     </a>
 
-    <!-- AUTOMATED 10-PICTURE BACKGROUND SCROLL SLIDER -->
-    <div class="hero-slider">
-        <div class="slides">
-            <div class="slide s1"></div>
-            <div class="slide s2"></div>
-            <div class="slide s3"></div>
-            <div class="slide s4"></div>
-            <div class="slide s5"></div>
-            <div class="slide s6"></div>
-            <div class="slide s7"></div>
-            <div class="slide s8"></div>
-            <div class="slide s9"></div>
-            <div class="slide s10"></div>
-        </div>
-        <div class="hero-overlay">
-            <h1>Annapurna Base Camp (ABC) Trek - 5 Days</h1>
-            <p>Premium Himalayan Guided Packages by Tilicho Tours Pokhara</p>
-        </div>
-    </div>
+    <!-- MASTER CONTAINER FOR SCREEN BOUNDS -->
+    <div class="wrapper-bounded">
 
-    <!-- CONTENT DISPLAY MAIN LAYOUT GRID -->
-    <div class="container">
-        
-        <!-- LEFT SCREEN COLUMN (Main Trip Details) -->
-        <div class="main-content">
+        <!-- BOXED HERO BACKGROUND SLIDER -->
+        <div class="hero-slider">
+            <div class="slides">
+                <div class="slide s1"></div>
+                <div class="slide s2"></div>
+                <div class="slide s3"></div>
+                <div class="slide s4"></div>
+                <div class="slide s5"></div>
+                <div class="slide s6"></div>
+                <div class="slide s7"></div>
+                <div class="slide s8"></div>
+                <div class="slide s9"></div>
+                <div class="slide s10"></div>
+            </div>
+            <div class="hero-overlay">
+                <h1>Annapurna Base Camp Trek - 5 Days</h1>
+                <p>Premium Himalayan Guided Packages by Tilicho Tours Pokhara</p>
+            </div>
+        </div>
+
+        <!-- MAIN LAYOUT ROW -->
+        <div class="container">
             
-            <div class="box">
-                <h2>Express Annapurna Base Camp Trek Overview</h2>
-                <p>Experience the ultimate short-duration Himalayan adventure with our custom 5-day express Annapurna Base Camp trekking package designed specifically for travelers with limited time who still want to reach an altitude of 4,130 meters.</p>
+            <!-- LEFT COLUMN (Itinerary Content) -->
+            <div class="main-content">
                 
-                <div class="highlight-box">
-                    <strong>Package Highlights:</strong>
-                    <ul>
-                        <li>Private 4WD Jeep transport from Pokhara to the trailhead.</li>
-                        <li>Accompanied by elite, licensed local mountain guides.</li>
-                        <li>Includes ACAP (Annapurna Conservation Area Project) permits and TIMS cards.</li>
-                        <li>Standard teahouse accommodation with meals included.</li>
-                    </ul>
+                <div class="box">
+                    <h2>5-Day Express Itinerary Metrics</h2>
+                    
+                    <!-- MASTER BLUEPRINT SINGLE LINE TRACKING ROWS -->
+                    <div class="itinerary-row">
+                        <span class="itinerary-title">Day 1: Pokhara to Jhinu Danda & Trek to Lower Sinuwa</span>
+                        <span class="itinerary-metrics">5 Hrs | 11 KM | 2,340m</span>
+                    </div>
+                    
+                    <div class="itinerary-row">
+                        <span class="itinerary-title">Day 2: Lower Sinuwa to Deurali</span>
+                        <span class="itinerary-metrics">6 Hrs | 13 KM | 3,200m</span>
+                    </div>
+                    
+                    <div class="itinerary-row">
+                        <span class="itinerary-title">Day 3: Deurali to Annapurna Base Camp via MBC</span>
+                        <span class="itinerary-metrics">5 Hrs | 10 KM | 4,130m</span>
+                    </div>
+                    
+                    <div class="itinerary-row">
+                        <span class="itinerary-title">Day 4: Annapurna Base Camp to Bamboo</span>
+                        <span class="itinerary-metrics">7 Hrs | 16 KM | 2,310m</span>
+                    </div>
+                    
+                    <div class="itinerary-row">
+                        <span class="itinerary-title">Day 5: Bamboo to Jhinu Hot Springs & Drive to Pokhara</span>
+                        <span class="itinerary-metrics">5 Hrs | 10 KM | 822m</span>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <h2>Package Options Comparison</h2>
+                    <p>Compare our packages below. Our Semi-Independent option manages transport and accommodation bookings while letting you pick and pay for meals along the path yourself.</p>
+                    
+                    <!-- BLUEPRINT COMPARISON GRID -->
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Service Features Included</th>
+                                    <th>Full Package Plan</th>
+                                    <th>Semi-Independent Plan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Private 4WD Jeep (Pokhara transfers)</td>
+                                    <td class="status-yes">✔ Included</td>
+                                    <td class="status-yes">✔ Included</td>
+                                </tr>
+                                <tr>
+                                    <td>Licensed Government Guide & Porter</td>
+                                    <td class="status-yes">✔ Included</td>
+                                    <td class="status-yes">✔ Included</td>
+                                </tr>
+                                <tr>
+                                    <td>ACAP Trekking Permits & TIMS Cards</td>
+                                    <td class="status-yes">✔ Included</td>
+                                    <td class="status-yes">✔ Included</td>
+                                </tr>
+                                <tr>
+                                    <td>Teahouse Accommodations on Trail</td>
+                                    <td class="status-yes">✔ Included</td>
+                                    <td class="status-yes">✔ Included</td>
+                                </tr>
+                                <tr>
+                                    <td>Daily Meals (Breakfast, Lunch, Dinner)</td>
+                                    <td class="status-yes">✔ Included</td>
+                                    <td class="status-no">❌ Excluded (Pay Direct)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <h2>Frequently Asked Questions</h2>
+                    
+                    <!-- HIGH DENSITY ACCORDIONS -->
+                    <details>
+                        <summary>What is the best month to do a 5-day short ABC trek?</summary>
+                        <div class="details-content">
+                            The best windows are March to May (spring rhododendron blooms) and September to November (crisp, post-monsoon mountain visibility).
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>How difficult is the express Annapurna Base Camp route?</summary>
+                        <div class="details-content">
+                            It is physically demanding because you cover more distance per day compared to the standard 7-10 day options. Good cardiovascular health is highly recommended.
+                        </div>
+                    </details>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN (Compact Form) -->
+            <div class="sidebar">
+                <div class="price-box-fixed">
+                    <div class="price-title">Express Option Rate</div>
+                    <div class="offer"><span class="strike">$450</span> $375 <span style="font-size:12px; color:#666; font-weight:normal;">/ pax</span></div>
+                    
+                    <!-- COMPACT FORM FACTOR -->
+                    <form class="compact-form" action="mailto:tilichotours074@gmail.com" method="POST" enctype="text/plain">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" name="Name" class="form-control" placeholder="Your Name" required>
+                        
+                        <label class="form-label">Trek Start Date</label>
+                        <input type="date" name="Date" class="form-control" required>
+                        
+                        <label class="form-label">Group Size</label>
+                        <input type="number" name="Trekkers" class="form-control" min="1" value="1" required>
+                        
+                        <button type="submit" class="pkg-btn">Email Direct Request</button>
+                    </form>
+                    
+                    <a href="https://wa.me/9779856023917?text=Hi%20Tilicho%20Tours,%20I%20want%20to%20instantly%20book%20the%205%20Days%20ABC%20Trek!" class="pkg-btn" style="background:#0d4d7a;" target="_blank">Quick WhatsApp Chat</a>
+                    
+                    <a href="mailto:tilichotours074@gmail.com" class="email-link">tilichotours074@gmail.com</a>
                 </div>
             </div>
 
-            <div class="box">
-                <h2>5-Day Express Trek Itinerary</h2>
-                <h3>Day 1: Pokhara to Jhinu Danda & Trek to Lower Sinuwa</h3>
-                <p>Drive from Pokhara to Jhinu Danda via private transport, then begin your walk ascending through beautiful stone steps up to Sinuwa village.</p>
-                
-                <h3>Day 2: Sinuwa to Deurali</h3>
-                <p>Pass through deep bamboo forests, Dobhan, and Himalaya stations to reach the gateway village of Deurali.</p>
-                
-                <h3>Day 3: Deurali to Annapurna Base Camp (4,130m) via MBC</h3>
-                <p>Hike past Machhapuchhre Base Camp into the sanctuary basin to catch an extraordinary sunset over the high peaks from ABC.</p>
-                
-                <h3>Day 4: ABC to Bamboo</h3>
-                <p>Catch early morning sunrise panoramas over Annapurna I and South before retracing steps back down to Bamboo.</p>
-                
-                <h3>Day 5: Bamboo to Jhinu Hot Springs & Drive back to Pokhara</h3>
-                <p>Trek down to Jhinu, relax at the natural riverside hot springs, and board your return private vehicle back to your hotel in Pokhara.</p>
-            </div>
-
         </div>
-
-        <!-- RIGHT SIDEBAR COLUMN (Keeps layout proportioned and avoids horizontal stretching) -->
-        <div class="sidebar">
-            
-            <div class="price-box-fixed">
-                <div class="price-title">Special Package Price</div>
-                <div class="offer"><span class="strike">$450</span> $375 <small style="font-size:12px; color:#666; font-weight:normal;">/ person</small></div>
-                
-                <hr style="border:0; border-top:1px solid #eee; margin:15px 0;">
-                
-                <!-- Quick Request Booking Form -->
-                <form action="#" method="POST">
-                    <label class="form-label">Full Name</label>
-                    <input type="text" class="form-control" placeholder="Your Name" required>
-                    
-                    <label class="form-label">Email Address</label>
-                    <input type="email" class="form-control" placeholder="name@example.com" required>
-                    
-                    <label class="form-label">Trek Start Date</label>
-                    <input type="date" class="form-control" required>
-                    
-                    <label class="form-label">Number of Trekkers</label>
-                    <input type="number" class="form-control" min="1" value="1" required>
-                    
-                    <button type="submit" class="pkg-btn">Send Booking Request</button>
-                </form>
-            </div>
-
-        </div>
-
     </div>
 
 </body>
