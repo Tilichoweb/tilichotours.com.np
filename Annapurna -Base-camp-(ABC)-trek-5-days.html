@@ -13,11 +13,13 @@
     <style>
         /* --- CORE CONFIGURATION & RESET --- */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background: #f4f6f8; color: #333; line-height: 1.5; }
+        
+        /* FIX 1: Absolutely prevents the page from expanding too wide or creating side-scrolling bugs */
+        html, body { width: 100%; overflow-x: hidden; background: #f4f6f8; color: #333; line-height: 1.5; }
         
         /* --- DESIGN LAYOUT WRAPPER (COMPACT FOOTPRINT) --- */
-        .wrapper-bounded { max-width: 1140px; margin: 0 auto; padding: 0 15px; }
-        .container { display: flex; gap: 20px; margin-top: 20px; position: relative; align-items: flex-start; }
+        .wrapper-bounded { max-width: 1140px; margin: 0 auto; padding: 0 15px; width: 100%; }
+        .container { display: flex; gap: 20px; margin-top: 20px; position: relative; align-items: flex-start; width: 100%; }
         .main-content { flex: 3; min-width: 0; }
         .sidebar { flex: 1; min-width: 300px; position: sticky; top: 20px; }
         .box { background: white; padding: 22px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
@@ -29,7 +31,9 @@
         /* --- 10-PICTURE AUTOMATED HERO SLIDER --- */
         .hero-slider { width: 100%; height: 420px; overflow: hidden; position: relative; background: #222; border-radius: 12px; margin-top: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
         .slides { display: flex; width: 1000%; height: 100%; animation: slideFlowTen 40s infinite; }
-        .slide { width: 10%; height: 100%; background-size: cover; background-position: center top; position: relative; }
+        
+        /* FIX 2: Switched background-position to center center so mountain landscapes aren't vertically cut off */
+        .slide { width: 10%; height: 100%; background-size: cover; background-position: center center; position: relative; }
         
         /* EXACT GITHUB REPOSITORY PATH ALIGNMENTS */
         .s1 { background-image: url('images/ABCtrek1.jpg'); }
@@ -112,6 +116,12 @@
             .container { flex-direction: column; }
             .sidebar { width: 100%; position: relative; top: 0; }
             .persistent-whatsapp-topright { top: auto; bottom: 15px; right: 15px; }
+        }
+        @media (max-width: 768px) {
+            /* FIX 3: Automatically drops image container height on small mobile displays so the photo retains its clean aspect ratio formatting */
+            .hero-slider { height: 280px; } 
+            .hero-overlay h1 { font-size: 24px; }
+            .hero-overlay p { font-size: 14px; }
         }
     </style>
 </head>
@@ -277,338 +287,5 @@
         </div>
     </div>
 
-</body>
-</html>
-            <!-- OVERVIEW BOX -->
-            <div class="box">
-                <h2>Trip Overview</h2>
-                <p>Are you searching for the ultimate <strong>Annapurna Base Camp short trek 5 days</strong> itinerary from Pokhara? Our signature express route is custom-engineered for modern adventure travelers seeking a fast, secure, and deeply immersive mountain holiday. Avoid long, unnecessary paths with our optimized 4WD rugged transits, taking you right into the scenic core of the breathtaking Annapurna Sanctuary basin region.</p>
-                <ul>
-                    <li>Comfortable express day camp route maps optimized for beginners and families</li>
-                    <li>Max elevation milestone: 4,130m directly at the legendary Annapurna Base Camp boundary</li>
-                    <li>Spectacular 360-degree panoramic golden sunrise backdrops over towering 7,000m and 8,000m peaks</li>
-                    <li>The highest-rated premium short trek package managed by <strong>Tilicho Tours</strong> in Pokhara</li>
-                    <li>Incredible combinations of deep alpine bamboo forests, dramatic river valleys, and natural hot springs</li>
-                </ul>
-            </div>
-
-            <!-- OUTLINE TABLE BOX -->
-            <div class="box">
-                <h2>Outline Itinerary & Route Map Summary</h2>
-                <div class="table-responsive">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Day</th>
-                                <th>Stay Place Destination</th>
-                                <th>Altitude (Meters)</th>
-                                <th>Walking Hours</th>
-                                <th>Trek Difficulty & Type</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>1</td><td><strong>Chhomrong Ridge</strong></td><td>2,170m</td><td>5-6 hrs</td><td>Uphill Forest Pathways</td></tr>
-                            <tr><td>2</td><td><strong>Deurali Alpine Station</strong></td><td>3,200m</td><td>6-7 hrs</td><td>Glacial River Trail tracking</td></tr>
-                            <tr><td>3</td><td><strong>Annapurna Base Camp (ABC)</strong></td><td>4,130m</td><td>5-6 hrs</td><td>High Altitude Wilderness</td></tr>
-                            <tr><td>4</td><td><strong>Bamboo Base Camp</strong></td><td>2,310m</td><td>5-6 hrs</td><td>Downhill Forest Descent</td></tr>
-                            <tr><td>5</td><td><strong>Jhinu Springs / Pokhara Lakeside</strong></td><td>1,780m</td><td>4-5 hrs</td><td>Natural Hot Springs + Return Drive</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <!-- DETAILED ITINERARY BOX -->
-            <div class="box">
-                <h2>Detailed Day-by-Day Himalayan Itinerary</h2>
-
-                <!-- REQUESTED SINGLE-LINE METRICS HEADINGS -->
-                <h3>Day 1: Pokhara to Samrong (Drive) & Trek to Chhomrong/Sinuwa (2-3 Hrs Trek | 6 Km / 3.7 Miles | Stay: 2,170m)</h3>
-                <ul>
-                    <li><b>Route Highlights:</b> Board your private 4WD rugged mountain jeep at Lakeside Pokhara for a panoramic off-road journey via Nayapul straight to the Samrong trailhead. Cross the longest suspension footbridges in the Annapurna conservation region before hiking up through lush terraced fields to the iconic Chhomrong village ridge line.</li>
-                </ul>
-
-                <h3>Day 2: Chhomrong/Sinuwa to Deurali Camp Station (6-7 Hrs Trek | 12 Km / 7.4 Miles | Stay: 3,200m)</h3>
-                <ul>
-                    <li><b>Route Highlights:</b> Begin your morning descent down stone steps to the Chhomrong river before entering deep forest tracks. Trace the roaring paths of the glacial Modi Khola river basin, passing Bamboo and Dovan. Rest near the historic Hinko Cave as you adapt smoothly to rising high-altitude trail metrics.</li>
-                </ul>
-
-                <h3>Day 3: Deurali to Annapurna Base Camp Sanctuary (5-6 Hrs Trek | 10 Km / 6.2 Miles | Stay: 4,130m)</h3>
-                <ul>
-                    <li><b>Route Highlights:</b> Trek past Machhapuchhre Base Camp (MBC) into the wide, alpine mountain amphitheater. Stand in awe as the landscape shifts into spectacular glacier valleys. Walk safely into the heart of the <strong>Annapurna Base Camp Sanctuary ring</strong> before twilight sets over the peaks.</li>
-                </ul>
-
-                <div class="highlight-box">
-                    <p><b>Major Himalayan Peaks Visible directly from the ABC Sanctuary Ring:</b></p>
-                    <ul style="list-style-type: '✔ '; margin-left: 10px;">
-                        <li><b>Annapurna I (8,091m):</b> The historic 10th highest mountain peak on Earth.</li>
-                        <li><b>Annapurna South (7,219m):</b> Imposing wall directly framing the western skyline.</li>
-                        <li><b>Machhapuchhre (6,993m):</b> The legendary, universally sacred "Fishtail" pinnacle peak.</li>
-                        <li><b>Hiunchuli (6,441m):</b> Beautifully guarding the sanctuary gateway entrances.</li>
-                    </ul>
-                </div>
-
-                <h3>Day 4: Annapurna Base Camp to Bamboo Forest Station (5-6 Hrs Trek | 14 Km / 8.6 Miles | Stay: 2,310m)</h3>
-                <ul>
-                    <li><b>Route Highlights:</b> Capture the absolute best panoramic golden sunrise photography over the Annapurna Massif. After breakfast, trace your path back down through the deep river valleys, exiting high alpine borders into the rich air and comfortable climate of the Bamboo forest camp.</li>
-                </ul>
-
-                <h3>Day 5: Bamboo to Jhinu Danda & Return Drive to Pokhara (4-5 Hrs Trek + 3 Hrs Drive | 11 Km / 6.8 Miles | Return: 820m)</h3>
-                <ul>
-                    <li><b>Route Highlights:</b> Hike over Sinuwa loops down to Jhinu Danda. Unwind in the healing riverside natural geothermal hot springs. Afterward, your private 4WD return transport takes you straight back to your hotel in Lakeside, Pokhara.</li>
-                </ul>
-            </div>
-
-            <!-- EQUIPMENT LIST BOX -->
-            <div class="box">
-                <h2>Trekking Equipment Checklist & Packing Guide</h2>
-                <div class="table-responsive">
-                    <table>
-                        <thead>
-                            <tr><th>Essential Gear Item</th><th>Qty</th><th>Mountain Operation Notes</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Duffel Bag Allocation</td><td>1</td><td>Heavy-duty weather protection zippers carried by porters</td></tr>
-                            <tr><td>Hiking Daypack</td><td>1</td><td>Comfortable straps for personal cameras and route maps</td></tr>
-                            <tr><td>Waterproof Boots</td><td>1 Pair</td><td>Firm traction layout for slippery stone stair sections</td></tr>
-                            <tr><td>Insulated Down Jacket</td><td>1</td><td>Essential for freezing high altitudes at ABC</td></tr>
-                            <tr><td>Trekking Poles</td><td>1 Pair</td><td>Extremely helpful for balancing joint pressure down steps</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <!-- INCLUDE / EXCLUDE GRID BOX -->
-            <div class="box">
-                <div style="display: flex; flex-wrap: wrap; gap: 25px;">
-                    <div style="flex: 1; min-width: 280px;">
-                        <h2 style="border-left-color: #27ae60;">Package Includes</h2>
-                        <ul style="list-style-type: '✓ '; margin-left:5px;">
-                            <li>Official ACAP Entry Permits & TIMS Validation Documents</li>
-                            <li>Accredited English-Speaking Mountain Guides & Local Porters</li>
-                            <li>Three Nutritional Hot Meals Daily (Breakfast, Lunch, Dinner) *Full Package Only</li>
-                            <li>Clean Private Teahouse Base Accommodations on the Trail</li>
-                        </ul>
-                    </div>
-                    <div style="flex: 1; min-width: 280px;">
-                        <h2 style="border-left-color: #e74c3c;">Package Excludes</h2>
-                        <ul style="list-style-type: '✕ '; margin-left:5px; color: #555;">
-                            <li>International Airline Ticketing and Nepalese Arrival Visas</li>
-                            <li>Personalized Medical and Helicopter Evacuation Travel Insurance</li>
-                            <li>Carbonated Soft Drinks, Private Bar Bills, Hot Laundry, or Local Wi-Fi Fees</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- REQUESTED NEW COMPONENT: PACKAGE COST DETAILS TABLE -->
-            <div class="box">
-                <h2>Package Cost Details</h2>
-                <div class="table-responsive">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Package Option Tier</th>
-                                <th>Regular Price</th>
-                                <th>Discount Price</th>
-                                <th>Details & Inclusions Summary</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Full Package Plan</strong></td>
-                                <td><span class="strike">USD 390</span></td>
-                                <td><span style="color:#e74c3c; font-weight:bold;">USD 380 / Person</span></td>
-                                <td>Guide + Porter + ACAP Permit + Transport + Accommodation + All Trail Meals Included</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Semi Package Plan</strong></td>
-                                <td>USD 290</td>
-                                <td><span style="color:#0d4d7a; font-weight:bold;">USD 260 / Person</span></td>
-                                <td>Includes Guide, Porter, Permits, Transport & Accommodation. Trail meals are excluded (paid directly to guesthouses).</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <!-- MEDIA ASSETS & ROUTE MAP BOX -->
-            <div class="box">
-                <h2>Maps & Trekking Media Assets</h2>
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-                </div>
-                <div style="margin-top: 20px;">
-                    <h3 style="font-size: 15px; margin-bottom: 10px;">🗺️ Static Route Reference Map</h3>
-                    <div class="static-map-box">
-                        <img src="assets/images/annapurna-route-map.jpg" alt="Static Annapurna Route Reference Map Grid">
-                    </div>
-                </div>
-            </div>
-
-            <!-- SEO VALUE ACCORDION FAQ BLOCK WITH HIGHEST-VOLUME SEARCH PHRASES -->
-            <div class="box">
-                <div class="abc-faq-wrapper">
-                    <h2>Frequently Asked Questions — Annapurna Base Camp Trek 5 Days</h2>
-                    <p style="color:#666; font-size:14px; margin-bottom:20px;">Get quick answers to the most-searched questions about express booking rates, permits, and trail conditions.</p>
-                    
-                    <details class="abc-faq-accordion">
-                        <summary>Can I do the Annapurna Base Camp trek in 5 days from Pokhara?</summary>
-                        <div class="abc-faq-answer">
-                            Yes, you can easily complete the <strong>Annapurna Base Camp trek in 5 days from Pokhara</strong>. This express route is optimized by utilizing local 4WD jeeps to bypass lower trail sections, letting you begin hiking directly from high trailheads like Samrong. It requires good physical health as daily hiking averages 5 to 7 hours to reach the sanctuary basin safely.
-                        </div>
-                    </details>
-
-                    <details class="abc-faq-accordion">
-                        <summary>What is the total 5 days ABC trek cost from Pokhara?</summary>
-                        <div class="abc-faq-answer">
-                            The all-inclusive <strong>5 days ABC trek cost from Pokhara</strong> ranges between **$350 to $450 USD per person** depending on your group size. Booking through a licensed agency like <strong>Tilicho Tours</strong> covers private jeep transport, local mountain guides, porters, government permits, and teahouse stays.
-                        </div>
-                    </details>
-
-                    <details class="abc-faq-accordion">
-                        <summary>What is the difference between the Full Package and the Semi Independent Plan?</summary>
-                        <div class="abc-faq-answer">
-                            Both options offer identical premium services, including your licensed guide, experienced porter network, private 4WD transport, ACAP permits, and teahouse accommodations. The only difference is that our **Semi Independent Plan excludes trail meals**, allowing you to order and settle your food bills directly with the guesthouses.
-                        </div>
-                    </details>
-
-                    <details class="abc-faq-accordion">
-                        <summary>What is the Nepal trekking permits price for the ACAP and TIMS cards?</summary>
-                        <div class="abc-faq-answer">
-                            The official **Nepal trekking permits price** for the Annapurna Conservation Area Project (ACAP) permit is approximately **3,000 NPR (approx. $23 USD)** for international travelers, plus **2,000 NPR** for the TIMS validation card. Our professional team handles all permit paperwork before your trip departs.
-                        </div>
-                    </details>
-
-                    <details class="abc-faq-accordion">
-                        <summary>Which is the best travel agency in Pokhara for the ABC trek?</summary>
-                        <div class="abc-faq-answer">
-                            <strong>Tilicho Tours</strong>, located near Lakeside Pokhara, is widely recognized as one of the <strong>best travel agencies in Pokhara for the ABC trek</strong>. We specialize in express Himalayan itineraries, high-altitude safety management, and custom private group packages with expert local staff.
-                        </div>
-                    </details>
-
-                    <details class="abc-faq-accordion">
-                        <summary>Is a mountain guide and porter hire in Pokhara mandatory for this short trek?</summary>
-                        <div class="abc-faq-answer">
-                            Yes, under current Nepal government regulations, solo trekking without an authorized professional is restricted in the region. Securing a certified **mountain guide and porter hire in Pokhara** ensures your safety along avalanche-prone sections above Deurali and guarantees room availability during peak months.
-                        </div>
-                    </details>
-
-                    <details class="abc-faq-accordion">
-                        <summary>When is the best time to book an express short trek to ABC from Pokhara?</summary>
-                        <div class="abc-faq-answer">
-                            The peak windows for clear weather and mountain views are **Autumn (September to November)** and **Spring (March to May)**. Spring offers blooming rhododendron forests along the Sinuwa trails, while autumn delivers crisp, cloudless blue skies for photographing Mt. Annapurna I and Machhapuchhre.
-                        </div>
-                    </details>
-
-                    <details class="abc-faq-accordion">
-                        <summary>How difficult is the short Annapurna trekking package compared to the Circuit loop?</summary>
-                        <div class="abc-faq-answer">
-                            The **short Annapurna trekking package** is physically demanding due to its faster altitude gain and thousands of steep stone steps (especially around Chhomrong). However, it is much shorter and doesn't reach the extreme altitudes of the Annapurna Circuit (which crosses Thorong La Pass at 5,416m).
-                        </div>
-                    </details>
-
-                    <details class="abc-faq-accordion">
-                        <summary>What is the maximum altitude reached on the express 5-day ABC itinerary?</summary>
-                        <div class="abc-faq-answer">
-                            The highest point reached on this tour is **4,130 meters (13,549 feet)** right at the Annapurna Base Camp marker. To ensure your safety at this elevation, our guides pace the trek carefully and monitor your acclimatization every step of the way.
-                        </div>
-                    </details>
-
-                    <details class="abc-faq-accordion">
-                        <summary>How do I book this 5 days Annapurna Base Camp short trek from Pokhara?</summary>
-                        <div class="abc-faq-answer">
-                            You can easily book your trip by using the inquiry console below. Send your details directly to our team via **WhatsApp text** or **Direct Email (tilichotours074@gmail.com)** for an instant response and real-time availability updates.
-                        </div>
-                    </details>
-                </div>
-            </div>
-
-            <!-- DUAL ACTION RESERVATION BOOKING FORM -->
-            <div class="box">
-                <h2>Book Your Adventure with Tilicho Tours</h2>
-                <form id="bookingForm">
-                    <input type="text" id="bkName" class="form-control" placeholder="Full Name" required>
-                    <input type="email" id="bkEmail" class="form-control" placeholder="Email Address" required>
-                    <input type="text" id="bkPhone" class="form-control" placeholder="WhatsApp / Phone Number" required>
-                    <select id="bkPlan" class="form-control" required>
-                        <option value="" disabled selected>Select Your Desired Package Plan</option>
-                        <option value="Full Package Plan ($380)">Full Package Plan ($380) — All Inclusive</option>
-                        <option value="Semi Independent Plan ($260)">Semi Independent Plan ($260) — Meals Excluded</option>
-                    </select>
-                    <textarea id="bkMessage" class="form-control" placeholder="Your Custom Requirements & Group Size" rows="4"></textarea>
-                    
-                    <div class="booking-actions-grid">
-                        <button type="button" onclick="submitViaWhatsApp()" class="pkg-btn" style="margin-top:0; background:#25D366;">Send via WhatsApp</button>
-                        <button type="button" onclick="submitViaEmail()" class="pkg-btn" style="margin-top:0; background:#0d4d7a;">Send via Email</button>
-                    </div>
-                </form>
-            </div>
-
-        </div>
-
-        <!-- RIGHT COLUMN: STICKY BOOKING CONSOLE -->
-        <div class="sidebar">
-            <div class="price-box-fixed">
-                <p style="font-weight:bold; color:#0d4d7a; margin-top:0; margin-bottom:12px;">Package Pricing Tiers</p>
-                
-                <div style="border-bottom:1px solid #eee; padding-bottom:15px; margin-bottom:15px;">
-                    <p style="font-size:11px; font-weight:700; color:#555; letter-spacing:0.5px;">FULL EXPERIENCE PLAN</p>
-                    <p class="strike">USD 390</p>
-                    <p class="offer">USD 380</p>
-                    <p style="font-size:11px; color:#777; margin-top:4px;">(Includes All Trail Meals)</p>
-                    <a class="pkg-btn" href="https://wa.me/9779856023917?text=Inquiry%20Full%20Package%20ABC%205%20Days">BOOK FULL PACKAGE</a>
-                </div>
-                
-                <div>
-                    <p style="font-size:11px; font-weight:700; color:#555; letter-spacing:0.5px;">SEMI INDEPENDENT PLAN</p>
-                    <p class="strike">USD 290</p>
-                    <p class="offer">USD 260</p>
-                    <p style="font-size:11px; color:#c0392b; font-weight:700; margin-top:4px;">(All Trail Meals Excluded)</p>
-                    <p style="font-size:11px; color:#666; line-height:1.3; margin-top:2px;">Includes Guide, Porter, Permit, Transport, & Accommodation. You pay food bills directly to guesthouses.</p>
-                    <a class="pkg-btn" style="background:#0d4d7a;" href="https://wa.me/9779856023917?text=Inquiry%20Semi%20Package%20ABC%205%20Days">BOOK SEMI PACKAGE</a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- JAVASCRIPT BOOKING ENGINE -->
-    <script>
-        // WhatsApp API Redirect Controller
-        function submitViaWhatsApp() {
-            const name = encodeURIComponent(document.getElementById('bkName').value || 'Guest');
-            const email = encodeURIComponent(document.getElementById('bkEmail').value || 'Not provided');
-            const phone = encodeURIComponent(document.getElementById('bkPhone').value || 'Not provided');
-            const plan = encodeURIComponent(document.getElementById('bkPlan').value || 'Not selected');
-            const msg = encodeURIComponent(document.getElementById('bkMessage').value || 'None');
-            
-            if(!document.getElementById('bkName').value || !document.getElementById('bkPhone').value) {
-                alert('Please enter your Name and Phone/WhatsApp number first.');
-                return;
-            }
-            
-            const waUrl = `https://wa.me/9779856023917?text=Hello%20Tilicho%20Tours!%20New%20Booking%20Inquiry:%0A%0A*Name:*%20${name}%0A*Email:*%20${email}%0A*Phone:*%20${phone}%0A*Plan:*%20${plan}%0A*Message:*%20${msg}`;
-            window.open(waUrl, '_blank');
-        }
-
-        // Direct Email Action Controller
-        function submitViaEmail() {
-            const name = document.getElementById('bkName').value;
-            const email = document.getElementById('bkEmail').value;
-            const phone = document.getElementById('bkPhone').value;
-            const plan = document.getElementById('bkPlan').value;
-            const msg = document.getElementById('bkMessage').value;
-
-            if(!name || !email) {
-                alert('Please enter your Name and Email address first.');
-                return;
-            }
-
-            const subject = encodeURIComponent(`ABC 5-Day Trek Booking Request - ${name}`);
-            const body = encodeURIComponent(`Booking Details:\n\nName: ${name}\nEmail: ${email}\nPhone/WhatsApp: ${phone}\nSelected Plan: ${plan}\nRequirements: ${msg}`);
-            
-            window.location.href = `mailto:tilichotours074@gmail.com?subject=${subject}&body=${body}`;
-        }
-    </script>
 </body>
 </html>
