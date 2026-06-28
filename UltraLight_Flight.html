@@ -919,38 +919,99 @@
             </div>
         </div>
 
-        <div class="full-width-row">
-            <div class="box">
-                <h2>❓ Ultralight Flight FAQ (Frequently Asked Questions)</h2>
-                <p style="margin-bottom: 20px;">Get reliable structural answers regarding airport operations, fleet safety, and booking rules.</p>
-                
-                <div class="faq-item">
-                    <a href="#" class="faq-trigger-link" onclick="toggleFaqAccordion(event, this)">What is the official ultralight flight Pokhara price for 2026? <span>+</span></a>
-                    <div class="faq-content"><p>Our official rate structures vary by tourism market segment (Foreigners, Indian Nationals, and Domestic Nepalese) and flight timelines. All online reservations initiated today unlock an instant 5% markdown offer.</p></div>
-                </div>
+        <style>
+    /* FAQ Container Architecture */
+    .full-width-row {
+        max-width: 1280px;
+        margin: 40px auto;
+        padding: 0 20px;
+        font-family: 'Inter', sans-serif;
+    }
 
-                <div class="faq-item">
-                    <a href="#" class="faq-trigger-link" onclick="toggleFaqAccordion(event, this)">Where do the ultralight flights take off from? <span>+</span></a>
-                    <div class="faq-content"><p>All fixed-wing aviation tours launch directly from the runways of the <strong>Pokhara Domestic Airport</strong>, working in close synchronization with tower air traffic controls.</p></div>
-                </div>
+    /* Main Box Styling */
+    .box {
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 35px;
+        box-shadow: 0 8px 32px rgba(13, 77, 122, 0.06);
+        border-top: 4px solid #0d4d7a; /* Primary Blue Accent */
+    }
 
-                <div class="faq-item">
-                    <a href="#" class="faq-trigger-link" onclick="toggleFaqAccordion(event, this)">What is the difference between open and closed cockpit options? <span>+</span></a>
-                    <div class="faq-content"><p>Open cockpits consist of a powered hang-glider frame structure designed for unobstructed 360-degree high-fidelity photography. Closed cabin designs provide full windshield wraps keeping you warm and insulated during high altitude mountain passes.</p></div>
-                </div>
+    .box h2 {
+        color: #0d4d7a;
+        font-size: 28px;
+        font-weight: 700;
+        margin-top: 0;
+    }
 
-                <div class="faq-item">
-                    <a href="#" class="faq-trigger-link" onclick="toggleFaqAccordion(event, this)">What are the passenger weight and age criteria? <span>+</span></a>
-                    <div class="faq-content"><p>Passengers must weigh between 25 KG and 100 KG. Age-wise, anyone above 7 years old can fly, though flyers below 12 years of age require verified signatures of permission from their parents.</p></div>
-                </div>
+    /* Individual FAQ Items */
+    .faq-item {
+        border-bottom: 1px solid #e2e8f0;
+        padding: 18px 0;
+    }
+    
+    .faq-item:last-child {
+        border-bottom: none;
+    }
 
-                <div class="faq-item">
-                    <a href="#" class="faq-trigger-link" onclick="toggleFaqAccordion(event, this)">What happens if a reservation is halted by shifting weather systems? <span>+</span></a>
-                    <div class="faq-content"><p>If the Pokhara airport tower restricts operations due to dense wind blocks or visual clouds, your manifest timing is instantly shifted forward to the next clear sky slot or fully refunded.</p></div>
-                </div>
-            </div>
-        </div>
+    /* Interactive Trigger Links */
+    .faq-trigger-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 600;
+        color: #1e293b;
+        text-decoration: none;
+        transition: color 0.2s ease-in-out;
+    }
 
+    .faq-trigger-link:hover {
+        color: #e74c3c; /* Accent Red on Hover */
+    }
+
+    .faq-trigger-link span {
+        color: #0d4d7a;
+        font-size: 22px;
+        font-weight: bold;
+        transition: transform 0.3s ease;
+    }
+
+    /* Hidden Content Styling */
+    .faq-content {
+        display: none; /* Hidden by default until JavaScript toggles it */
+        padding-top: 12px;
+        color: #475569;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .faq-content p {
+        margin: 0;
+        border-left: 3px solid #38bdf8; /* Soft blue highlight line */
+        padding-left: 15px;
+    }
+
+    /* Active State (When Accordion is Open) */
+    .faq-item.active .faq-trigger-link {
+        color: #0d4d7a;
+    }
+    
+    .faq-item.active .faq-trigger-link span {
+        transform: rotate(45deg); /* Rotates the + into an x */
+        color: #e74c3c;
+    }
+    
+    .faq-item.active .faq-content {
+        display: block;
+        animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-5px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
         <div class="full-width-row">
             <div class="registration-panel">
                 <h2>📝 Instant Flight Manifest Booking Engine</h2>
