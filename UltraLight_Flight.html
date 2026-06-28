@@ -1132,6 +1132,277 @@
                    "- Extra Flight Notes: " + notes;
         }
 
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultralight Flight Pokhara - FAQ</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Base Reset */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f8f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* FAQ Container Architecture */
+        .full-width-row {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Main Box Styling */
+        .box {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 35px;
+            box-shadow: 0 8px 32px rgba(13, 77, 122, 0.06);
+            border-top: 4px solid #0d4d7a; /* Primary Blue Accent */
+        }
+
+        .box h2 {
+            color: #0d4d7a;
+            font-size: 28px;
+            font-weight: 700;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .box p.subtitle {
+            margin-bottom: 30px;
+            color: #64748b;
+            font-size: 15px;
+        }
+
+        /* Individual FAQ Items */
+        .faq-item {
+            border-bottom: 1px solid #e2e8f0;
+            padding: 18px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Interactive Trigger Links */
+        .faq-trigger-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 600;
+            color: #1e293b;
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .faq-trigger-link:hover {
+            color: #e74c3c; /* Accent Red on Hover */
+        }
+
+        .faq-trigger-link span {
+            color: #0d4d7a;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 1;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        /* Hidden Content Styling */
+        .faq-content {
+            display: none;
+            padding-top: 12px;
+            color: #475569;
+            font-size: 14.5px;
+            line-height: 1.7;
+        }
+
+        .faq-content p {
+            margin: 0;
+            border-left: 3px solid #38bdf8; /* Soft blue highlight line */
+            padding-left: 15px;
+            background: #f8fafc;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .faq-content strong {
+            color: #0d4d7a;
+        }
+
+        /* Active State (When Accordion is Open) */
+        .faq-item.active .faq-trigger-link {
+            color: #0d4d7a;
+        }
+        
+        .faq-item.active .faq-trigger-link span {
+            transform: rotate(45deg); /* Rotates the + into an x */
+            color: #e74c3c;
+        }
+        
+        .faq-item.active .faq-content {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .box { padding: 20px; }
+            .faq-trigger-link { font-size: 15px; }
+            .box h2 { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="full-width-row">
+        <div class="box">
+            <h2>❓ Ultralight Flight FAQ (Frequently Asked Questions)</h2>
+            <p class="subtitle">Get reliable structural answers regarding airport operations, fleet safety, and booking rules in Pokhara.</p>
+            
+            <div class="faq-item">
+                <a href="#" class="faq-trigger-link" onclick="toggleFaqAccordion(event, this)">What is the official ultralight flight in Nepal Pokhara price for 2026? <span>+</span></a>
+                <div class="faq-content"><p>Our official rate structures vary by tourism market segment (Foreigners, Indian Nationals, and Domestic Nepalese) and flight timelines. All online reservations initiated today unlock an instant 5% markdown offer. For context, the 15-minute flight for foreign nationals is generally priced at $150 USD, while a 90-minute flight costs $440 USD.</p></div>
+            </div>
+
+            <div class="faq-item">
+                <a href="#" class="faq-trigger-link" onclick="toggleFaqAccordion(event, this)">Where do the ultralight flights take off from? <span>+</span></a>
+                <div class="faq-content"><p>All fixed-wing aviation tours launch directly from the runways of the <strong>Pokhara Domestic Airport</strong>, working in close synchronization with tower air traffic controls.</p></div>
+            </div>
+
+            <div class="faq-item">
+                <a href="#" class="faq-trigger-link" onclick="toggleFaqAccordion(event, this)">What is the difference between open and closed cockpit options? <span>+</span></a>
+                <div class="faq-content"><p>Open cockpits consist of a powered hang-glider frame structure designed for unobstructed 360-degree high-fidelity photography. Closed cabin designs provide full windshield wraps keeping you warm and insulated during high altitude mountain passes.</p></div>
+            </div>
+
+            <div class="faq-item">
+                <a href="#" class="faq-trigger-link" onclick="toggleFaqAccordion(event, this)">What are the passenger weight and age criteria? <span>+</span></a>
+                <div class="faq-content"><p>Passengers must weigh between 25 KG and 100 KG. Age-wise, anyone above 7 years old can fly, though flyers below 12 years of age require verified signatures of permission from their parents.</p></div>
+            </div>
+
+            <div class="faq-item">
+                <a href="#" class="faq-trigger-link" onclick="toggleFaqAccordion(event, this)">What happens if a reservation is halted by shifting weather systems? <span>+</span></a>
+                <div class="faq-content"><p>If the Pokhara airport tower restricts operations due to dense wind blocks or visual clouds, your manifest timing is instantly shifted forward to the next clear sky slot or fully rescheduled.</p></div>
+            </div>
+
+            <div class="faq-item">
+                <a href="#" class="faq-trigger-link" onclick="toggleFaqAccordion(event, this)">Are there any hidden fees beyond the standard cost of an ultralight flight in Pokhara? <span>+</span></a>
+                <div class="faq-content"><p>Standard rates typically include airport tax, government taxes, and hotel pick-up and drop-off from the Lakeside area, ensuring there are no hidden fees at check-in. Professional photo and video packages are an optional extra, usually costing around $15 USD.</p></div>
+            </div>
+
+            <div class="faq-item">
+                <a href="#" class="faq-trigger-link" onclick="toggleFaqAccordion(event, this)">How is the safety of ultralight flights in Pokhara maintained? <span>+</span></a>
+                <div class="faq-content"><p>Safety is a key priority. All ultralight aircraft are equipped with hand glide landing capability and feature the MAGNUM 450 safety parachute emergency rescue system. Furthermore, operators strictly adhere to regulations established by the Civil Aviation Authority of Nepal (CAAN).</p></div>
+            </div>
+
+            <div class="faq-item">
+                <a href="#" class="faq-trigger-link" onclick="toggleFaqAccordion(event, this)">Are the pilots licensed and experienced for flying in the Himalayas? <span>+</span></a>
+                <div class="faq-content"><p>Yes, flights are operated by highly trained and experienced UPL-licensed pilots. Pilots and ground crew conduct daily pre-flight inspections, run emergency equipment checks, and deliver a thorough on-ground safety briefing before takeoff.</p></div>
+            </div>
+
+            <div class="faq-item">
+                <a href="#" class="faq-trigger-link" onclick="toggleFaqAccordion(event, this)">Which flight duration (15, 30, 60, or 90 minutes) is the best value? <span>+</span></a>
+                <div class="faq-content"><p>The 15-minute flight is a budget-friendly introduction that circles over Phewa Lake and the city. For breathtaking mountain proximity, the 60-minute or 90-minute options take you directly into the heart of the Annapurna range and near Mt. Fishtail.</p></div>
+            </div>
+
+            <div class="faq-item">
+                <a href="#" class="faq-trigger-link" onclick="toggleFaqAccordion(event, this)">Do I need to be physically fit or have prior trekking experience to fly? <span>+</span></a>
+                <div class="faq-content"><p>No physical exertion or trekking experience is required. Unlike the rigorous mountain ground treks arranged by our trekking arrangement manager, Mr. Prakash, this aerial adventure is entirely accessible and only requires you to sit back and enjoy the panoramic views.</p></div>
+            </div>
+
+            <div class="faq-item">
+                <a href="#" class="faq-trigger-link" onclick="toggleFaqAccordion(event, this)">How do the flight views compare to regular commercial airlines? <span>+</span></a>
+                <div class="faq-content"><p>Unlike standard commercial aviation—such as heavy international routes like KTM-BKK or KTM-DEL where you are observing the world through a tiny window from 30,000 feet—an ultralight flight immerses you directly in the landscape at lower altitudes for unparalleled, unobstructed views of the peaks.</p></div>
+            </div>
+
+            <div class="faq-item">
+                <a href="#" class="faq-trigger-link" onclick="toggleFaqAccordion(event, this)">Can I bring my own camera or GoPro for the flight? <span>+</span></a>
+                <div class="faq-content"><p>Yes, you can bring your own camera or smartphone to capture the stunning landscapes. However, security measures strictly require the use of neck straps or wrist straps for all equipment to prevent drops, and lens caps must be highly secured.</p></div>
+            </div>
+
+            <div class="faq-item">
+                <a href="#" class="faq-trigger-link" onclick="toggleFaqAccordion(event, this)">What is the best season and time of day for an ultralight flight in Nepal? <span>+</span></a>
+                <div class="faq-content"><p>The most optimal season for flying spans from September to May. Flights are primarily scheduled during the mornings and late afternoons when weather conditions are stable and skies are clear.</p></div>
+            </div>
+
+            <div class="faq-item">
+                <a href="#" class="faq-trigger-link" onclick="toggleFaqAccordion(event, this)">Is an ultralight flight safe for pregnant women or individuals with health issues? <span>+</span></a>
+                <div class="faq-content"><p>Ultralight flights are not recommended as an appropriate adventure for pregnant women. If you have any significant medical issues—especially conditions related to altitude or motion sickness—you should consult with your doctor before securing a booking.</p></div>
+            </div>
+
+            <div class="faq-item">
+                <a href="#" class="faq-trigger-link" onclick="toggleFaqAccordion(event, this)">How do I book an ultralight flight in Pokhara with Tilicho Tours? <span>+</span></a>
+                <div class="faq-content"><p>Booking through our team at Tilicho Tours is incredibly simple. Contact our Lakeside office with your preferred dates and flight duration. Once availability is verified, a small advance deposit will lock in your time slot, allowing our local network to prepare everything for your arrival.</p></div>
+            </div>
+
+            <div class="faq-item">
+                <a href="#" class="faq-trigger-link" onclick="toggleFaqAccordion(event, this)">What should I wear for my Pokhara ultralight flight? <span>+</span></a>
+                <div class="faq-content"><p>We recommend wearing comfortable clothing and sturdy shoes. Because temperatures can drop significantly at higher altitudes, layering your clothes or bringing a windproof jacket is highly recommended for your comfort.</p></div>
+            </div>
+
+            <div class="faq-item">
+                <a href="#" class="faq-trigger-link" onclick="toggleFaqAccordion(event, this)">Are there special price discounts for Nepalese and Indian citizens? <span>+</span></a>
+                <div class="faq-content"><p>Yes, the ultralight flight price in Pokhara for Nepali and Indian citizens is significantly discounted compared to international tourists. For example, a 15-minute flight is priced at NPR 17,600 for domestic travelers.</p></div>
+            </div>
+
+            <div class="faq-item">
+                <a href="#" class="faq-trigger-link" onclick="toggleFaqAccordion(event, this)">How fast does the ultralight aircraft fly? <span>+</span></a>
+                <div class="faq-content"><p>During the flight, the aircraft generally cruises at a comfortable speed of 60 to 80 km/hr, providing a smooth and visually spectacular ride over the valleys and mountains.</p></div>
+            </div>
+
+            <div class="faq-item">
+                <a href="#" class="faq-trigger-link" onclick="toggleFaqAccordion(event, this)">What specific landmarks will I see during the flight? <span>+</span></a>
+                <div class="faq-content"><p>Depending entirely on your chosen duration, you will soar above iconic landmarks including Phewa Lake, the World Peace Pagoda, Sarangkot Hill, and venture deep into the Annapurna Massif and Kapuche Glacier Lake.</p></div>
+            </div>
+
+            <div class="faq-item">
+                <a href="#" class="faq-trigger-link" onclick="toggleFaqAccordion(event, this)">What is the cancellation and refund policy? <span>+</span></a>
+                <div class="faq-content"><p>If severe weather conditions—such as adverse wind blocks or poor visibility—force the airport tower to restrict flights, your flight will either be shifted to the next available clear sky slot or fully refunded.</p></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript to handle Accordion Functionality -->
+    <script>
+        function toggleFaqAccordion(event, element) {
+            // Prevent the browser from jumping to the top of the page when clicking the # link
+            event.preventDefault(); 
+            
+            // Find the parent .faq-item of the clicked link
+            const currentItem = element.closest('.faq-item');
+            
+            // Optional: Close all other open FAQs if you only want one open at a time
+            const allItems = document.querySelectorAll('.faq-item');
+            allItems.forEach(item => {
+                if (item !== currentItem) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Toggle the 'active' class on the clicked FAQ item
+            currentItem.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
+
         function routeManifestToWhatsApp() {
             var text = buildManifestString();
             window.open("https://wa.me/9779705023917?text=" + encodeURIComponent(text), "_blank");
