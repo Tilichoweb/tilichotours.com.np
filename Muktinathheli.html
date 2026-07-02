@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- High-CTR SEO Title -->
+    <title>Muktinath Helicopter Tour from Pokhara | Best Price & Same Day Return</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0a192f;
+            --accent: #ffb400;
+            --saffron: #ff9933;
+            --bg: #f8f9fa;
+        }
+
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--bg); color: var(--primary); }
+
+        /* --- Sliding Image Hero (10 Images Setup) --- */
+        .hero-slider {
+            position: relative;
+            height: 450px;
+            overflow: hidden;
+            border-bottom: 5px solid var(--saffron);
+        }
+
+        .slides {
+            display: flex;
+            width: 1000%; /* 100% * 10 images */
+            height: 100%;
+            animation: slideEffect 60s infinite;
+        }
+
+        .slides img { width: 10%; height: 100%; object-fit: cover; }
+
+        @keyframes slideEffect {
+            0%, 9% { transform: translateX(0%); }
+            10%, 19% { transform: translateX(-10%); }
+            20%, 29% { transform: translateX(-20%); }
+            30%, 39% { transform: translateX(-30%); }
+            40%, 49% { transform: translateX(-40%); }
+            50%, 59% { transform: translateX(-50%); }
+            60%, 69% { transform: translateX(-60%); }
+            70%, 79% { transform: translateX(-70%); }
+            80%, 89% { transform: translateX(-80%); }
+            90%, 100% { transform: translateX(-90%); }
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%; left: 50%; transform: translate(-50%, -50%);
+            text-align: center; color: white; text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+            width: 90%;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem; 
+            margin: 0;
+            transition: font-size 0.3s ease;
+        }
+
+        /* --- Layout --- */
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 30px; }
+        .info-side { display: flex; flex-direction: column; }
+        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 25px; }
+
+        /* --- Responsive Price Table Wrapper --- */
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin-top: 15px;
+            border-radius: 6px;
+        }
+        .price-table { width: 100%; border-collapse: collapse; min-width: 500px; }
+        .price-table th, .price-table td { padding: 12px; border-bottom: 1px solid #eee; text-align: left; }
+        .price-table th { background: #f1f1f1; font-weight: bold; }
+
+        /* --- Video Box Frame --- */
+        .box { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 25px; }
+        .box h2 { margin-top: 0; display: flex; align-items: center; gap: 10px; }
+        .box h2 i { color: #ff0000; }
+        .video-box-frame { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; }
+        .video-box-frame iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+
+        /* --- Clickable Accordion FAQ Layout --- */
+        .faq-item { margin-bottom: 12px; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; background: #ffffff; }
+        .faq-question { width: 100%; text-align: left; padding: 18px 20px; background: #f8fafc; border: none; cursor: pointer; font-weight: 600; font-size: 1rem; color: var(--primary); display: flex; justify-content: space-between; align-items: center; transition: background 0.2s ease; gap: 15px; }
+        .faq-question:hover { background: #f1f5f9; }
+        .faq-question::after { content: '\f078'; font-family: 'Font Awesome 5 Free'; font-weight: 900; font-size: 0.8rem; transition: transform 0.3s ease; color: #64748b; flex-shrink: 0; }
+        .faq-item.active .faq-question::after { transform: rotate(180deg); }
+        .faq-answer { display: none; padding: 18px 20px; background: #ffffff; font-size: 0.95rem; line-height: 1.6; color: #334155; border-top: 1px solid #e2e8f0; }
+
+        /* --- Sidebar Booking Box --- */
+        .booking-box { background: var(--primary); color: white; padding: 25px; border-radius: 15px; position: sticky; top: 20px; }
+        .booking-box h3 { color: var(--accent); margin: 0 0 15px 0; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 10px; }
+        .booking-box label { display: block; margin-bottom: 5px; font-size: 0.9rem; font-weight: 500; }
+        .form-input { width: 100%; padding: 12px; margin-bottom: 12px; border-radius: 6px; border: none; box-sizing: border-box; font-family: inherit; font-size: 1rem; }
+        
+        .btn { width: 100%; padding: 15px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 10px; font-size: 1rem; }
+        .btn-wa { background: #25D366; color: white; }
+        .btn-mail { background: var(--accent); color: var(--primary); }
+
+        /* --- High-Visibility Floating Action Button Style --- */
+        .sticky-pulse-wa { position: fixed; bottom: 25px; right: 25px; background-color: #25D366; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; transition: transform 0.3s ease, background-color 0.3s ease; }
+        .sticky-pulse-wa:hover { transform: scale(1.05); background-color: #128C7E; }
+        .sticky-pulse-wa i { font-size: 1.3rem; }
+
+        /* --- Hidden SEO Metadata Storage Block --- */
+        .seo-meta-cloud { display: none; }
+
+        /* --- Comprehensive Responsive Mobile Engine --- */
+        @media (max-width: 900px) {
+            .container { grid-template-columns: 1fr; margin: 20px auto; padding: 0 15px; gap: 20px; } 
+            .hero-slider { height: 320px; } 
+            .hero-text h1 { font-size: 2rem; }
+            .hero-text p { font-size: 1rem; }
+            .card, .box { padding: 20px; margin-bottom: 20px; }
+            .booking-box { position: static; padding: 20px; }
+            .sticky-pulse-wa span { display: none; } 
+            .sticky-pulse-wa { padding: 15px; bottom: 20px; right: 20px; border-radius: 50%; width: 55px; height: 55px; justify-content: center; box-sizing: border-box; }
+            .sticky-pulse-wa i { font-size: 1.6rem; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-slider { height: 260px; }
+            .hero-text h1 { font-size: 1.6rem; }
+            .hero-text p { font-size: 0.85rem; }
+            .card, .box { padding: 15px; border-radius: 8px; }
+            .faq-question { padding: 14px 15px; font-size: 0.95rem; }
+            .faq-answer { padding: 14px 15px; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+    
+<!-- High-Visibility Floating Action Button Layout -->
+<a href="https://wa.me/9779856023917?text=Hello%20Tilicho%20Tours,%20I'm%20interested%20in%20a%20Helicopter%20Tour." target="_blank" class="sticky-pulse-wa">
+    <i class="fab fa-whatsapp"></i> <span>Live Chat Booking</span>
+</a>
+
+<section class="hero-slider">
+    <div class="slides">
+        <img src="images/muktinathheli1.jpeg" alt="Muktinath Helicopter Tour">
+        <img src="images/muktinathheli2.jpeg" alt="Muktinath Heli Tour">
+        <img src="images/muktinathheli3.jpeg" alt="Muktinath Helicopter Package">
+        <img src="images/muktinathheli4.jpeg" alt="Muktinath Helicopter Ride">
+        <img src="images/muktinathheli5.jpeg" alt="Muktinath Helicopter Booking">
+        <img src="images/muktinathheli6.jpeg" alt="Muktinath Helicopter Flight">
+        <img src="images/muktinathheli7.jpeg" alt="Muktinath by Helicopter">
+        <img src="images/muktinathheli8.jpeg" alt="Helicopter Tour to Muktinath">
+        <img src="images/muktinathheli9.jpeg" alt="Helicopter Ride to Muktinath">
+        <img src="images/muktinathheli10.jpeg" alt="Pokhara to Muktinath Helicopter">
+    </div>
+    <div class="hero-text">
+        <h1>Muktinath Salvation Journey</h1>
+        <p>Luxury Helicopter Pilgrimage | Tilicho Tours & Travels</p>
+    </div>
+</section>
+
+<div class="container">
+    <div class="info-side">
+        
+        <!-- High-Converting SEO Copy Block -->
+        <div class="card">
+            <p><strong>Book your unforgettable Muktinath Helicopter Tour with instant confirmation and the best prices in Nepal.</strong> Experience a breathtaking helicopter ride to Muktinath Temple with panoramic Himalayan views[cite: 2]. Enjoy a same-day Muktinath helicopter package from Pokhara or Kathmandu with professional service[cite: 2]. Fly over the spectacular Annapurna and Dhaulagiri mountain ranges on your journey to the sacred Muktinath Temple[cite: 2].</p>
+            <p>Choose from private charter or shared helicopter tours to Muktinath with flexible departures[cite: 2]. Visit one of Nepal's most sacred pilgrimage destinations in comfort with a luxury helicopter tour[cite: 2]. Perfect for pilgrims, families, senior travelers, and visitors with limited time who want a fast and scenic journey[cite: 2]. Book online today for a safe, reliable, and unforgettable Muktinath helicopter experience with experienced pilots and modern helicopters[cite: 2].</p>
+        </div>
+
+        <div class="card">
+            <h2>Spiritual Importance</h2>
+            <p>Muktinath, or <strong>Mukti Kshetra</strong>, is the sacred site where Lord Vishnu attained freedom from the curse of Brinda, symbolizing <strong>Moksha</strong> (salvation)[cite: 2]. For Hindu pilgrims, it is a life-changing experience to bathe in the <strong>108 holy spouts</strong> and the two sacred ponds[cite: 2]. It is the only Divya Desam temple located outside of India, making it a supreme pilgrimage destination for devotees worldwide[cite: 2].</p>
+        </div>
+
+        <div class="card">
+            <h2>Heli Tour Rates (2026/27)</h2>
+            <div class="table-container">
+                <table class="price-table">
+                    <tr><th>Category</th><th>Indian Citizen</th><th>Foreigner</th></tr>
+                    <tr><td>Group Joining (Per Pax)</td><td>₹58000 INR</td><td>$699</td></tr>
+                    <tr><td>Private Charter (5 Pax)</td><td>₹2,70,000 INR</td><td>$1150</td></tr>
+                    <tr><td>ACAP Permit Cost</td><td>NPR 3,000</td><td>NPR 3,000</td></tr>
+                </table>
+            </div>
+            <p style="font-size: 0.85rem; margin-top: 10px;">*Rates include Pokhara hotel pickup/drop. Aadhaar is NOT valid for air travel; please carry a <strong>Voter ID or Passport</strong>[cite: 2].</p>
+        </div>
+
+        <div class="card">
+            <h2>Safety & Policy</h2>
+            <p><strong>Safety Features:</strong> We fly with Airbus H125 helicopters, designed for high-altitude landings[cite: 2]. Every flight includes a professional mountain pilot and emergency oxygen kits[cite: 2].</p>
+            <p><strong>Cancellation:</strong> 100% refund if the flight is cancelled due to weather[cite: 2]. Guest cancellations within 48 hours are non-refundable[cite: 2].</p>
+        </div>
+
+        <!-- Video Experience Box -->
+        <div class="box">
+            <h2><i class="fab fa-youtube"></i> Muktinath Heli Media Experience Official Live Video</h2>
+            <div class="video-box-frame">
+                <iframe 
+                    src="https://www.youtube.com/embed/pPW5zJY0vAQ" 
+                    title="Muktinath Helicopter Tour Video Preview" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Fully Expanded Clickable FAQ Layout Block -->
+        <div class="card">
+            <h2>21 Frequently Asked Questions (FAQ) – Muktinath Helicopter Tour Package</h2>
+            <div id="faq-accordion-container">
+
+                <!-- Additional Cost FAQ Integrated First -->
+                <div class="faq-item">
+                    <button class="faq-question">1. How much cost for muktinath heli tour ?</button>
+                    <div class="faq-answer">
+                        <strong>Heli Tour Rates (2026/27)</strong>
+                        <div class="table-container">
+                            <table class="price-table">
+                                <tr><th>Category</th><th>Indian Citizen</th><th>Foreigner</th></tr>
+                                <tr><td>Group Joining (Per Pax)</td><td>₹58000 INR</td><td>$699</td></tr>
+                                <tr><td>Private Charter (5 Pax)</td><td>₹2,70,000 INR</td><td>$1150</td></tr>
+                                <tr><td>ACAP Permit Cost</td><td>NPR 3,000</td><td>NPR 3,000</td></tr>
+                            </table>
+                        </div>
+                        <p style="font-size: 0.85rem; margin-top: 10px; color: var(--primary);">*Rates include Pokhara hotel pickup/drop. Aadhaar is NOT valid for air travel; please carry a Voter ID or Passport[cite: 2].</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">2. How much does a Muktinath Helicopter Tour cost?</button>
+                    <div class="faq-answer">The cost of a Muktinath Helicopter Tour depends on whether you choose a private charter or a shared helicopter flight. Prices vary according to the departure location (Pokhara or Kathmandu), number of passengers, and the season. Contact Tilicho Tours & Travels for the latest group-sharing and private helicopter charter rates.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">3. What is included in the Muktinath Helicopter Tour Package?</button>
+                    <div class="faq-answer">Most Muktinath helicopter packages include helicopter flight, airport taxes, experienced pilot, permit assistance, and waiting time at Muktinath Temple for darshan. Some packages also include hotel transfers and airport assistance.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">4. How long does the Muktinath Helicopter Tour take?</button>
+                    <div class="faq-answer">A Muktinath Helicopter Tour from Pokhara usually takes around 2 to 3 hours including landing time. From Kathmandu, the tour generally takes around 4 to 5 hours depending on weather conditions and airport operations.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">5. Where does the helicopter depart from?</button>
+                    <div class="faq-answer">Flights depart from either Pokhara Domestic Airport or Kathmandu Domestic Airport. Your departure location depends on the package you book.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">6. Can I visit Muktinath Temple and return on the same day?</button>
+                    <div class="faq-answer">Yes. The Muktinath Helicopter Tour is a same-day tour. After landing near the temple, passengers have enough time for darshan, photography, and sightseeing before returning.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">7. Is the Muktinath Helicopter Tour safe?</button>
+                    <div class="faq-answer">Yes. Helicopter tours are operated by experienced commercial pilots using modern helicopters maintained according to Nepal Civil Aviation Authority regulations. Flights operate only under suitable weather conditions.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">8. What mountains can I see during the helicopter flight?</button>
+                    <div class="faq-answer">During the flight you may enjoy spectacular views of Annapurna, Dhaulagiri, Nilgiri, Tukuche Peak, Machhapuchhre (Fishtail), and the beautiful Kali Gandaki Valley depending on the route and weather.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">9. How much time do we get at Muktinath Temple?</button>
+                    <div class="faq-answer">Most helicopter tours allow approximately 30–60 minutes at Muktinath for temple visits, prayers, photography, and exploration before returning.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">10. Is food included in the helicopter package?</button>
+                    <div class="faq-answer">Food is not included in standard helicopter tours. However, tea, coffee, snacks, and meals are available at lodges and restaurants near Muktinath Temple if time permits.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">11. Can senior citizens travel by helicopter to Muktinath?</button>
+                    <div class="faq-answer">Yes. The helicopter tour is highly recommended for senior citizens, families, and pilgrims who wish to avoid several days of road travel or trekking.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">12. What is the best season for a Muktinath Helicopter Tour?</button>
+                    <div class="faq-answer">The best months are March to May and September to November when the weather is usually clear and mountain visibility is excellent. Helicopter tours also operate during other seasons depending on weather conditions.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">13. How many passengers can travel in one helicopter?</button>
+                    <div class="faq-answer">Depending on the helicopter type and passenger weight, most helicopters carry up to five passengers on a shared or private charter flight.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">14. What should I wear during the helicopter tour?</button>
+                    <div class="faq-answer">Wear warm clothing, sunglasses, comfortable walking shoes, sunscreen, and a light jacket. Morning flights can be cold due to the high altitude.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">15. Can children join the Muktinath Helicopter Tour?</button>
+                    <div class="faq-answer">Yes. Children can travel with their parents or guardians. Families with children frequently choose helicopter tours because they are fast, safe, and comfortable.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">16. What is the altitude of Muktinath Temple?</button>
+                    <div class="faq-answer">Muktinath Temple is located at an altitude of approximately 3,800 meters (12,467 feet) above sea level in Mustang District, Nepal.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">17. Can I book a private helicopter charter?</button>
+                    <div class="faq-answer">Yes. Private helicopter charters are available for couples, families, photographers, pilgrims, corporate groups, and VIP travelers who want flexible departure times and complete privacy.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">18. What happens if the weather is bad?</button>
+                    <div class="faq-answer">Safety always comes first. If weather conditions are not suitable for flying, the flight may be delayed, rescheduled, or refunded according to the operator's cancellation policy.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">19. Can I take photos and videos during the flight?</button>
+                    <div class="faq-answer">Absolutely. Photography and videography are allowed throughout the helicopter journey. The Himalayan mountain scenery, deep valleys, and Muktinath Temple provide excellent opportunities for memorable photos.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">20. Why choose a helicopter instead of driving to Muktinath?</button>
+                    <div class="faq-answer">A helicopter tour saves many hours of travel, avoids rough mountain roads, provides breathtaking aerial views of the Himalayas, and allows visitors to complete the pilgrimage in just one day.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">21. Why book your Muktinath Helicopter Tour with Tilicho Tours & Travels?</button>
+                    <div class="faq-answer">Tilicho Tours & Travels offers professional booking assistance, competitive prices, experienced local support, trusted helicopter operators, instant confirmation, flexible departure options, and excellent customer service. Whether you choose a shared helicopter seat or a private charter, our team ensures a safe, comfortable, and unforgettable Muktinath pilgrimage experience.</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <aside>
+        <div class="booking-box">
+            <h3>Book Your Yatra</h3>
+            <form id="yatraForm">
+                <label>Name</label>
+                <input type="text" id="name" class="form-input" placeholder="Name as per ID" required>
+                
+                <label>Mobile No (WhatsApp / Local No)</label>
+                <input type="tel" id="mobile" class="form-input" placeholder="e.g. +977 9856023917" required>
+
+                <label>Date</label>
+                <input type="date" id="date" class="form-input" required>
+                
+                <label>Pax & Nationality</label>
+                <div style="display: flex; gap: 10px;">
+                    <input type="number" id="pax" class="form-input" value="1" min="1" max="5" style="width: 35%;">
+                    <select id="nation" class="form-input" style="width: 65%;">
+                        <option value="Nepali">Nepali</option>
+                        <option value="Indian">Indian</option>
+                        <option value="Other SAARC">Other SAARC</option>
+                        <option value="Other Country">Other Country</option>
+                    </select>
+                </div>
+
+                <label>Pickup From</label>
+                <input type="text" id="pickup" class="form-input" placeholder="Hotel name or location" required>
+
+                <label>Extra Details / Special Requests</label>
+                <textarea id="notes" class="form-input" rows="4" placeholder="Weights of passengers, hotel name, or ritual assistance..."></textarea>
+
+                <button type="button" class="btn btn-wa" onclick="sendWA()">
+                    <i class="fab fa-whatsapp"></i> Reserve on WhatsApp
+                </button>
+                <button type="button" class="btn btn-mail" onclick="sendEmail()">
+                    <i class="fas fa-envelope"></i> Send Email Inquiry
+                </button>
+            </form>
+        </div>
+    </aside>
+</div>
+
+<!-- Raw Keyword Cloud Asset for Search Index Crawling optimization -->
+<div class="seo-meta-cloud">
+    <h2>Keywords and Tags Reference Index</h2>
+    <p>Nepal Helicopter Tour, Muktinath Darshan by Helicopter, Muktinath Temple Helicopter Tour, Muktinath Pilgrimage Helicopter Tour, Muktinath Helicopter Tour Price, Muktinath Helicopter Cost, Muktinath Helicopter Tour Package Price, Cheap Muktinath Helicopter Tour, Best Muktinath Helicopter Package, Muktinath Group Helicopter Tour, Private Muktinath Helicopter Charter, Shared Helicopter to Muktinath, Muktinath Helicopter Booking Online, Instant Muktinath Helicopter Booking, Same Day Muktinath Helicopter Tour, Luxury Helicopter Tour Nepal, VIP Muktinath Helicopter Tour, Muktinath Helicopter Tour Pokhara, Pokhara Helicopter Tour, Pokhara to Muktinath Flight, Helicopter Tour Pokhara Nepal, Pokhara Airport Helicopter Tour, Kathmandu Helicopter Tour, Kathmandu to Muktinath, Nepal Helicopter Services, Annapurna Helicopter Tour, Mustang Helicopter Tour, Jomsom Helicopter Tour, Lower Mustang Helicopter Tour, Muktinath Darshan Package, Muktinath Temple Tour, Muktinath Pilgrimage, Hindu Pilgrimage Nepal, Buddhist Pilgrimage Nepal, Vishnu Temple Nepal, Sacred Temple Nepal, Holy Temple Helicopter Tour, Spiritual Helicopter Tour Nepal, Muktinath Yatra Package, Muktinath Dham Helicopter Tour, Nepal Helicopter Adventure, Himalayan Helicopter Tour, Annapurna Helicopter Ride, Mustang Scenic Flight, Himalayan Scenic Helicopter Flight, Mountain Helicopter Tour Nepal, Snow Mountain Helicopter Tour, High Altitude Helicopter Tour, Nepal Scenic Flight, Helicopter Sightseeing Nepal, Muktinath Helicopter Tour 2026, Muktinath Helicopter Vlog, Helicopter Ride Nepal, Muktinath Travel Guide, Pokhara Helicopter Ride, Nepal Helicopter Experience, Muktinath Tour Video, Helicopter Landing Muktinath</p>
+    <p>#MuktinathHelicopterTour #MuktinathHeliTour #MuktinathTemple #MuktinathDarshan #HelicopterRide #HelicopterTourNepal #VisitNepal #Pokhara #Kathmandu #Mustang #Annapurna #NepalTour #NepalTravel #TravelNepal #LuxuryTravel #AdventureNepal #Pilgrimage #HolyTemple #MountainFlight #Himalayas #TravelGoals #BucketList #ExploreNepal #HelicopterAdventure #ScenicFlight #TilichoTours</p>
+</div>
+
+<footer style="text-align: center; padding: 20px; background: var(--primary); color: white; margin-top: 40px; font-size: 0.9rem;">
+    &copy; 2026 Tilicho Tours & Travels | Lakeside-6, Pokhara, Nepal. All Rights Reserved.
+</footer>
+
+<script>
+    // Complete Accordion Interaction Setup Engine
+    document.querySelectorAll('.faq-question').forEach(item => {
+        item.addEventListener('click', () => {
+            const parent = item.parentElement;
+            const answer = item.nextElementSibling;
+            
+            // Check if item is already active
+            if (parent.classList.contains('active')) {
+                answer.style.display = 'none';
+                parent.classList.remove('active');
+            } else {
+                // Close other active accordions to preserve layout clarity
+                document.querySelectorAll('.faq-item').forEach(child => {
+                    child.classList.remove('active');
+                    child.querySelector('.faq-answer').style.display = 'none';
+                });
+                
+                answer.style.display = 'block';
+                parent.classList.add('active');
+            }
+        });
+    });
+
+    function sendWA() {
+        const msg = `MUKTINATH HELI INQUIRY:\nName: ${document.getElementById('name').value}\nMobile: ${document.getElementById('mobile').value}\nDate: ${document.getElementById('date').value}\nPax Count: ${document.getElementById('pax').value}\nNationality: ${document.getElementById('nation').value}\nPickup From: ${document.getElementById('pickup').value}\nNotes: ${document.getElementById('notes').value}`;
+        window.open(`https://wa.me/9779856023917?text=${encodeURIComponent(msg)}`);
+    }
+    function sendEmail() {
+        const body = `Inquiry Details:\nName: ${document.getElementById('name').value}\nMobile: ${document.getElementById('mobile').value}\nPreferred Date: ${document.getElementById('date').value}\nNo of Passengers: ${document.getElementById('pax').value}\nNationality: ${document.getElementById('nation').value}\nPickup From: ${document.getElementById('pickup').value}\nSpecial Requests: ${document.getElementById('notes').value}`;
+        window.location.href = `mailto:tilichotours074@gmail.com?subject=Muktinath Helicopter Tour Booking Inquiry&body=${encodeURIComponent(body)}`;
+    }
+</script>
+
+</body>
+</html>
