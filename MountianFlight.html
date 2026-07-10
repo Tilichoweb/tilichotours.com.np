@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everest Mountain Flight Booking 2026 | Tilicho Tours & Travels</title>
+    
+    <!-- External Asset Integrity -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Root Variables & Fluid Design Reset */
+        :root {
+            --navy-deep: #051d40;
+            --navy-light: #0b2b5c;
+            --gold-primary: #c5a059;
+            --gold-dark: #b38f4b;
+            --accent-green: #25D366;
+            --accent-green-dark: #128c7e;
+            --light-bg: #f8fafc;
+            --border-color: #cbd5e1;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --white: #ffffff;
+            --danger-red: #ef4444;
+            --danger-bg: #fef2f2;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-dark);
+            background-color: #fdfdfd;
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Fixed High-Visibility Floating Contact Components */
+        .floating-action-whatsapp {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: var(--accent-green);
+            color: var(--white);
+            padding: 14px 22px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 9999;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .floating-action-whatsapp:hover {
+            transform: translateY(-5px);
+            background-color: var(--accent-green-dark);
+            box-shadow: 0 15px 30px rgba(18, 140, 126, 0.5);
+        }
+
+        /* Utility Layout Wrapper */
+        .wrapper {
+            width: 100%;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Sticky Navigation Bar Implementation */
+        header {
+            position: sticky;
+            top: 0;
+            background-color: var(--navy-deep);
+            border-bottom: 3px solid var(--gold-primary);
+            z-index: 8000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .brand-logo {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .brand-logo span {
+            color: var(--gold-primary);
+        }
+
+        .nav-contact-trigger {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--white);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.95rem;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .nav-contact-trigger:hover {
+            background: var(--gold-primary);
+            color: var(--navy-deep);
+            border-color: var(--gold-primary);
+        }
+
+        /* Aspect-Ratio-Locked 10-Image Sliding Hero Banner */
+        .hero-carousel-viewport {
+            position: relative;
+            width: 100%;
+            height: 520px;
+            overflow: hidden;
+            background-color: var(--navy-deep);
+        }
+
+        .carousel-track-ten {
+            display: flex;
+            width: 1000%;
+            height: 100%;
+            animation: infiniteHeroScroll 45s infinite ease-in-out;
+        }
+
+        .carousel-track-ten img {
+            width: 10%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+
+        .hero-vignette-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(5, 29, 64, 0.45), rgba(5, 29, 64, 0.75));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero-content-block {
+            max-width: 850px;
+            color: var(--white);
+            z-index: 10;
+        }
+
+        .hero-content-block h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3.8rem;
+            line-height: 1.15;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-content-block p {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #e2e8f0;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Keyframes Logic for 10 Sequential Image Transitions */
+        @keyframes infiniteHeroScroll {
+            0%, 8%    { transform: translateX(0%); }
+            10%, 18%  { transform: translateX(-10%); }
+            20%, 28%  { transform: translateX(-20%); }
+            30%, 38%  { transform: translateX(-30%); }
+            40%, 48%  { transform: translateX(-40%); }
+            50%, 58%  { transform: translateX(-50%); }
+            60%, 68%  { transform: translateX(-60%); }
+            70%, 78%  { transform: translateX(-70%); }
+            80%, 88%  { transform: translateX(-80%); }
+            90%, 98%  { transform: translateX(-90%); }
+            100%      { transform: translateX(0%); }
+        }
+
+        /* 2026 Fares Section */
+        .tariff-board-section {
+            background-color: var(--white);
+            padding: 35px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .tariff-headline-badge {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .tariff-headline-badge span {
+            background-color: var(--navy-deep);
+            color: var(--white);
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .tariff-pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1050px;
+            margin: 0 auto;
+        }
+
+        .tariff-tier-card {
+            background-color: var(--light-bg);
+            border: 2px solid #f1f5f9;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+            transition: all 0.3s ease;
+        }
+
+        .tariff-tier-card:hover {
+            border-color: var(--gold-primary);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(5, 29, 64, 0.06);
+        }
+
+        .tariff-tier-card.featured-tier {
+            border-color: var(--gold-primary);
+            background-color: var(--white);
+            box-shadow: 0 8px 20px rgba(197, 160, 89, 0.15);
+        }
+
+        .tariff-tier-card h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        .tariff-tier-card .price-output {
+            display: block;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--navy-deep);
+            margin-bottom: 5px;
+        }
+
+        .tariff-tier-card .passenger-scope {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--gold-dark);
+            text-transform: uppercase;
+        }
+
+        /* Core Two-Column Asymmetric Main Layout Layout Grid */
+        .asymmetric-layout-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-top: 45px;
+            margin-bottom: 60px;
+            align-items: start;
+        }
+
+        /* Main Editorial Content Cards */
+        .editorial-content-block {
+            background-color: var(--white);
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+            margin-bottom: 35px;
+        }
+
+        .editorial-content-block h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            color: var(--navy-deep);
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 5px solid var(--gold-primary);
+            line-height: 1.2;
+        }
+
+        .editorial-content-block p {
+            margin-bottom: 20px;
+            color: #334155;
+            font-size: 1rem;
+        }
+
+        .feature-bullet-list {
+            list-style: none;
+            margin-bottom: 25px;
+            padding-left: 5px;
+        }
+
+        .feature-bullet-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 12px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .feature-bullet-list li i {
+            position: absolute;
+            left: 0;
+            top: 4px;
+            color: var(--gold-primary);
+            font-size: 1.1rem;
+        }
+
+        /* Embedded Photo Mosaic Matrix */
+        .photo-mosaic-matrix {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+            margin: 35px 0;
+        }
+
+        .photo-mosaic-matrix img {
+            width: 100%;
+            height: 135px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .photo-mosaic-matrix img:hover {
+            transform: scale(1.06);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            z-index: 5;
+        }
+
+        /* Highlight Policy Content Container */
+        .contingency-notice-box {
+            background-color: var(--danger-bg);
+            border-left: 4px solid var(--danger-red);
+            border-radius: 6px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+
+        .contingency-notice-box h5 {
+            color: #991b1b;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contingency-notice-box p {
+            color: #7f1d1d;
+            font-size: 0.92rem;
+            margin-bottom: 0;
+        }
+
+        /* Real-Time User Reviews Panel */
+        .client-critique-card {
+            background-color: var(--light-bg);
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .client-critique-card:last-child {
+            margin-bottom: 0;
+        }
+
+        .critique-meta-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .critique-author-title {
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--navy-deep);
+        }
+
+        .critique-star-tier {
+            color: #f59e0b;
+            font-size: 0.85rem;
+            display: flex;
+            gap: 2px;
+        }
+
+        .client-critique-card p {
+            font-size: 0.94rem;
+            color: #475569;
+            font-style: italic;
+            margin-bottom: 0;
+        }
+
+        /* Persistent Booking Sidebar Hub */
+        .sticky-booking-sidebar {
+            position: sticky;
+            top: 110px;
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 20px 40px rgba(5, 29, 64, 0.08);
+        }
+
+        .sticky-booking-sidebar h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            color: var(--navy-deep);
+            border-bottom: 2px solid var(--gold-primary);
+            padding-bottom: 12px;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+        }
+
+        .input-parameter-group {
+            margin-bottom: 20px;
+        }
+
+        .input-parameter-group label {
+            display: block;
+            font-weight: 700;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .input-parameter-group input,
+        .input-parameter-group select,
+        .input-parameter-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--border-color);
+            background-color: #fafafa;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.92rem;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+        }
+
+        .input-parameter-group input:focus,
+        .input-parameter-group select:focus,
+        .input-parameter-group textarea:focus {
+            outline: none;
+            border-color: var(--navy-deep);
+            background-color: var(--white);
+            box-shadow: 0 0 0 3px rgba(5, 29, 64, 0.08);
+        }
+
+        .input-parameter-group textarea {
+            resize: none;
+            height: 95px;
+        }
+
+        /* Conversion Button Interface Elements */
+        .action-button-element {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 12px;
+        }
+
+        .action-button-element:last-child {
+            margin-bottom: 0;
+        }
+
+        .btn-theme-navy {
+            background-color: var(--navy-deep);
+            color: var(--white);
+        }
+
+        .btn-theme-navy:hover {
+            background-color: var(--navy-light);
+            transform: translateY(-2px);
+        }
+
+        .btn-theme-whatsapp {
+            background-color: var(--accent-green);
+            color: var(--white);
+        }
+
+        .btn-theme-whatsapp:hover {
+            background-color: var(--accent-green-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(37, 211, 102, 0.25);
+        }
+
+        .btn-theme-slate {
+            background-color: #64748b;
+            color: var(--white);
+            font-size: 0.85rem;
+        }
+
+        .btn-theme-slate:hover {
+            background-color: #475569;
+            transform: translateY(-2px);
+        }
+
+        /* 22-Item FAQ Component Style Module */
+        .faq-accordion-block {
+            background-color: var(--white);
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 45px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+            margin-bottom: 60px;
+        }
+
+        .faq-accordion-block h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            color: var(--navy-deep);
+            margin-bottom: 30px;
+            padding-left: 15px;
+            border-left: 5px solid var(--gold-primary);
+        }
+
+        .faq-accordion-node {
+            margin-bottom: 14px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            background-color: var(--white);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-accordion-node[open] {
+            border-color: var(--gold-primary);
+            box-shadow: 0 4px 12px rgba(5, 29, 64, 0.04);
+        }
+
+        .faq-accordion-node summary {
+            padding: 18px 24px;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--navy-deep);
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            background-color: var(--white);
+        }
+
+        .faq-accordion-node summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-accordion-node summary::after {
+            content: '\f078';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            font-size: 0.85rem;
+            color: var(--gold-primary);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-accordion-node[open] summary::after {
+            transform: rotate(180deg);
+        }
+
+        .faq-accordion-payload {
+            padding: 0 24px 20px 24px;
+            background-color: var(--white);
+            border-top: 1px solid #f1f5f9;
+            color: #334155;
+            font-size: 0.96rem;
+        }
+
+        .faq-accordion-payload p {
+            margin-bottom: 12px;
+        }
+
+        .faq-accordion-payload p:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-accordion-payload ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .faq-accordion-payload ul li {
+            margin-bottom: 6px;
+        }
+
+        /* Site-Wide Commercial Footer System */
+        footer {
+            background-color: var(--navy-deep);
+            border-top: 5px solid var(--gold-primary);
+            color: #94a3b8;
+            padding: 50px 0 30px 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-inner-layout {
+            text-align: center;
+        }
+
+        .footer-inner-layout h2 {
+            font-family: 'Oswald', sans-serif;
+            color: var(--white);
+            font-size: 2rem;
+            margin-bottom: 10px;
+            letter-spacing: 1.5px;
+        }
+
+        .footer-inner-layout p {
+            margin-bottom: 8px;
+        }
+
+        .footer-inner-layout .agency-credentials {
+            color: var(--gold-primary);
+            font-weight: 600;
+            margin-top: 15px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Mobile Friendliness Layout Assertions */
+        @media (max-width: 950px) {
+            .asymmetric-layout-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .sticky-booking-sidebar {
+                position: relative;
+                top: 0;
+            }
+
+            .tariff-pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+            }
+
+            .photo-mosaic-matrix {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .hero-content-block h1 {
+                font-size: 2.6rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-carousel-viewport {
+                height: 380px;
+            }
+
+            .hero-content-block h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content-block p {
+                font-size: 1rem;
+            }
+
+            .editorial-content-block,
+            .faq-accordion-block {
+                padding: 25px 20px;
+            }
+
+            .photo-mosaic-matrix {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .faq-accordion-node summary {
+                padding: 15px 18px;
+                font-size: 0.92rem;
+            }
+
+            .faq-accordion-payload {
+                padding: 0 18px 15px 18px;
+                font-size: 0.88rem;
+            }
+
+            .floating-action-whatsapp {
+                bottom: 15px;
+                right: 15px;
+                padding: 12px 18px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PERSISTENT MOBILE-OPTIMIZED WHATSAPP HOTLINK -->
+    <a href="https://wa.me/9779856023917?text=hi%20Tilicho%20Tours%20,%20i%20would%20like%20to%20inquiry%20/book%20Mountain%20flight" target="_blank" class="floating-action-whatsapp">
+        <i class="fab fa-whatsapp"></i> <span>Live Talk Now </span>
+    </a>
+
+    <!-- STRUCTURAL NAVBAR ELEMENT -->
+    <header>
+        <div class="wrapper">
+            <div class="nav-inner">
+                <a href="#" class="brand-logo">TILICHO <span>TOURS</span></a>
+                <a href="https://wa.me/9779856023917?text=hi%20Tilicho%20Tours%20,%20i%20would%20like%20to%20inquiry%20/book%20Mountain%20flight" target="_blank" class="nav-contact-trigger">
+                    <i class="fab fa-whatsapp"></i> <span>+977 9856023917</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- AUTOMATED ASPECT-RATIO CONTROLLED IMAGE HERO BANNER -->
+<section class="hero-carousel-viewport">
+    <div class="carousel-track-ten">
+        <img src="images/mountainflight1.jpeg" alt="Everest Mountain Flight Sightseeing View 1">
+        <img src="images/mountainflight2.jpeg" alt="Everest Mountain Flight Sightseeing View 2">
+        <img src="images/mountainflight3.webp" alt="Everest Mountain Flight Sightseeing View 3">
+        <img src="images/mountainflight4.jpg" alt="Everest Mountain Flight Sightseeing View 4">
+        <img src="images/mountainflight5.jpg" alt="Everest Mountain Flight Sightseeing View 5">
+        <img src="images/mountainflight6.jpg" alt="Everest Mountain Flight Sightseeing View 6">
+        <img src="images/mountainflight7.jpg" alt="Everest Mountain Flight Sightseeing View 7">
+        <img src="images/mountainflight8.jpg" alt="Everest Mountain Flight Sightseeing View 8">
+        <img src="images/mountainflight9.jpg" alt="Everest Mountain Flight Sightseeing View 9">
+        <img src="images/mountainflight10.jpeg" alt="Everest Mountain Flight Sightseeing View 10">
+    </div>
+    <div class="hero-vignette-overlay">
+        <div class="hero-content-block">
+            <h1>Everest Mountain Flight</h1>
+            <p>One hours MT Everst Mountain flight from Kathmandu to Kathmandu .Guaranteed Window Seats For Unparalleled Panoramic Himalayan Sightseeing Planes</p>
+        </div>
+    </div>
+</section>
+
+    <!-- VISUAL TARIFF AND FARE DASHBOARD -->
+    <section class="tariff-board-section">
+        <div class="wrapper">
+            <div class="tariff-headline-badge">
+                <span>OFFICIAL SEASONAL PRICING REGISTER 2026</span>
+            </div>
+            <div class="tariff-pricing-grid">
+                <div class="tariff-tier-card">
+                    <h4>Nepalese Passengers</h4>
+                    <span class="price-output">NPR 15,500</span>
+                    <span class="passenger-scope">Net Payable Per Pax</span>
+                </div>
+                <div class="tariff-tier-card featured-tier">
+                    <h4>Indian National Passengers</h4>
+                    <span class="price-output">INR 12,500</span>
+                    <span class="passenger-scope">Net Payable Per Pax</span>
+                </div>
+                <div class="tariff-tier-card">
+                    <h4>Other Foreign Nationals</h4>
+                    <span class="price-output">USD 290</span>
+                    <span class="passenger-scope">Net Payable Per Pax</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE CONTENT ARCHITECTURE -->
+    <main class="wrapper">
+        <div class="asymmetric-layout-grid">
+            
+            <!-- LEFT COLUMN: EDITORIAL CONTENT -->
+            <div class="editorial-column-container">
+                
+                <div class="editorial-content-block">
+                    <h2>Flight Overview & Operating Standards</h2>
+                    <p>Embark on the journey of a lifetime with **Tilicho Tours and Travel**. The Everest Mountain Flight offers an elite panoramic corridor directly to the highest geographical features on Earth. Operating daily from the domestic terminal of Tribhuvan International Airport (KTM) in Kathmandu, this custom-designed flight route provides an aerial cruise past twenty of the planet's highest peaks, highlighted by Mount Everest (8,848.86m).</p>
+                    <p>Every single passenger asset allocated through our reservation terminal is assigned a **Guaranteed Window Seat**. This eliminates interior visual obstructions, giving you a crystal-clear line of sight to capture pristine mountain landscapes and ice formations.</p>
+                    
+                    <ul class="feature-bullet-list">
+                        <li><i class="fas fa-check-circle"></i> 1 Full Hour of Flight Time along the High Himalayan Range.</li>
+                        <li><i class="fas fa-check-circle"></i> Complete door-to-door ground logistics including Kathmandu Hotel Pickup & Drop.</li>
+                        <li><i class="fas fa-check-circle"></i> Complete cockpit access permissions during optimal cruising windows (subject to pilot approval).</li>
+                        <li><i class="fas fa-check-circle"></i> Official personalized Mountain Flight Accomplishment Certificates endorsed by the operating carrier.</li>
+                    </ul>
+
+                    <div class="contingency-notice-box">
+                        <h5><i class="fas fa-cloud-sun"></i> Weather Contingency & Refund Protection Guarantee</h5>
+                        <p>Mountain flights depend entirely on clear morning visibility. In the event of standard high-altitude fog or adverse weather interruptions, Tilicho Tours guarantees a cost-free automatic postponement to the following morning or an immediate, comprehensive 100% financial refund with no cancellation processing fees.</p>
+                    </div>
+                </div>
+
+                <!-- Video Experience Box -->
+        <div class="box">
+            <h2><i class="fab fa-youtube"></i> Everest Mountain flight  Media Experience official live video</h2>
+            <div class="video-box-frame">
+                <iframe src="https://www.youtube.com/embed/pPW5zJY0vAQ&t" title="Everest Mountain flight   Video Preview" allowfullscreen></iframe>
+            </div>
+        </div>
+
+
+                <!-- REAL CLIENT REVIEWS MODULE -->
+                <div class="editorial-content-block">
+                    <h2>Authentic Customer Experience Reports</h2>
+                    
+                    <div class="client-critique-card">
+                        <div class="critique-meta-header">
+                            <span class="critique-author-title">Mark Schwimmer (Germany)</span>
+                            <div class="critique-star-tier">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p>"Booking the Everest flight via Tilicho Tours was flawless. The driver arrived exactly at 05:15 AM at our Thamel hotel. The guaranteed window seat meant I got unobstructed, crisp photos of the Everest South Face. Absolutely worth every single penny."</p>
+                    </div>
+
+                    <div class="client-critique-card">
+                        <div class="critique-meta-header">
+                            <span class="critique-author-title">Anita Vardhan (Mumbai, India)</span>
+                            <div class="critique-star-tier">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p>"We were worried about missing the mountains due to weather, but Tilicho handled our booking with absolute transparency. Our flight was delayed by an hour for fog clearance, but once in the air, the views of Lhotse and Everest were magnificent. Excellent coordination!"</p>
+                    </div>
+
+                    <div class="client-critique-card">
+                        <div class="critique-meta-header">
+                            <span class="critique-author-title">James L. (United Kingdom)</span>
+                            <div class="critique-star-tier">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p>"An incredible experience from start to finish. Tilicho Tours gave us the best price online, and the service was top notch. Each person on the plane gets a full window to themselves, and they even invite you to the cockpit for an even wider view. A top highlight of Nepal!"</p>
+                    </div>
+
+                    <div class="client-critique-card">
+                        <div class="critique-meta-header">
+                            <span class="critique-author-title">Yuki Tanaka (Japan)</span>
+                            <div class="critique-star-tier">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p>"Due to heavy cloud layers, our first scheduled flight was cancelled by the airline. Tilicho Tours instantly handled all the logistics to reschedule us for the next day. The second morning was perfectly clear. Outstanding client support!"</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN: STICKY CONVERSION BOOKING ENGINE -->
+            <aside class="sidebar-column-container">
+                <div class="sticky-booking-sidebar">
+                    <h3>Secure Booking Vault</h3>
+                    <form action="#" method="POST" onsubmit="event.preventDefault();">
+                        
+                        <div class="input-parameter-group">
+                            <label>Lead Passenger Full Name</label>
+                            <input type="text" placeholder="As written in passport" required>
+                        </div>
+
+                        <div class="input-parameter-group">
+                            <label>Passenger Demographic Category</label>
+                            <select required>
+                                <option value="" disabled selected>Select category for pricing validation...</option>
+                                <option value="nepalese">Nepalese Citizen (NPR 15,500)</option>
+                                <option value="indian">Indian Citizen (INR 12,500)</option>
+                                <option value="foreigner">International Foreigner (USD 290)</option>
+                            </select>
+                        </div>
+
+                        <div class="input-parameter-group">
+                            <label>Target Flight Date</label>
+                            <input type="date" required>
+                        </div>
+
+                        <div class="input-parameter-group">
+                            <label>Preferred Flight Departure Window</label>
+                            <select required>
+                                <option value="0600">06:00 AM Departure (Highly Recommended)</option>
+                                <option value="0700">07:00 AM Departure</option>
+                                <option value="0800">08:00 AM Departure</option>
+                                <option value="0900">09:00 AM Departure</option>
+                            </select>
+                        </div>
+
+                        <div class="input-parameter-group">
+                            <label>Total Passenger Count (Seats)</label>
+                            <input type="number" min="1" max="20" value="1" required>
+                        </div>
+
+                        <div class="input-parameter-group">
+                            <label>Logistics or Dietary Notes</label>
+                            <textarea placeholder="Specify Kathmandu hotel name for pickup or any required accessibility accommodations..."></textarea>
+                        </div>
+
+                        <button type="submit" class="action-button-element btn-theme-navy">
+                            <i class="fas fa-paper-plane"></i> Initialize Email Booking
+                        </button>
+
+                        <a href="https://wa.me/9779856023917?text=hi%20Tilicho%20Tours%20,%20i%20would%20like%20to%20inquiry%20/book%20Mountain%20flight" target="_blank" class="action-button-element btn-theme-whatsapp">
+                            <i class="fab fa-whatsapp"></i> Instantly Book via WhatsApp
+                        </a>
+
+                        <a href="https://wa.me/9779856023917?text=hi%20Tilicho%20Tours%20,%20i%20would%20like%20to%20inquiry%20/book%20Mountain%20flight" target="_blank" class="action-button-element btn-theme-slate">
+                            <i class="fas fa-info-circle"></i> General WhatsApp Inquiry
+                        </a>
+
+                    </form>
+                </div>
+            </aside>
+
+        </div>
+
+        <!-- FULL UNABRIDGED 22-ITEM FAQ SYSTEM -->
+        <section class="faq-accordion-block">
+            <h2>Frequently Asked Questions (Complete Directory)</h2>
+
+            <details class="faq-accordion-node">
+                <summary>1. How much does an Everest flight cost?</summary>
+                <div class="faq-accordion-payload">
+                    <p>The standard corporate pricing strategy for the Everest Mountain Flight via Tilicho Tours is tiered cleanly by passenger nationality status: NPR 15,500 for Nepalese Citizens, INR 12,500 for Indian Nationals, and USD 290 for all international passport holders. These operational fees cover all applicable airport security taxes and ground transport inclusions.</p>
+                </div>
+            </details>
+
+            <details class="faq-accordion-node">
+                <summary>2. Is the Everest mountain flight worth it?</summary>
+                <div class="faq-accordion-payload">
+                    <p>Yes, it is highly recommended. It provides an efficient and physically accessible alternative to multi-week high-altitude trekking, allowing travelers of all ages and fitness levels to view the primary Himalayan chain up close in just one hour.</p>
+                </div>
+            </details>
+
+            <details class="faq-accordion-node">
+                <summary>3. Which airline offers Everest flights?</summary>
+                <div class="faq-accordion-payload">
+                    <p>Tilicho Tours operates in direct technical partnership with Nepal's premier domestic carriers, primarily Buddha Air, Yeti Airlines, and Shree Airlines. These lines use modern, twin-engine turboprop fleets optimized for high-altitude sightseeing maneuvers.</p>
+                </div>
+            </details>
+
+            <details class="faq-accordion-node">
+                <summary>4. How long is the Everest scenic flight?</summary>
+                <div class="faq-accordion-payload">
+                    <p>The gross time elapsed from runway takeoff at Tribhuvan International Airport to landing wheels-down spans approximately 50 to 60 minutes. This provides roughly 45 minutes of direct high-altitude cruising along the major peaks.</p>
+                </div>
+            </details>
+
+            <details class="faq-accordion-node">
+                <summary>5. Can you see Mount Everest from Kathmandu?</summary>
+                <div class="faq-accordion-payload">
+                    <p>No, direct ground-level viewing of Mt. Everest from Kathmandu is impossible due to the surrounding valley topography and intervening mountain ranges. You must take a flight to see it clearly.</p>
+                </div>
+            </details>
+
+            <details class="faq-accordion-node">
+                <summary>6. What mountains can I see during the flight?</summary>
+                <div class="faq-accordion-payload">
+                    <p>The standard flight path showcases iconic peaks such as Mt. Everest (8,848.86m), Lhotse (8,516m), Makalu (8,463m), Cho Oyu (8,201m), Nuptse (7,855m), Shisha Pangma (8,013m), and Ama Dablam (6,812m).</p>
+                </div>
+            </details>
+
+            <details class="faq-accordion-node">
+                <summary>7. Is breakfast included after the flight?</summary>
+                <div class="faq-accordion-payload">
+                    <p>Standard tickets cover flight logistics and hotel transport only. If you would like a premium package with an airport lounge breakfast or a landing lunch, please request a custom package from our booking team.</p>
+                </div>
+            </details>
+
+            <details class="faq-accordion-node">
+                <summary>8. Is hotel pickup available?</summary>
+                <div class="faq-accordion-payload">
+                    <p>Yes, our service package includes free ground transport in private, climate-controlled vehicles. We pick you up directly from your hotel in Kathmandu and return you safely afterward.</p>
+                </div>
+            </details>
+
+            <details class="faq-accordion-node">
+                <summary>9. Is the flight safe?</summary>
+                <div class="faq-accordion-payload">
+                    <p>Absolutely. The flights use advanced aircraft flown by veteran captains with thousands of hours of high-altitude experience. Flights only depart when clear morning weather and safe operating conditions are confirmed by air traffic control.</p>
+                </div>
+            </details>
+
+            <details class="faq-accordion-node">
+                <summary>10. Which seat is best for Everest flight?</summary>
+                <div class="faq-accordion-payload">
+                    <p>To maximize visibility, we utilize aircraft configurations with a single row of seats on each side of the aisle. Every ticket booked through Tilicho Tours comes with a guaranteed window seat.</p>
+                </div>
+            </details>
+
+            <details class="faq-accordion-node">
+                <summary>11. What happens if the flight is cancelled?</summary>
+                <div class="faq-accordion-payload">
+                    <p>If bad weather or low visibility forces a cancellation, you can choose to reschedule for the next available morning at no extra cost, or receive an immediate, full 100% refund.</p>
+                </div>
+            </details>
+
+            <details class="faq-accordion-node">
+                <summary>12. When is the best season?</summary>
+                <div class="faq-accordion-payload">
+                    <p>Flights run daily year-round, but the best visibility occurs during the autumn window (September through November) and spring window (March through May), which offer the clearest morning skies.</p>
+                </div>
+            </details>
+
+            <details class="faq-accordion-node">
+                <summary>13. Can children join the flight?</summary>
+                <div class="faq-accordion-payload">
+                    <p>Yes. The aircraft cabin is fully pressurized and climate-controlled, making it perfectly safe and comfortable for infants, young children, and elderly travelers alike.</p>
+                </div>
+            </details>
+
+            <details class="faq-accordion-node">
+                <summary>14. Is passport required?</summary>
+                <div class="faq-accordion-payload">
+                    <p>Yes, all international passengers must present an official valid passport at the domestic airport terminal security gate. Nepalese and Indian nationals may alternatively provide a valid government-issued photo ID card.</p>
+                </div>
+            </details>
+
+            <details class="faq-accordion-node">
+                <summary>15. Can I take photos?</summary>
+                <div class="faq-accordion-payload">
+                    <p>Yes, photography and filming are highly encouraged. The window layout provides an excellent vantage point for capturing clear photos of the mountains and glaciers below.</p>
+                </div>
+            </details>
+
+            <details class="faq-accordion-node">
+                <summary>16. What is the best month for mountain flight?</summary>
+                <div class="faq-accordion-payload">
+                    <p>October and November are widely considered the ideal months. The post-monsoon air is incredibly crisp and clear, providing the sharpest possible views of the Himalayan range.</p>
+                </div>
+            </details>
+
+            <details class="faq-accordion-node">
+                <summary>17. How close does the airplane fly to Everest?</summary>
+                <div class="faq-accordion-payload">
+                    <p>The plane maintains a safe, approved flight path roughly 20 miles from the peaks, flying at an altitude between 20,000 and 25,000 feet to provide spectacular, eye-level mountain views.</p>
+                </div>
+            </details>
+
+            <details class="faq-accordion-node">
+                <summary>18. What is the difference between Everest Base Camp helicopter tour and Everest mountain flight?</summary>
+                <div class="faq-accordion-payload">
+                    <p>The mountain flight uses a fixed-wing plane that flies a continuous loop from Kathmandu without landing. A helicopter tour is a longer experience that flies much lower into the valleys and includes actual landings at viewpoints like Kala Patthar or Everest Base Camp.</p>
+                </div>
+            </details>
+
+            <details class="faq-accordion-node">
+                <summary>19. Is there an Everest flight certificate?</summary>
+                <div class="faq-accordion-payload">
+                    <p>Yes, each passenger receives an official, personalized souvenir certificate signed by the flight crew to commemorate their journey to the roof of the world.</p>
+                </div>
+            </details>
+
+            <details class="faq-accordion-node">
+                <summary>20. How early should I arrive?</summary>
+                <div class="faq-accordion-payload">
+                    <p>Flights depart early in the morning. Our team will pick you up from your hotel between 05:00 AM and 05:30 AM to ensure you are checked in at the domestic terminal well before takeoff.</p>
+                </div>
+            </details>
+
+            <details class="faq-accordion-node">
+                <summary>21. How much does the Mount Everest Mountain Flight cost?</summary>
+                <div class="faq-accordion-payload">
+                    <p>Our official rates for the 2026 operating season are structured as follows:</p>
+                    <ul>
+                        <li><strong>Nepali Citizens:</strong> NPR 15,500 per passenger</li>
+                        <li><strong>Indian Citizens:</strong> INR 12,500 per passenger</li>
+                        <li><strong>Foreign Nationals:</strong> USD 290 per passenger</li>
+                    </ul>
+                    <p>These rates include all airport passenger fees, ground transfers within Kathmandu, and our window seat guarantee. There are absolutely no hidden costs or surprise surcharges added during checkout.</p>
+                </div>
+            </details>
+
+            <details class="faq-accordion-node">
+                <summary>22. What is included in the Everest Mountain Flight package?</summary>
+                <div class="faq-accordion-payload">
+                    <p>Our comprehensive tour package includes everything you need for a smooth, stress-free experience:</p>
+                    <ul>
+                        <li>Full 1-hour scenic mountain flight from Kathmandu.</li>
+                        <li>A guaranteed individual window seat for unobstructed viewing.</li>
+                        <li>Stunning aerial views of Mt. Everest, Lhotse, Makalu, and Cho Oyu.</li>
+                        <li>Private hotel pickup and return transfers within Kathmandu.</li>
+                        <li>An official, signed commemorative flight certificate.</li>
+                        <li>Full weather protection with a hassle-free re-booking or 100% refund guarantee.</li>
+                    </ul>
+                </div>
+            </details>
+        </section>
+    </main>
+
+    <!-- FOOTER SYSTEM -->
+    <footer>
+        <div class="wrapper">
+            <div class="footer-inner-layout">
+                <h2>TILICHO TOURS AND TRAVEL</h2>
+                <p>Primary Lakeside Operational Hub: Lakeside-6, Pokhara, Nepal</p>
+                <p>Kathmandu Operations desk: Thamel Tourism Hub, Kathmandu, Nepal</p>
+                <p>Corporate Communication Email: <a href="mailto:tilichotours074@gmail.com" style="color: var(--gold-primary); text-decoration: none;">tilichotours074@gmail.com</a></p>
+                <p class="agency-credentials">Authorized and Registered Tour Operator under the Ministry of Culture, Tourism and Civil Aviation of Nepal</p>
+                <p style="font-size: 0.75rem; margin-top: 20px; opacity: 0.5;">&copy; 2026 Tilicho Tours and Travel. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
