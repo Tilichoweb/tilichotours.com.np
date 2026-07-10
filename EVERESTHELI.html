@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shared Everest Base Camp Helicopter Tour | Tilicho Tours & Travels</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-navy: #0a192f;
+            --accent-gold: #ffb400;
+            --snow-white: #f8fbff;
+            --whatsapp-green: #25D366;
+            --text-dark: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            background-color: #f0f2f5;
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* --- Updated 10-Image Dynamic Hero Slider --- */
+        .hero {
+            position: relative;
+            height: 60vh;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .slider {
+            display: flex;
+            width: 1000%; /* Spans across 10 imagery blocks */
+            height: 100%;
+            animation: slideAnimation 40s infinite;
+        }
+
+        .slider img {
+            width: 10%; /* Equal 1/10th spacing per slide position */
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes slideAnimation {
+            0%, 8%     { transform: translateX(0%); }
+            11%, 19%   { transform: translateX(-10%); }
+            22%, 30%   { transform: translateX(-20%); }
+            33%, 41%   { transform: translateX(-30%); }
+            44%, 52%   { transform: translateX(-40%); }
+            55%, 63%   { transform: translateX(-50%); }
+            66%, 74%   { transform: translateX(-60%); }
+            77%, 85%   { transform: translateX(-70%); }
+            88%, 96%   { transform: translateX(-80%); }
+            99%, 100%  { transform: translateX(-90%); }
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+            width: 90%;
+            z-index: 2;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(1.8rem, 5vw, 3rem); /* Fluid responsive typography */
+            margin-bottom: 10px;
+            color: var(--accent-gold);
+        }
+
+        /* --- Main Container with Mobile Flex/Grid Adjustment --- */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            box-sizing: border-box;
+        }
+
+        .content-card {
+            background: white;
+            padding: clamp(20px, 4vw, 35px); /* Fluid internal padding */
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            box-sizing: border-box;
+            word-wrap: break-word;
+        }
+
+        h2 { 
+            color: var(--primary-navy); 
+            border-left: 5px solid var(--accent-gold); 
+            padding-left: 15px; 
+            margin-top: 0;
+            font-size: clamp(1.3rem, 4vw, 1.75rem);
+        }
+
+        h3 {
+            color: var(--primary-navy);
+            margin-top: 25px;
+            font-size: clamp(1.1rem, 3.5vw, 1.4rem);
+        }
+
+        /* --- Lists & Tables Responsive Wrapper --- */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .feature-list li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: var(--accent-gold);
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+
+        /* Responsive Mobile Table Containers */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .itinerary-table, .inclusion-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 500px; /* Forces safety horizontal scroll bar on small devices */
+        }
+
+        .itinerary-table th, .itinerary-table td,
+        .inclusion-table th, .inclusion-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .itinerary-table th, .inclusion-table th {
+            background-color: var(--primary-navy);
+            color: white;
+        }
+
+        .itinerary-table tr:hover, .inclusion-table tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        .icon-col {
+            width: 50px;
+            text-align: center !important;
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+        }
+
+        /* Responsive Grid for Inclusions & Essentials */
+        .grid-split {
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 30px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--primary-navy); 
+            color: white; 
+            padding: 40px 20px; 
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* --- Mobile Responsive Media Queries --- */
+        @media screen and (max-width: 768px) {
+            .hero { height: 45vh; }
+            .grid-split {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .pricing-header-block {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 15px;
+            }
+            .perks-list {
+                flex-direction: column !important;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Sliding Image Sidebar/Hero using precise file designations -->
+    <section class="hero">
+        <div class="slider">
+            <img src="images/everestheli2.webp" alt="Everest Helicopter View 2">
+            <img src="images/everestheli3.webp" alt="Everest Helicopter View 3">
+            <img src="images/everestheli4.webp" alt="Everest Helicopter View 4">
+            <img src="images/everestheli5.webp" alt="Everest Helicopter View 5">
+            <img src="images/everestheli6.jpeg" alt="Everest Helicopter View 6">
+            <img src="images/everestheli7.webp" alt="Everest Helicopter View 7">
+            <img src="images/everestheli8.jpg" alt="Everest Helicopter View 8">
+            <img src="images/everestheli9.jpeg" alt="Everest Helicopter View 9">
+            <img src="images/everestheli10.webp" alt="Everest Helicopter View 10">
+            <img src="images/everestheli2.webp" alt="Everest Helicopter View Loop Anchor">
+        </div>
+        <div class="hero-text">
+            <h1>Everest Base Camp Helicopter Tour</h1>
+            <p style="font-size: clamp(1rem, 3vw, 1.2rem); font-weight: 500;">Premium Group Joining & Charter Flights to the Roof of the World</p>
+        </div>
+    </section>
+
+    <div class="container">
+        
+        <!-- Overview Section -->
+        <div class="content-card">
+            <h2>Tour Overview</h2>
+            <p>The <strong>Everest Base Camp Helicopter Tour (Sharing Basis)</strong> offers a highly dynamic and visually stunning way to experience the majestic Everest region. Standing at the lap of the highest point on Earth is a lifelong dream for many, and this swift, 4-hour airborne journey makes witnessing Mount Everest entirely accessible without weeks of trekking.</p>
+            <p>Our modern aviation fleet is configured to comfortably carry 3 to 5 passengers per flight. By choosing a shared flight, you will split the costs equally with like-minded adventurers while soaring past towering giants like <strong>Mount Everest (8,848m / 29,029ft)</strong>, <strong>Lhotse (8,516m / 27,940ft)</strong>, and <strong>Ama Dablam (6,856m / 22,493ft)</strong>. The Tilicho Tours team ensures that your flight is safe, highly flexible, and packed with unforgettable alpine memories.</p>
+        </div>
+
+        <!-- Highlights Section -->
+        <div class="content-card">
+            <h2>Key Tour Highlights</h2>
+            <ul class="feature-list">
+                <li><strong>Convenient Departures:</strong> Your adventure begins with seamless, private transportation right from your Kathmandu hotel doorstep to Tribhuvan International Airport.</li>
+                <li><strong>Iconic Transit:</strong> Experience a thrilling first leg of the journey as you fly into the world-famous Tenzing-Hillary Airport in Lukla.</li>
+                <li><strong>Elite Mountain Fleet:</strong> Fly safely aboard top-tier, high-altitude helicopters including the <strong>Airbus B3E, Bell 407 GXP, and Bell 505 Jet Ranger X</strong>.</li>
+                <li><strong>Unmatched Aerial Views:</strong> Look down upon the massive Khumbu Glacier, winding alpine rivers, and the historic settlements of Namche Bazaar and Tengboche.</li>
+                <li><strong>The Himalayan Giants:</strong> Capture eye-level photographs of Cho Oyu (8,201m), Nuptse (7,861m), and Pumori (7,161m) directly from your window.</li>
+            </ul>
+        </div>
+
+        <!-- Pricing & Rate List Section -->
+        <div class="content-card">
+            <div class="pricing-header-block" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 20px;">
+                <h2 style="margin: 0;">Tour Rates & Group Pricing</h2>
+                <div style="background: #e53e3e; color: white; padding: 8px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; animation: pulse 2s infinite;">
+                    <i class="fas fa-tag"></i> Limited Offer: Save US$ 120
+                </div>
+            </div>
+
+            <!-- Key Booking Perks -->
+            <div style="background: var(--snow-white); padding: 15px; border-radius: 8px; margin-bottom: 25px; border: 1px solid #e2e8f0;">
+                <ul class="feature-list perks-list" style="display: flex; justify-content: space-between; flex-wrap: wrap; margin: 0; padding-left: 0;">
+                    <li style="margin-bottom: 5px;"><strong>Duration:</strong> 5 hours</li>
+                    <li style="margin-bottom: 5px;">Best Price Guaranteed</li>
+                    <li style="margin-bottom: 5px;">No Booking Fees</li>
+                    <li style="margin-bottom: 5px;">Book Now, Pay Later</li>
+                </ul>
+            </div>
+
+            <!-- Shared Group Pricing Table -->
+            <h3 style="margin-top: 0;">Group Joining (Sharing Basis) Discounts</h3>
+            <p style="font-size: 0.95rem; margin-bottom: 15px;">Original Price: <span style="text-decoration: line-through; color: #a0aec0;">US$ 1,520</span> | <strong>Discounted Base: US$ 1,400</strong></p>
+            
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr style="background-color: var(--primary-navy); color: white;">
+                            <th style="padding: 12px; border-radius: 8px 0 0 0;">Group Size</th>
+                            <th style="padding: 12px; text-align: right; border-radius: 0 8px 0 0;">Price (Per Person)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 12px;"><strong>1 Person</strong></td>
+                            <td style="padding: 12px; text-align: right; color: var(--primary-navy); font-weight: bold;">US$ 1,400</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 12px;"><strong>2 Persons</strong></td>
+                            <td style="padding: 12px; text-align: right; color: var(--primary-navy); font-weight: bold;">US$ 1,390</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 12px;"><strong>3 Persons</strong></td>
+                            <td style="padding: 12px; text-align: right; color: var(--primary-navy); font-weight: bold;">US$ 1,380</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 12px;"><strong>4 Persons</strong></td>
+                            <td style="padding: 12px; text-align: right; color: var(--primary-navy); font-weight: bold;">US$ 1,370</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 12px;"><strong>5 Persons</strong></td>
+                            <td style="padding: 12px; text-align: right; color: var(--primary-navy); font-weight: bold;">US$ 1,360</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Private Charter Highlight Box -->
+            <div style="margin-top: 30px; background: linear-gradient(135deg, var(--primary-navy), #1a365d); color: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 10px;">
+                    <i class="fas fa-helicopter" style="font-size: 2rem; color: var(--accent-gold);"></i>
+                    <h3 style="margin: 0; color: white;">Private Charter Helicopter</h3>
+                </div>
+                <div style="font-size: 1.8rem; font-weight: bold; color: var(--accent-gold); margin-bottom: 10px;">
+                    US$ 5,999 <span style="font-size: 1rem; color: #cbd5e0; font-weight: normal;">/ per flight</span>
+                </div>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">
+                    <i class="fas fa-info-circle"></i> <strong>Maximum capacity:</strong> 4 to 5 persons per flight. <br>
+                    <em>*Note: The exact number of passengers permitted on a single charter flight is strictly dependent on total combined body weight and current alpine weather conditions for safety.</em>
+                </p>
+            </div>
+        </div>
+
+        <!-- Cancellation & Weather Policy Section -->
+        <div class="content-card">
+            <h2>Cancellation & Weather Policy</h2>
+            <p>Mountain flights in the Himalayas are highly dependent on aviation weather conditions. We strive to provide flexible, fair policies to ensure your peace of mind when booking.</p>
+            
+            <div style="margin-top: 20px;">
+                <h3 style="color: var(--primary-navy); margin-bottom: 10px; font-size: 1.1rem;"><i class="fas fa-times-circle" style="color: #e53e3e;"></i> Voluntary Cancellations</h3>
+                <ul class="feature-list">
+                    <li>Cancellations made <strong>less than 24 hours</strong> before the scheduled flight departure time will be subject to a <strong>25% cancellation charge</strong>.</li>
+                </ul>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <h3 style="color: var(--primary-navy); margin-bottom: 10px; font-size: 1.1rem;"><i class="fas fa-cloud-sun-rain" style="color: var(--accent-gold);"></i> Weather-Related Cancellations</h3>
+                <ul class="feature-list">
+                    <li>If your flight cannot take off due to adverse weather or poor visibility, you will be given the priority option to <strong>postpone your flight to the next available day</strong> at no extra flight cost.</li>
+                    <li>If you are unable to reschedule and must cancel entirely due to weather, you are entitled to a <strong>full refund</strong> of the flight cost.</li>
+                    <li><em>Important Note:</em> Only the costs already utilized for local transportation (hotel pickups) and pre-issued national park permits will be deducted from the refund amount.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Dynamic Offer Badge Animation -->
+        <style>
+            @keyframes pulse {
+                0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(229, 62, 62, 0.7); }
+                70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(229, 62, 62, 0); }
+                100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(229, 62, 62, 0); }
+            }
+        </style>
+
+        <!-- Itinerary Section -->
+        <div class="content-card">
+            <h2>Detailed Flight Itinerary</h2>
+            <div class="table-responsive">
+                <table class="itinerary-table">
+                    <thead>
+                        <tr>
+                            <th class="icon-col"><i class="fas fa-clock"></i></th>
+                            <th>Phase</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="icon-col"><i class="fas fa-car"></i></td>
+                            <td><strong>Hotel Pick-up & Transfer</strong></td>
+                            <td>A private vehicle collects your group from your accommodation and transfers you to the domestic terminal. We handle all pre-flight formalities, including ticketing and mandatory weight checks.</td>
+                        </tr>
+                        <tr>
+                            <td class="icon-col"><i class="fas fa-plane-departure"></i></td>
+                            <td><strong>Flight to Lukla</strong></td>
+                            <td>Taking off from Kathmandu, enjoy spectacular aerial views as the city gives way to thick green forests, terraced hills, and the distant snow-capped Himalayan ranges.</td>
+                        </tr>
+                        <tr>
+                            <td class="icon-col"><i class="fas fa-gas-pump"></i></td>
+                            <td><strong>Lukla Refuel & EBC Flyover</strong></td>
+                            <td>The helicopter makes a brief, spontaneous landing in Lukla for refueling. Afterward, we fly directly over the vibrant Namche Bazaar valley and into the arctic landscapes surrounding Everest Base Camp.</td>
+                        </tr>
+                        <tr>
+                            <td class="icon-col"><i class="fas fa-coffee"></i></td>
+                            <td><strong>Scenic Mountain Breakfast</strong></td>
+                            <td>We touch down at a premier vantage point (such as Hotel Everest View) for a relaxing breakfast. Enjoy world-class photographic opportunities of Mount Everest in a tranquil alpine setting.</td>
+                        </tr>
+                        <tr>
+                            <td class="icon-col"><i class="fas fa-helicopter"></i></td>
+                            <td><strong>Return to Lukla</strong></td>
+                            <td>Boarding the helicopter once more, we retrace our flight path, capturing any missed angles of the rugged terrain before stopping at Lukla for a final refueling sequence.</td>
+                        </tr>
+                        <tr>
+                            <td class="icon-col"><i class="fas fa-home"></i></td>
+                            <td><strong>Arrival in Kathmandu</strong></td>
+                            <td>The final leg of the journey brings you safely back to the capital. A waiting car will be ready at the terminal to drive you directly back to your hotel.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Video Experience Box -->
+        <div class="box">
+            <h2><i class="fab fa-youtube"></i>EBC Heli Media Experience official live video</h2>
+            <div class="video-box-frame">
+                <iframe src="https://www.youtube.com/embed/pPW5zJY0vAQ&t" title="everest Base Camp Helicopter Tour Video Preview" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Inclusions & Essentials Responsive Stack Grid -->
+        <div class="grid-split">
+            
+            <!-- Inclusions -->
+            <div class="content-card" style="margin: 0;">
+                <h2>What's Included</h2>
+                <div class="table-responsive">
+                    <table class="inclusion-table">
+                        <tbody>
+                            <tr>
+                                <td class="icon-col"><i class="fas fa-check-circle" style="color: green;"></i></td>
+                                <td>Shared helicopter flight (1 to 5 passengers max).</td>
+                            </tr>
+                            <tr>
+                                <td class="icon-col"><i class="fas fa-check-circle" style="color: green;"></i></td>
+                                <td>Round-trip airport hotel transfers.</td>
+                            </tr>
+                            <tr>
+                                <td class="icon-col"><i class="fas fa-check-circle" style="color: green;"></i></td>
+                                <td>All government taxes, fuel levies, and boarding passes.</td>
+                            </tr>
+                            <tr>
+                                <td class="icon-col"><i class="fas fa-check-circle" style="color: green;"></i></td>
+                                <td>Onboard emergency oxygen system.</td>
+                            </tr>
+                            <tr>
+                                <td class="icon-col"><i class="fas fa-check-circle" style="color: green;"></i></td>
+                                <td>1-hour scenic stopover at the Everest View Hotel.</td>
+                            </tr>
+                            <tr>
+                                <td class="icon-col"><i class="fas fa-info-circle" style="color: var(--primary-navy);"></i></td>
+                                <td><em>Note: A 10-15 minute landing at the Kalapathar viewpoint for photos is guaranteed primarily for private charter groups.</em></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Essentials -->
+            <div class="content-card" style="margin: 0;">
+                <h2>Packing Essentials</h2>
+                <p>Mountain weather can be unpredictable. Even during periods of excellent visibility, the high altitudes retain their chill. We highly recommend bringing:</p>
+                <ul class="feature-list">
+                    <li>Warm, windproof clothing and thick insulated socks.</li>
+                    <li>An umbrella or light rain shell (especially crucial if flying near the meteorological rainy seasons).</li>
+                    <li>A thermos for hot water or warm beverages.</li>
+                    <li>A personal first-aid kit containing your basic necessities.</li>
+                    <li><strong>Travel Insurance:</strong> Comprehensive coverage is mandatory to protect against unforeseen trip delays, cancellations, or loss of personal assets.</li>
+                </ul>
+            </div>
+
+        </div>
+    <div class="content-card" id="booking-section">
+    <style>
+        .content-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 20px auto;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .booking-form { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .form-group { display: flex; flex-direction: column; }
+        .form-group.full-width { grid-column: span 2; }
+        
+        .form-group label { font-weight: 600; margin-bottom: 8px; color: #0a192f; }
+        .form-group input, .form-group select, .form-group textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .info-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 0.9rem;
+            color: #856404;
+        }
+
+        /* Dual Green Buttons */
+        .action-button-container { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
+        .action-btn {
+            display: flex; align-items: center; justify-content: center;
+            gap: 10px; padding: 15px; border-radius: 8px;
+            color: white; text-decoration: none; font-weight: bold;
+            background-color: #25D366; /* WhatsApp Green */
+            transition: 0.2s;
+        }
+        .action-btn:hover { filter: brightness(1.1); }
+        
+        @media screen and (max-width: 768px) {
+            .booking-form { grid-template-columns: 1fr; }
+            .form-group.full-width { grid-column: span 1; }
+            .action-button-container { grid-template-columns: 1fr; }
+        }
+    </style>
+
+    <h2>Everest Heli Tour Booking</h2>
+    
+    <form class="booking-form" action="#" method="POST">
+        <div class="form-group"><label>Full Name *</label><input type="text" name="name" required></div>
+        <div class="form-group"><label>Email Address *</label><input type="email" name="email" required></div>
+        <div class="form-group"><label>WhatsApp / Mobile *</label><input type="tel" name="contact" required></div>
+        <div class="form-group"><label>Flight Date *</label><input type="date" name="date" required></div>
+        <div class="form-group"><label>Number of Pax *</label><input type="number" name="pax" min="1" required></div>
+        <div class="form-group">
+            <label>Flight Type *</label>
+            <select name="flight_type"><option>Group Joining</option><option>Private Charter</option></select>
+        </div>
+        <div class="form-group">
+            <label>Pickup Time *</label>
+            <select name="pickup_time">
+                <option>05:00 AM</option><option>06:00 AM</option><option>07:00 AM</option>
+                <option>08:00 AM</option><option>09:00 AM</option><option>10:00 AM</option>
+            </select>
+        </div>
+        <div class="form-group"><label>Hotel Name / Pickup Place *</label><input type="text" name="hotel" required></div>
+        <div class="form-group full-width"><label>Passenger Weights (kg) & Notes</label><textarea name="notes" rows="3"></textarea></div>
+
+        <div class="info-box full-width">
+            <strong>Important:</strong> You are required to fill a full detail form individually before your flight for insurance and safety. Please carry a printed or digital copy of your passport on your mobile device.
+        </div>
+
+        <button type="submit" style="grid-column: span 2; padding: 15px; background: #0a192f; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;">Submit Booking Form</button>
+    </form>
+
+    <div class="action-button-container">
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/9779705023917?text=Hi%20tilicho%20tours%20i%20want%20to%20inquary%20everest%20heli%20tour" 
+           target="_blank" class="action-btn">
+           <i class="fab fa-whatsapp"></i> WhatsApp: +977-9705023917
+        </a>
+
+        <!-- Email Button -->
+        <a href="mailto:tilichotours074@gmail.com?subject=Everest%20Heli%20Tour%20Inquiry&body=Hi%20tilicho%20tours%20i%20want%20to%20inquary%20everest%20heli%20tour" 
+           class="action-btn">
+           <i class="fas fa-envelope"></i> Email: tilichotours074@gmail.com
+        </a>
+    </div>
+</div>
+
+    </div> <!-- End Workspace Wrapper -->
+    <!-- --- SEO-Optimized FAQ Accordion Section --- -->
+    <div class="container" style="margin-top: 0;">
+        <div class="content-card" id="faq-section">
+            <h2 style="margin-bottom: 25px;">Everest Helicopter Tour FAQ – Essential Travel Guide</h2>
+            
+            <style>
+                .faq-container {
+                    margin-top: 15px;
+                }
+                .faq-item {
+                    border-bottom: 1px solid #e2e8f0;
+                    padding: 15px 0;
+                }
+                .faq-question {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-weight: 600;
+                    font-size: 1.1rem;
+                    color: var(--primary-navy);
+                    cursor: pointer;
+                    user-select: none;
+                    transition: color 0.2s ease;
+                }
+                .faq-question:hover {
+                    color: var(--accent-gold);
+                }
+                .faq-answer {
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.3s ease-out, padding 0.3s ease;
+                    color: #4a5568;
+                    font-size: 0.95rem;
+                    padding-right: 20px;
+                }
+                .faq-item.active .faq-answer {
+                    max-height: 500px;
+                    padding-top: 10px;
+                    padding-bottom: 5px;
+                }
+                .faq-icon {
+                    font-size: 0.9rem;
+                    transition: transform 0.3s ease;
+                    color: var(--accent-gold);
+                    margin-left: 10px;
+                }
+                .faq-item.active .faq-icon {
+                    transform: rotate(180deg);
+                }
+            </style>
+
+            <div class="faq-container">
+
+                <!-- FAQ 1 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>1. What is the Everest Helicopter Tour Price 2026 for group joining or private charter?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The standard <strong>Everest Helicopter Tour Price 2026</strong> starts at <strong>$1400 per person</strong> on a shared/group joining basis[cite: 4]. If you prefer an exclusive, customized luxury experience, our <strong>Private Everest Charter Helicopter</strong> cost starts at <strong>$5,999 total</strong> for a maximum group size of 3-5 passengers based on weight configurations and local clearance limitations[cite: 4]. All packages managed by Tilicho Tours include airport pickup, oxygen cylinders, and pilot fees[cite: 4].</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>2. How long is the Everest Helicopter Tour from Kathmandu?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The total duration of the <strong>Kathmandu to Everest Helicopter Tour</strong> is approximately <strong>4 to 5 hours</strong> from takeoff to landing[cite: 4]. This includes a brief 15-minute fueling stop at Lukla Airport[cite: 4], a spectacular 15 to 20-minute scenic landing at Kala Patthar viewpoint[cite: 4], and up to 45 minutes for a luxury helicopter breakfast at Hotel Everest View[cite: 4]. It is the ultimate <strong>One Day Everest Tour</strong>[cite: 4].</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>3. Is the Everest Helicopter Tour safe for seniors and children?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, our <strong>Mount Everest Helicopter Tour</strong> is highly secure and routinely accommodates passengers of all ages[cite: 4]. Because this is a <strong>No Trek Everest Tour</strong>, there is zero physical exertion required[cite: 4]. Ground time at high altitudes is strictly regulated to 15–20 minutes to eliminate any risk of acute mountain sickness (AMS)[cite: 4], and our aircraft are outfitted with advanced medical emergency oxygen systems[cite: 4].</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>4. Where exactly does the helicopter land during the Everest Base Camp Heli Tour?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>An authentic <strong>Everest Base Camp Helicopter Tour with Landing</strong> features two primary stops[cite: 4]. First, we execute a high-altitude landing at <strong>Kala Patthar (5,545 meters)</strong>, which offers a far superior 360-degree aerial view of Mount Everest compared to the actual base camp ground[cite: 4]. Second, the helicopter lands at the ridge of <strong>Hotel Everest View in Syangboche (3,880 meters)</strong> for a premium high-altitude breakfast break[cite: 4].</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>5. Can a helicopter land directly at the actual Everest Base Camp?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>While an <strong>Everest Base Camp Landing</strong> is technically feasible for emergency search and rescue operations, commercial tourist landings directly on the moving Khumbu Glacier ice are heavily restricted by Sagarmatha National Park authorities due to safety, wildlife preservation, and geography. Instead, we land at the solid rock ledge of <strong>Kala Patthar</strong>, which provides a significantly better, unobstructed panoramic view of Mount Everest[cite: 4].</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>6. What is the difference between a Shared and Private Everest Helicopter Tour?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>A <strong>Shared Everest Helicopter Tour</strong> matches solo travelers or couples together to fill a 5-seat aircraft, making it a budget-friendly, cheap Everest helicopter tour choice[cite: 4]. A <strong>Private Everest Helicopter Charter</strong> grants you exclusive ownership of the entire flight itinerary[cite: 4], flexible takeoff schedules, customized ground times, and an intimate, luxury Nepal helicopter tour environment for family or corporate groups[cite: 4].</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 7 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>7. What happens if the weather causes a flight cancellation?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Mountain weather in the Khumbu region can be dynamic. Tilicho Tours & Travels enforces a <strong>100% full weather refund guarantee</strong> or a free automated next-day rescheduling option for your <strong>Everest Scenic Flight</strong> if aviation authorities close Kathmandu or Lukla airspace[cite: 4]. Passenger safety remains our highest priority during any Himalayan helicopter experience[cite: 4].</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 8 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>8. When is the absolute best time for an Everest Helicopter Tour?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The **Best Time for Everest Helicopter Tour** bookings falls into two peak seasons. The **Everest Helicopter Tour Autumn** season (primarily October and November) features crisp alpine air and the clearest panoramic horizons. The **Everest Helicopter Tour Spring** window (March through May) brings warmer temperatures and incredible views of blooming rhododendron forests below the snow-capped Himalayan peaks[cite: 4].</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 9 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>9. What is the maximum weight limit per person for the flight?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>To adhere to strict aviation safety regulations at ultra-high altitudes, the absolute maximum individual passenger weight limit is <strong>100 kg (220 lbs)</strong>, and the maximum total combined weight for a single aircraft configuration is <strong>450 kg</strong>. We collect precise, individual weights prior to confirming any <strong>Everest Helicopter Ride</strong> booking to calculate weight-balancing matrices accurately[cite: 4].</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 10 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>10. Why is a shuttle flight system used at Pheriche during the tour?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Air density drops significantly above 4,000 meters. While our high-performance <strong>Airbus H125</strong> helicopters can easily carry 5 passengers from Kathmandu to Lukla, they cannot safely hover or land at Kala Patthar (5,545m) with that much weight[cite: 4]. Therefore, for groups of 4 to 5 people, we land at Pheriche or Syangboche and split the group into two separate shuttle flights (2 Pax / 3 Pax) to safely access the mountain landing zones[cite: 4].</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 11 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>11. Can I book an Everest Helicopter Tour from Pokhara or other cities?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most commercial standard flights operate as a <strong>Kathmandu Everest Heli Tour</strong> due to fuel station networks and proximity[cite: 4]. However, Tilicho Tours gladly organizes tailored private charters departing directly from Pokhara or alternative locations upon specialized request. For group-joining rates, travelers typically take a domestic connection to Kathmandu before starting their morning <strong>Everest Mountain Flight</strong>[cite: 4].</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 12 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>12. Is breakfast included in the standard group joining tour price?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The standard **Everest Heli Tour Cost** covers the entire helicopter operation, logistics, fuel, pilots, and permits[cite: 4]. The cost of food and drinks during the **Helicopter Breakfast at Everest View Hotel** is settled independently by each client on-site (ranging roughly between $35 to $50 per person for an American or continental breakfast layout)[cite: 4].</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 13 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>13. What national permits are required for the Everest Air Tour?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Every traveler taking an **Everest Tour by Helicopter** requires two distinct local permits: the **Sagarmatha National Park Entry Permit** and the Khumbu Pasang Lhamu Rural Municipality Tourism Fee[cite: 4]. When booking a complete **Everest Helicopter Package** through Tilicho Tours & Travels, our operational desk processes these official clearances in advance to avoid long terminal lines[cite: 4].</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 14 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>14. What should I pack for a winter or spring Everest flight?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Your **Everest Helicopter Tour packing list** must include a heavy down jacket, windproof trousers, sturdy shoes, UV-protection sunglasses, SPF sunscreen, a camera or smartphone, and your original passport[cite: 4]. Temperatures at Kala Patthar can drop below freezing even during spring, so dressing in easily removable layers is highly recommended.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 15 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>15. Can I experience the Everest flight without any prior trekking experience?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! This is explicitly styled as an **Everest Without Trekking** luxury experience[cite: 4]. You skip the standard 12 days of strenuous uphill hiking completely. You simply board the aircraft in the morning from Kathmandu, fly comfortably over the rugged terrain, land to view the summit, eat breakfast, and return back to your hotel before noon[cite: 4].</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 16 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>16. Which helicopter models are used for the Khumbu regional flights?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We work exclusively with industry-standard **Airbus H125 (AS350 B3e)** helicopters via elite aviation partners like Air Dynasty and Simrik Air[cite: 4]. These specialized aircraft are globally acclaimed for superior performance in thin air, mechanical reliability, and alpine versatility during high-altitude operations across the **Sagarmatha Helicopter Tour** paths[cite: 4].</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 17 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>17. Is a window seat guaranteed on a shared/group joining flight?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, our fleet configuration guarantees that every single passenger receives an excellent, direct **Aerial View of Mount Everest**. The Airbus seating layout features large wrapsaround viewing glass, and our pilots routinely perform a seat-rotation protocol midway through the journey so that all participants enjoy identical, unobstructed angles of the peaks.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 18 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>18. How do I secure an online booking with Tilicho Tours & Travels?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Securing an **Everest Helicopter Tour Online Booking** is straightforward[cite: 4]. Use our integrated website booking sidebar to submit your preferred date, name, and passenger metrics[cite: 4]. Our team will cross-check fleet availability instantly, map out any group-joining deals, and coordinate via WhatsApp or secure email invoices to finalize your placement[cite: 4].</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 19 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>19. Is there an increased risk of altitude sickness during the landing?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Because the rapid ascent to the **Everest Helicopter Tour altitude** of 5,545 meters is temporary, your body does not have enough time to trigger severe altitude sickness[cite: 4]. We strictly limit the Kala Patthar ground photography session to 20 minutes max[cite: 4]. This duration provides plenty of time for photos while ensuring you stay safe before descending to lower altitudes for breakfast[cite: 4].</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 20 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>20. Why should I choose Tilicho Tours over cheap international portals?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Tilicho Tours & Travels is a licensed, locally rooted **Nepal Helicopter Tour** operator[cite: 4]. We cut out third-party international agent commission markups to keep our **Everest Heli Tour Cost** highly competitive[cite: 4]. Furthermore, our direct relationships with local pilots and mountain rescue operators ensure seamless logistics, flight priority, and flexible, transparent handling of your booking.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- --- Native Accordion JavaScript Interaction Logic --- -->
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+    </script>
+
+    <!-- Footer Integrated with Tilicho Tours Info -->
+    <footer>
+        <h3 style="color: white; margin-top: 0;">Tilicho Tours & Travels</h3>
+        <p>Lakeside-6, Pokhara | Kathmandu, Nepal</p>
+        <p>Your Trusted Partner for Himalayan Adventures</p>
+        
+        <div class="footer-links">
+            <a href="https://wa.me/9779856023917"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+            <a href="viber://chat?number=+9779856023917"><i class="fab fa-viber"></i> Viber Us</a>
+            <a href="mailto:tilichotours074@gmail.com"><i class="fas fa-envelope"></i> tilichotours074@gmail.com</a>
+        </div>
+        
+        <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 30px;">&copy; 2026 Tilicho Tours & Travels. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
