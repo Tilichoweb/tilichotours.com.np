@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kathmandu Heritage Day Tour | Tilicho Tours & Travel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #0a192f; 
+            --accent: #d4af37;  
+            --crimson: #c0392b; 
+            --bg-light: #fdfbfb; 
+            --faq-bg: #f0f4f8;  
+            --faq-border: #1a365d;
+        }
+        
+        * { box-sizing: border-box; }
+        body { font-family: 'Outfit', sans-serif; margin: 0; background: var(--bg-light); color: #333; line-height: 1.7; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+
+        /* --- STICKY NAV --- */
+        .main-menu { background: var(--primary); position: sticky; top: 0; z-index: 1000; border-bottom: 3px solid var(--accent); }
+        .menu-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: center; gap: 10px; padding: 12px 20px; flex-wrap: wrap; align-items: center; }
+        .menu-link { color: white; text-decoration: none; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; padding: 8px 14px; border-radius: 4px; transition: 0.3s; display: inline-flex; align-items: center; gap: 6px; }
+        .menu-link:hover { background: rgba(212, 175, 55, 0.2); color: var(--accent); }
+        .btn-nav-special { background: rgba(212, 175, 55, 0.15); border: 1px solid var(--accent); color: var(--accent); }
+
+        /* --- 5 IMAGE SLIDER --- */
+        .slider-section { position: relative; max-width: 1200px; margin: 20px auto 0; overflow: hidden; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+        .slider-container { display: flex; transition: transform 0.5s ease-in-out; height: 450px; }
+        .slide { min-width: 100%; position: relative; }
+        .slide img { width: 100%; height: 100%; object-fit: cover; }
+        .slide-caption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(10,25,47,0.85)); color: white; padding: 20px 30px; }
+        .slide-caption h2 { margin: 0; font-size: 1.8rem; color: #fff; }
+        .slide-caption p { margin: 5px 0 0; color: var(--accent); font-weight: 600; }
+        
+        .prev-btn, .next-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(10,25,47,0.7); color: var(--accent); border: none; font-size: 1.5rem; padding: 12px 18px; cursor: pointer; border-radius: 50%; transition: 0.3s; z-index: 10; }
+        .prev-btn:hover, .next-btn:hover { background: var(--primary); color: white; }
+        .prev-btn { left: 15px; }
+        .next-btn { right: 15px; }
+        .slider-dots { position: absolute; bottom: 15px; right: 20px; display: flex; gap: 6px; z-index: 10; }
+        .dot { width: 10px; height: 10px; background: rgba(255,255,255,0.5); border-radius: 50%; cursor: pointer; transition: 0.3s; }
+        .dot.active { background: var(--accent); width: 22px; border-radius: 10px; }
+
+        /* --- PAGE HEADER & QUICK FACTS BOX --- */
+        .page-title-box { text-align: center; margin: 25px auto 15px; max-width: 1200px; padding: 0 20px; }
+        .page-title-box h1 { font-size: 2.5rem; color: var(--primary); margin: 0 0 5px; }
+        .page-title-box p { color: #666; font-size: 1.1rem; margin: 0; }
+
+        .overview-box { max-width: 1200px; margin: 20px auto 30px; padding: 0 20px; }
+        .box-grid { background: white; border: 2px solid var(--accent); border-radius: 12px; padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .box-item { text-align: center; border-right: 1px solid #eee; padding: 5px 10px; }
+        .box-item:last-child { border-right: none; }
+        .box-item i { font-size: 1.4rem; color: var(--accent); margin-bottom: 5px; display: block; }
+        .box-item strong { display: block; color: var(--primary); font-size: 0.85rem; text-transform: uppercase; }
+        .box-item span { font-size: 0.9rem; font-weight: 600; color: #444; }
+
+        /* --- MAIN LAYOUT GRID --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px 40px; display: flex; gap: 30px; }
+        .main-content { flex: 2; min-width: 0; }
+        .sidebar { flex: 1; }
+
+        /* --- CONTENT CARDS --- */
+        .intro-card { background: white; border-radius: 12px; padding: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-bottom: 25px; border-top: 4px solid var(--primary); }
+        .intro-card h2 { color: var(--primary); margin-top: 0; font-size: 1.6rem; }
+        
+        .site-section-card { background: white; border-radius: 12px; padding: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-bottom: 25px; border-left: 5px solid var(--accent); }
+        .site-flex { display: flex; gap: 20px; align-items: flex-start; flex-wrap: wrap; }
+        .site-flex img { width: 100%; max-width: 260px; height: 170px; object-fit: cover; border-radius: 8px; border: 1px solid #ddd; }
+        .site-info { flex: 1; min-width: 240px; }
+        .site-info h3 { color: var(--primary); margin-top: 0; font-size: 1.3rem; border-bottom: 1px solid #eee; padding-bottom: 6px; }
+        .site-info p { margin: 8px 0; font-size: 0.93rem; color: #444; }
+        .meta-tag { display: inline-block; background: #f4f6f8; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 600; color: var(--primary); margin-right: 5px; margin-top: 5px; }
+
+        /* --- SHORT COMPACT ITINERARY --- */
+        .itinerary-card { background: white; border-radius: 12px; padding: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-bottom: 25px; border-top: 4px solid var(--primary); }
+        .itinerary-card h2 { color: var(--primary); margin-top: 0; font-size: 1.6rem; border-bottom: 2px solid var(--accent); padding-bottom: 8px; margin-bottom: 15px; }
+        .itinerary-row { display: flex; gap: 15px; padding: 10px 0; border-bottom: 1px solid #eee; align-items: baseline; }
+        .itinerary-row:last-child { border-bottom: none; }
+        .itinerary-time { min-width: 130px; color: var(--crimson); font-weight: 800; font-size: 0.85rem; text-transform: uppercase; }
+        .itinerary-details h4 { margin: 0 0 3px; color: var(--primary); font-size: 1.05rem; }
+        .itinerary-details p { margin: 0 0 3px; font-size: 0.88rem; color: #555; }
+        .itinerary-vibe { font-size: 0.82rem; font-style: italic; color: #666; }
+
+        /* --- SIDEBAR PRICING & BOOKING --- */
+        .price-box { background: var(--primary); color: white; padding: 25px; border-radius: 12px; margin-bottom: 25px; border-bottom: 5px solid var(--accent); }
+        .price-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1); font-weight: 600; }
+        .price-row span:last-child { color: var(--accent); }
+
+        .booking-card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-top: 6px solid var(--primary); position: sticky; top: 70px; }
+        .form-group { margin-bottom: 12px; }
+        .form-group label { display: block; font-size: 0.7rem; font-weight: 800; color: #555; text-transform: uppercase; margin-bottom: 3px; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; font-family: 'Outfit'; }
+
+        .btn { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 14px; border-radius: 6px; font-weight: 800; cursor: pointer; text-decoration: none; transition: 0.3s; text-transform: uppercase; font-size: 0.8rem; border: none; margin-bottom: 10px; width: 100%; box-sizing: border-box; }
+        .btn-wa { background: #25d366; color: white; }
+        .btn-mail { background: var(--primary); color: white; border: 1px solid var(--accent); }
+        .btn-talk-wa { background: #fff; color: #25d366; border: 2px solid #25d366; font-size: 0.8rem; }
+        .btn-talk-wa:hover { background: #25d366; color: white; }
+
+        /* --- FOOTER --- */
+        .site-footer { background: var(--primary); color: #ccc; text-align: center; padding: 25px 15px; border-top: 3px solid var(--accent); font-size: 0.85rem; margin-top: 40px; }
+        .site-footer a { color: var(--accent); text-decoration: none; }
+
+        @media (max-width: 900px) { 
+            .container { flex-direction: column; } 
+            .box-item { border-right: none; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+            .slider-container { height: 300px; }
+            .site-flex { flex-direction: column; }
+            .site-flex img { max-width: 100%; height: 200px; }
+            .itinerary-row { flex-direction: column; gap: 3px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION MENU WITH BACK & HOME BUTTONS -->
+    <nav class="main-menu">
+        <div class="menu-container">
+            <a href="javascript:history.back()" class="menu-link btn-nav-special"><i class="fas fa-arrow-left"></i> Back</a>
+            <a href="index.html" class="menu-link btn-nav-special"><i class="fas fa-home"></i> Home</a>
+            <a href="#overview" class="menu-link">Overview</a>
+            <a href="#sites" class="menu-link">Heritage Sites</a>
+            <a href="#itinerary" class="menu-link">Itinerary</a>
+            <a href="#bookingForm" class="menu-link">Book Now</a>
+        </div>
+    </nav>
+
+    <!-- TOP 5 IMAGE SLIDER -->
+    <section class="slider-section">
+        <button class="prev-btn" onclick="moveSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+        <button class="next-btn" onclick="moveSlide(1)"><i class="fas fa-chevron-right"></i></button>
+        
+        <div class="slider-container" id="slider">
+            <div class="slide">
+                <img src="images/worldheritage1.png" alt="Kathmandu Durbar Square">
+                <div class="slide-caption"><h2>Kathmandu Durbar Square</h2><p>Explore historic palaces, Kumari Ghar, and ancient temples</p></div>
+            </div>
+            <div class="slide">
+                <img src="images/worldheritage2.webp" alt="Swayambhunath Stupa">
+                <div class="slide-caption"><h2>Swayambhunath (Monkey Temple)</h2><p>Hilltop spiritual site with 360° views of Kathmandu Valley</p></div>
+            </div>
+            <div class="slide">
+                <img src="images/worldheritage3.jpg" alt="Pashupatinath Temple">
+                <div class="slide-caption"><h2>Pashupatinath Temple Complex</h2><p>The holiest Hindu shrine along the sacred Bagmati River</p></div>
+            </div>
+            <div class="slide">
+                <img src="images/worldheritage4.jpg" alt="Boudhanath Stupa">
+                <div class="slide-caption"><h2>Boudhanath Stupa</h2><p>The largest dome stupa and heart of Tibetan Buddhism</p></div>
+            </div>
+            <div class="slide">
+                <img src="images/worldheritage5.png" alt="Newari Architecture">
+                <div class="slide-caption"><h2>Intricate Newari Woodcarvings</h2><p>Exquisite medieval craftsmanship across historical monuments</p></div>
+            </div>
+        </div>
+        
+        <div class="slider-dots" id="sliderDots"></div>
+    </section>
+
+    <!-- TITLE & OVERVIEW -->
+    <div class="page-title-box">
+        <h1>Kathmandu World Heritage Day Tour</h1>
+        <p>Tilicho Tours and Travel | 4 UNESCO Sites in 1 Day</p>
+    </div>
+
+    <div class="overview-box">
+        <div class="box-grid">
+            <div class="box-item"><i class="fas fa-clock"></i><strong>Duration</strong><span>6-7 Hours</span></div>
+            <div class="box-item"><i class="fas fa-map-marker-alt"></i><strong>Sites Covered</strong><span>4 UNESCO Landmarks</span></div>
+            <div class="box-item"><i class="fas fa-car"></i><strong>Transportation</strong><span>Private AC Car / Van</span></div>
+            <div class="box-item"><i class="fas fa-user-tie"></i><strong>Guide</strong><span>Licensed Cultural Expert</span></div>
+        </div>
+    </div>
+
+    <!-- MAIN BODY CONTAINER -->
+    <div class="container">
+        <main class="main-content">
+
+            <!-- GENERAL TOUR DESCRIPTION -->
+            <div class="intro-card" id="overview">
+                <h2>About the World Heritage Tour</h2>
+                <p>Welcome to the Kathmandu Valley World Heritage Tour, curated by <strong>Tilicho Tours and Travel</strong>. Kathmandu is a living open-air museum where ancient history, mythology, and daily traditions blend seamlessly. This tour takes you across four monumental UNESCO World Heritage Sites, showcasing centuries of Newari architecture, sacred shrines, and unmatched artistic craftsmanship.</p>
+            </div>
+
+            <!-- INDIVIDUAL SECTIONS -->
+            <div id="sites">
+                
+                <!-- 1. Kathmandu Durbar Square -->
+                <div class="site-section-card">
+                    <div class="site-flex">
+                        <img src="images/worldheritage1.png" alt="Kathmandu Durbar Square">
+                        <div class="site-info">
+                            <h3>1. Kathmandu Durbar Square</h3>
+                            <div>
+                                <span class="meta-tag">History</span>
+                                <span class="meta-tag">Malla Dynasty</span>
+                                <span class="meta-tag">Royal Palace</span>
+                            </div>
+                            <p><strong>History & Culture:</strong> Serving as the royal seat of the Malla kings, this historic square features grand courtyards, stone statues, and multi-tiered pagoda temples built between the 12th and 18th centuries.</p>
+                            <p><strong>Importance:</strong> It houses Hanuman Dhoka Palace and the Kumari Ghar—the residence of the Royal Kumari, the world's only living goddess, showcasing supreme Newari woodcarvings.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Swayambhunath (Monkey Temple) -->
+                <div class="site-section-card">
+                    <div class="site-flex">
+                        <img src="images/worldheritage2.webp" alt="Swayambhunath Stupa">
+                        <div class="site-info">
+                            <h3>2. Swayambhunath (Monkey Temple)</h3>
+                            <div>
+                                <span class="meta-tag">Spiritual</span>
+                                <span class="meta-tag">Hilltop Stupa</span>
+                                <span class="meta-tag">All-Seeing Eyes</span>
+                            </div>
+                            <p><strong>History & Culture:</strong> Perched atop a green hill west of the city, Swayambhunath is one of the world's oldest Buddhist chaityas, offering sweeping panoramic valley views.</p>
+                            <p><strong>Importance:</strong> Dating back over 2,000 years, the stupa's famous painted "All-Seeing Eyes" watch in all four directions, symbolizing wisdom, compassion, and the origin of the Kathmandu Valley lake.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Pashupatinath Temple -->
+                <div class="site-section-card">
+                    <div class="site-flex">
+                        <img src="images/worldheritage3.jpg" alt="Pashupatinath Temple">
+                        <div class="site-info">
+                            <h3>3. Pashupatinath Temple</h3>
+                            <div>
+                                <span class="meta-tag">Sacred Shrine</span>
+                                <span class="meta-tag">Lord Shiva</span>
+                                <span class="meta-tag">Bagmati River</span>
+                            </div>
+                            <p><strong>History & Culture:</strong> Situated along the sacred Bagmati River, Pashupatinath is the holiest Hindu temple dedicated to Lord Shiva in Nepal, drawing spiritual seekers worldwide.</p>
+                            <p><strong>Importance:</strong> Its monumental golden roof and pagoda architecture stand as a profound center for Hindu philosophy, daily ritual devotion, and sacred open-air cremation traditions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Boudhanath Stupa -->
+                <div class="site-section-card">
+                    <div class="site-flex">
+                        <img src="images/worldheritage4.jpg" alt="Boudhanath Stupa">
+                        <div class="site-info">
+                            <h3>4. Boudhanath Stupa</h3>
+                            <div>
+                                <span class="meta-tag">Tibetan Buddhism</span>
+                                <span class="meta-tag">Giant Mandala</span>
+                                <span class="meta-tag">Prayer Wheels</span>
+                            </div>
+                            <p><strong>History & Culture:</strong> Boudhanath is one of the largest spherical stupas in the world and serves as the global epicenter of Tibetan Buddhist culture outside Tibet.</p>
+                            <p><strong>Importance:</strong> Built along historic trade routes in the 5th century, pilgrims circle its base spinning copper prayer wheels and chanting mantras beneath fluttering prayer flags.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SHORT COMPACT ITINERARY SECTION -->
+            <div class="itinerary-card" id="itinerary">
+                <h2>Day Itinerary</h2>
+                
+                <div class="itinerary-row">
+                    <div class="itinerary-time">Morning</div>
+                    <div class="itinerary-details">
+                        <h4>Swayambhunath Stupa (The Monkey Temple)</h4>
+                        <p><strong>Highlights:</strong> Panoramic valley views, ancient white dome, and playful monkeys.</p>
+                        <div class="itinerary-vibe">Vibe: Peaceful early morning spiritual energy.</div>
+                    </div>
+                </div>
+
+                <div class="itinerary-row">
+                    <div class="itinerary-time">Late Morning</div>
+                    <div class="itinerary-details">
+                        <h4>Kathmandu Durbar Square</h4>
+                        <p><strong>Highlights:</strong> Hanuman Dhoka Palace, Taleju Temple, and Kumari Ghar (Living Goddess).</p>
+                        <div class="itinerary-vibe">Vibe: Intricate wooden carvings and bustling historic courtyards.</div>
+                    </div>
+                </div>
+
+                <div class="itinerary-row">
+                    <div class="itinerary-time">Afternoon</div>
+                    <div class="itinerary-details">
+                        <h4>Pashupatinath Temple</h4>
+                        <p><strong>Highlights:</strong> Hindu temple complex, Bagmati riverbank open cremations, and sadhus.</p>
+                        <div class="itinerary-vibe">Vibe: Deeply spiritual, raw, and culturally profound.</div>
+                    </div>
+                </div>
+
+                <div class="itinerary-row">
+                    <div class="itinerary-time">Late Afternoon / Evening</div>
+                    <div class="itinerary-details">
+                        <h4>Boudhanath Stupa</h4>
+                        <p><strong>Highlights:</strong> Large stupa, Tibetan monasteries, and rooftop cafes.</p>
+                        <div class="itinerary-vibe">Vibe: Circular kora chanting, glowing butter lamps, and relaxing dinner backdrop.</div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- SIDEBAR (BOOKING DETAILS) -->
+        <aside class="sidebar">
+            <div class="price-box">
+                <h3 style="margin-top: 0; color: var(--accent);">Tour Pricing</h3>
+                <div class="price-row"><span>Private Car (1-3 Pax)</span><span>$ 65 <small>Total</small></span></div>
+                <div class="price-row"><span>Private Van (4-8 Pax)</span><span>$ 90 <small>Total</small></span></div>
+                <div class="price-row"><span>Sharing Per Person</span><span>$ 25</span></div>
+            </div>
+
+            <div class="booking-card">
+                <h3>Reservations</h3>
+                <form id="bookingForm">
+                    <div class="form-group"><label>Total Pax</label><input type="number" id="pax" required min="1"></div>
+                    <div class="form-group"><label>Travel Date</label><input type="date" id="date" required></div>
+                    <div class="form-group"><label>Pickup Hotel</label><input type="text" id="pickup" required></div>
+                    <div class="form-group"><label>Special Queries</label><textarea id="extra" rows="2"></textarea></div>
+
+                    <a href="javascript:void(0)" onclick="sendBooking('WA')" class="btn btn-wa"><i class="fab fa-whatsapp"></i> Book via WhatsApp</a>
+                    <a href="javascript:void(0)" onclick="sendBooking('Mail')" class="btn btn-mail"><i class="fas fa-envelope"></i> Book via Email</a>
+                    
+                    <div style="text-align: center; margin: 10px 0; font-size: 0.7rem; font-weight: 800; color: #888;">HAVE QUESTIONS?</div>
+                    <a href="https://wa.me/9779705023917?text=I%20have%20questions%20about%20the%20Kathmandu%20Heritage%20Tour." target="_blank" class="btn btn-talk-wa">
+                        <i class="fab fa-whatsapp"></i> Talk Direct via WhatsApp
+                    </a>
+                </form>
+            </div>
+        </aside>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p style="margin: 0 0 5px;"><strong>Tilicho Tours & Travel</strong> | Lakeside-6, Pokhara, Nepal</p>
+        <p style="margin: 0; font-size: 0.8rem; color: #aaa;">© 2026 Tilicho Tours. All Rights Reserved. | Direct Contact: +977-9856023917 | <a href="mailto:tilichotours074@gmail.com">tilichotours074@gmail.com</a></p>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const slider = document.getElementById('slider');
+        const dotsContainer = document.getElementById('sliderDots');
+
+        slides.forEach((_, idx) => {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (idx === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(idx));
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.dot');
+
+        function updateSlider() {
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+            dots.forEach((dot, index) => {
+                if(index === currentSlide) dot.classList.add('active');
+                else dot.classList.remove('active');
+            });
+        }
+
+        function moveSlide(direction) {
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            updateSlider();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlider();
+        }
+
+        setInterval(() => moveSlide(1), 5000);
+
+        function sendBooking(method) {
+            const pax = document.getElementById('pax').value;
+            const date = document.getElementById('date').value;
+            const pick = document.getElementById('pickup').value;
+            const extra = document.getElementById('extra').value;
+            
+            if(!pax || !date || !pick) { 
+                alert("Please complete all required fields."); 
+                return; 
+            }
+            
+            let msg = `Heritage Tour Request:\nPax: ${pax}\nDate: ${date}\nPickup: ${pick}`;
+            if(extra) msg += `\nSpecial Queries: ${extra}`;
+
+            if(method === 'WA') {
+                window.open(`https://wa.me/9779705023917?text=${encodeURIComponent(msg)}`, '_blank');
+            } else {
+                window.location.href = `mailto:tilichotours074@gmail.com?subject=Heritage Tour Booking&body=${encodeURIComponent(msg)}`;
+            }
+        }
+    </script>
+</body>
+</html>
